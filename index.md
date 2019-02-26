@@ -8,4 +8,4 @@ registration: false
 ---
 
 
-Tešíme sa na Vás 3.6.2019 na ďalšom ročníku RBA. Registrácia bude stpustená 15.4.2019.
+Tešíme sa na Vás 3.6.2019 na ďalšom ročníku RBA. Registrácia bude spustená 15.4.2019.
