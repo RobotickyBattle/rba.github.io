@@ -82,27 +82,39 @@ layout: default
                         </li>
                         {% if common != "" %}
                         <li class="collection-item">
+                            {% if page.common_directives == true %}
                             <a href="{{common}}">
                                 Všeobecné pravidlá súťaže
                                 <span class="secondary-content"><i class="material-icons">send</i></span>
                             </a>
+                            {% else %}
+                                Všeobecné pravidlá súťaže čoskoro
+                            {% endif %}
                         </li>
 
                         {% endif %}
                         {% if directive != "" %}
                         <li class="collection-item">
+                            {% if page.common_directives == true %}
                             <a href="{{direcitve}}">
                                 Propozície
                                 <span class="secondary-content"><i class="material-icons">send</i></span>
                             </a>
+                            {% else %}
+                                Propozície čoskoro
+                            {% endif %}
                         </li>
                         {% endif %}
                         {% if schedule != "" %}
                         <li class="collection-item">
+                            {% if page.schedule == true %}
                             <a href="{{schedule}}">
                                 Harmonogram
                                 <span class="secondary-content"><i class="material-icons">send</i></span>
                             </a>
+                            {% else %}
+                                Harmonogram čoskoro
+                            {% endif %}
                         </li>
                         {% endif %}
                     </ul>
@@ -116,27 +128,39 @@ layout: default
                         </li>
                         {% if rules_racing != "" %}
                         <li class="collection-item">
+                            {% if page.racing == true %}
                             <a href="{{rules_racing}}">
                                 Racing
                                 <span class="secondary-content"><i class="material-icons">send</i></span>
                             </a>
+                            {% else %}
+                            Racing čoskoro
+                            {% endif %}
                         </li>
 
                         {% endif %}
                         {% if rules_vyzva != "" %}
                         <li class="collection-item">
+                            {% if page.roboticka_vyzva == true %}
                             <a href="{{rules_vyzva}}">
                                 Robotická výzva
                                 <span class="secondary-content"><i class="material-icons">send</i></span>
                             </a>
+                            {% else %}
+                            Robotická výzva čoskoro
+                            {% endif %}
                         </li>
                         {% endif %}
                         {% if rules_model != "" %}
                         <li class="collection-item">
+                            {% if page.vlastny_model == true %}
                             <a href="{{rules_model}}">
                                 Vlastný model
                                 <span class="secondary-content"><i class="material-icons">send</i></span>
                             </a>
+                            {% else %}
+                            Vlastný model čoskoro
+                            {% endif %}
                         </li>
                         {% endif %}
                     </ul>
