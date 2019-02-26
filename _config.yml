@@ -1,0 +1,37 @@
+title: Robotický Battle na Alejovej
+author: Robotický Battle na Alejovej
+email: galejeteam@gmail.com
+logo_text: /img/logo_text.png
+description: > # this means to ignore newlines until "baseurl:"
+  A Site Starter Materialize Templates for Jekyll
+
+plugins:
+  - jekyll-feed
+sass:
+    style: compressed
+permalink: /:categories/:year/:title:output_ext
+defaults:
+  - scope:
+      path: "pdf/rules/racing"
+    values:
+      rules_racing: true
+  - scope:
+      path: "pdf/rules/vlastny_model"
+    values:
+      rules_model: true
+  - scope:
+      path: "pdf/rules/roboticka_vyzva"
+    values:
+      rules_vyzva: true
+  - scope:
+      path: "pdf/schedules"
+    values:
+      schedule: true
+  - scope:
+      path: "pdf/rules/common"
+    values:
+      common: true
+  - scope:
+      path: "pdf/directives"
+    values:
+      directive: true

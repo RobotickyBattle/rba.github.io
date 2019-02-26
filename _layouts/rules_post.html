@@ -1,0 +1,103 @@
+---
+layout: rules
+---
+
+{{ content | markdownify }}
+
+
+{% assign page_year = page.date | date: "%Y" %}
+{% if page_year != "" %}
+{% assign page_year = site.posts | map: "date" | first | date: "%Y" %}
+{% endif %}
+{% assign st_files = site.static_files | where: "common", true %}
+{% for file in st_files %}
+{% if file.name contains page_year %}
+{% assign common = file.path %}
+{% break %}
+{% else %}
+{% assign common = "" %}
+{% endif %}
+{% endfor %}
+
+{% assign st_files = site.static_files | where: "directive", true %}
+{% for file in st_files %}
+{% if file.name contains page_year %}
+{% assign directive = file.path %}
+{% break %}
+{% else %}
+{% assign directive = "" %}
+{% endif %}
+{% endfor %}
+
+{% assign st_files = site.static_files | where: "schedule", true %}
+{% for file in st_files %}
+{% if file.name contains page_year %}
+{% assign schedule = file.path %}
+{% break %}
+{% else %}
+{% assign schedule = "" %}
+{% endif %}
+{% endfor %}
+
+<h5>Všeobecné informácie:</h5>
+<ul>
+    {% if common != "" %}
+    <li> • <a href="{{common}}">Všeobecné pravidlá súťaže</a> - platné
+        pre všetky kategórie</li>
+    {% endif %}
+    {% if directive != "" %}
+    <li> • <a href="{{direcitve}}">Propozície</a></li>
+    {% endif %}
+    {% if schedule != "" %}
+    <li> • <a href="{{schedule}}">Harmonogram</a></li>
+    {% endif %}
+</ul>
+
+{% assign st_files = site.static_files | where: "rules_vyzva", true %}
+{% for file in st_files %}
+{% if file.name contains page_year %}
+{% assign rules_vyzva = file.path %}
+{% break %}
+{% else %}
+{% assign rules_vyzva = "" %}
+{% endif %}
+{% endfor %}
+
+{% assign st_files = site.static_files | where: "rules_racing", true %}
+{% for file in st_files %}
+{% if file.name contains page_year %}
+{% assign rules_racing = file.path %}
+{% break %}
+{% else %}
+{% assign rules_racing = "" %}
+{% endif %}
+{% endfor %}
+
+{% assign st_files = site.static_files | where: "rules_model", true %}
+{% for file in st_files %}
+{% if file.name contains page_year %}
+{% assign rules_model = file.path %}
+{% break %}
+{% else %}
+{% assign rules_model = "" %}
+{% endif %}
+{% endfor %}
+
+<h5>Pravidlá kategórii:</h5>
+<ul>
+    {% if rules_racing != "" %}
+    <li> • <a href="{{rules_racing}}">Racing</a></li>
+    {% endif %}
+    {% if rules_vyzva != "" %}
+    <li> • <a href="{{rules_vyzva}}">Robotická výzva</a></li>
+    {% endif %}
+    {% if rules_model != "" %}
+    <li> • <a href="{{rules_model}}">Vlastný model</a></li>
+    {% endif %}
+</ul>
+
+<h5>Užitočné dokumenty:</h5>
+<ul>
+    <li> • <a href="">Ako správne prezentovať</a></li>
+    <li> • <a href="/pdf/other/TipsAndTricks.pdf">Tipy a triky pri stavbe Vlastného modelu</a></li>
+</ul>

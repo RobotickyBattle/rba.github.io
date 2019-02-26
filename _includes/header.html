@@ -1,0 +1,55 @@
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" class="brand-logo" href="{{ "/" | relative_url }}">
+            <img class="img-logo" src="{{ site.logo_text | relative_url}}">
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+            <li>
+                <a href="{{ "/" | relative_url }}">Domov</a>
+            </li>
+            <li>
+                <a href="{{ "/rules" | relative_url }}">Pravidlá</a>
+            </li>
+            <li>
+                <a href="{{ "/results" | relative_url }}">Výsledky</a>
+            </li>
+            <li>
+                <a href="{{ "/gallery" | relative_url }}">Galéria</a>
+            </li>
+            <li>
+                <a href="{{ "/organizers" | relative_url }}">Kto sme?</a>
+            </li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+            <li>
+                <br>
+                <a id="logo-container" class="brand-logo" href="{{ "/" | relative_url }}">
+                    <img class="img-logo" src="{{ site.logo_text | relative_url}}" style="float: left">
+                </a>
+                <br>
+                <br>
+            </li>
+            <li>
+                <a href="{{ "/" | relative_url }}">Domov</a>
+            </li>
+            <li>
+                <a href="{{ "/rules" | relative_url }}">Pravidlá</a>
+            </li>
+            <li>
+                <a href="{{ "/results" | relative_url }}">Výsledky</a>
+            </li>
+            <li>
+                <a href="{{ "/gallery" | relative_url }}">Galéria</a>
+            </li>
+            <li>
+                <a href="{{ "/organizers" | relative_url }}">Kto sme?</a>
+            </li>
+        </ul>
+
+        <a href="#" data-activates="nav-mobile" class="button-collapse">
+            <i class="material-icons">menu</i>
+        </a>
+    </div>
+</nav>

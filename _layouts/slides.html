@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<div class="container">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+    {% assign posts = site.posts | where: "categories", page.show_category %}
+    {% assign first_post = posts | first %}
+    {% if first_post %}
+    <div class="col s12 m12">
+        <div class="card medium">
+            <div class="card-image">
+                <a target="_blank" rel="noopener noreferrer" href="{{first_post.link}}">
+                    <img src="{{first_post.front_img}}" style="margin-top: -200px">
+                </a>
+            </div>
+            <div class="card-content">
+                <span class="card-title">{{first_post.title}}</span>
+                <p>{{first_post.content}}</p>
+
+            </div>
+            <div class="card-action">
+                <a target="_blank" rel="noopener noreferrer" href="{{first_post.link}}">Prejsť na stránku</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% assign PER_LINE = 3 %}
+    {% assign N = posts | size | minus: 1 | divided_by: PER_LINE | ceil %}
+    {% for I in (i..N)%}
+    {% assign OFFSET = I | times: PER_LINE | plus: 1%}
+    <div class="row">
+        {% for post in posts offset: OFFSET limit: PER_LINE %}
+        <div class="col s12 m4">
+            <div class="card small">
+                <div class="card-image">
+                    <a target="_blank" rel="noopener noreferrer" href="{{post.link}}">
+                        <img src="{{post.front_img}}">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{post.title}}</span>
+                    <!--p>{{post.content}}</p-->
+                </div>
+                <div class="card-action">
+                    <a target="_blank" rel="noopener noreferrer" href="{{post.link}}">Prejsť na stránku</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
