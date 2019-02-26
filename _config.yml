@@ -3,12 +3,12 @@ author: Robotický Battle na Alejovej
 email: galejeteam@gmail.com
 logo_text: /img/logo_text.png
 description: > # this means to ignore newlines until "baseurl:"
-  A Site Starter Materialize Templates for Jekyll
+  Webpage for RBA
 
 plugins:
   - jekyll-feed
 sass:
-    style: compressed
+  style: compressed
 permalink: /:categories/:year/:title:output_ext
 defaults:
   - scope:
