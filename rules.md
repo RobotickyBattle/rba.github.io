@@ -2,7 +2,7 @@
 layout: rules
 title: Pravidlá
 permalink: rules/
-common_directives: false
+common_directives: true
 schedule: false
 racing: true
 roboticka_vyzva: false
