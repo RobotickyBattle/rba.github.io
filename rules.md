@@ -5,7 +5,7 @@ permalink: rules/
 common_directives: true
 schedule: false
 racing: true
-roboticka_vyzva: false
+roboticka_vyzva: true
 vlastny_model: true
 ---
 
