@@ -2,9 +2,6 @@ language: ruby
 rvm:
   - 2.4.1
 
-install: gem install jekyll html-proofer
-script: jekyll build && htmlproofer ./_site --disable-external
-
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
@@ -21,3 +18,36 @@ cache: bundler # caching bundler gem packages will speed up build
 # Optional: disable email notifications about the outcome of your builds
 notifications:
   email: false
+
+stages:
+  - test
+  - name: deploy
+    if: branch = master
+
+
+jobs:
+  include:
+    - stage: test                # naming the Tests stage
+      script: jekyll build && htmlproofer ./_site --disable-external
+
+    - script: ./integration-tests
+      name: "Integration Tests"     # names the second Tests stage job
+    - stage: deploy
+      name: "Deploy to GCP"
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build
+
+      deploy:
+        provider: pages
+        local-dir: ./site
+        target-branch: master
+        email: deploy@travis-ci.org
+        name: Deployment Bot
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        keep-history: true
+        on:
+          branch: master
+
+
+
