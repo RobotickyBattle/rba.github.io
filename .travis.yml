@@ -2,7 +2,8 @@ language: ruby
 rvm:
   - 2.4.1
 
-script: ./script/cibuild.sh
+install: gem install jekyll html-proofer
+script: jekyll build && htmlproofer ./_site --disable-external
 
 env:
   global:
