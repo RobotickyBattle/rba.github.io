@@ -2,23 +2,21 @@
 layout: default
 ---
 
-<div class="parallax-container center valign-wrapper">
-
-  <div class="container">
-    <h1 class="header center-align orange-text"><b>{{ site.title }}</b></h1>
-    <div class="section">
-      <div class="row">
-        <div class="col s12 m6 offset-m3 l6 offset-l3">
-          <h5 class="header center-align light" style="color:white"><b>{{ content }}</b></h5>
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <h1 class="header center orange-text "><b>{{ site.title }}</b></h1>
+      <div class="section">
+        <div class="row center">
+            <h5 class="header col s12 light" style="color:white"><b>{{ content }}</b></h5>
         </div>
-      </div>
-      <div class="row">
-        <div class="center-align">
-          <a href="{% if page.registration != false %}{{ page.registration }}{% endif %}" id="download-button" class="btn-large waves-effect waves-light orange {% if page.registration == false %}disabled{% endif %}">Registrovať</a>
+        <div class="row center">
+            <a href="{% if page.registration != false %}{{ page.registration }}{% endif %}" id="download-button" class="btn-large waves-effect waves-light orange {% if page.registration == false %}disabled{% endif %}">Registrovať</a>
         </div>
       </div>
     </div>
   </div>
+  
   <div class="parallax"><img src="img/parallax.jpg" style="filter: brightness(50%)"></div>
 </div>
 
@@ -30,7 +28,6 @@ layout: default
       <div class="col s12 m4">
         <div class="icon-block">
           <h2 class="center light-blue-text"><i class="fas fa-flag-checkered"></i>
-            <!--i class="material-icons">flash_on</i-->
           </h2>
           <h5 class="center">Racing</h5>
           <p class="light">
@@ -43,7 +40,6 @@ layout: default
       <div class="col s12 m4">
         <div class="icon-block">
           <h2 class="center light-blue-text"><i class="fas fa-rocket"></i>
-            <!--i class="material-icons">group</i-->
           </h2>
           <h5 class="center">Vlastný model</h5>
 
@@ -56,7 +52,6 @@ layout: default
       <div class="col s12 m4">
         <div class="icon-block">
           <h2 class="center light-blue-text"><i class="fas fa-cogs"></i>
-            <!--i class="material-icons">settings</i-->
           </h2>
           <h5 class="center">Robotická výzva</h5>
 
@@ -74,7 +69,7 @@ layout: default
     <div class="row center">
       <h4><b>Organizátori</b></h4>
     </div>
-    <div class="row center valign-wrapper">
+    <div class="row center">
       <div class="col s12 m3"></div>
       {% for org in site.data.org_logo %}
       <div class="col s8 offset-s2 m3">
@@ -86,6 +81,7 @@ layout: default
       <div class="col s12 m3"></div>
     </div>
   </div>
+
   <div>
     <div class="section">
       <div class="row center">
@@ -95,7 +91,7 @@ layout: default
       {% assign N = site.data.partner_logo | size | divided_by: PER_LINE | ceil %}
       {% for I in (i..N)%}
       {% assign OFFSET = I | times: PER_LINE%}
-      <div class="row center valign-wrapper">
+      <div class="row center">
         {% for org in site.data.partner_logo offset: OFFSET limit: PER_LINE %}
         <div class="col s6 offset-s3 m2">
           <a href="{{org.url}}"><img class="responsive-img" src="{{ org.logo | relative_url }}" alt="{{ org.name }}"

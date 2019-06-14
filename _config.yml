@@ -1,14 +1,17 @@
 title: Robotický Battle na Alejovej
 author: Robotický Battle na Alejovej
 email: galejeteam@gmail.com
-logo_text: /img/logo_text.png
+logo_text: /img/logo_text.svg
 description: > # this means to ignore newlines until "baseurl:"
   Webpage for RBA
 
 plugins:
   - jekyll-feed
+
 sass:
   style: compressed
+
+
 permalink: /:categories/:year/:title:output_ext
 defaults:
   - scope:

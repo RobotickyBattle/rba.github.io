@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ "/assets/materialize.css" | relative_url }}" />
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ "/assets/main.css" | relative_url }}">
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ "/assets/css/materialize.css" | relative_url }}" />
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ "/assets/css/main.css" | relative_url }}">
     <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ "/assets/css/style.css" | relative_url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}" />
 
-
-    {% include google-analytics.html %}
+    {% if jekyll.environment == "production" %}
+        {% include google-analytics.html %}    
+    {% endif %}
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <link rel="icon" href="/img/favicon.png" type="image/png" />
