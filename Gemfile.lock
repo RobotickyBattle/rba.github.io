@@ -89,7 +89,7 @@ PLATFORMS
 DEPENDENCIES
   html-proofer
   jekyll
-  jekyll-feed (~> 0.6)
+  jekyll-feed
   tzinfo-data
 
 BUNDLED WITH

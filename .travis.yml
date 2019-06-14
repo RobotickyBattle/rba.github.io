@@ -27,16 +27,14 @@ stages:
 
 jobs:
   include:
-    - stage: test                # naming the Tests stage
+    - stage: test
+      name: "Test"
       script: jekyll build && htmlproofer ./_site --disable-external
 
-    - script: ./integration-tests
-      name: "Integration Tests"     # names the second Tests stage job
     - stage: deploy
-      name: "Deploy to GCP"
+      name: "Deploy to GitHub pages"
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
-
       deploy:
         provider: pages
         local-dir: ./site
