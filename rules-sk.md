@@ -1,6 +1,7 @@
 ---
 layout: rules
 title: Pravidlá
+lang: sk
 permalink: rules/
 common_directives: true
 schedule: true

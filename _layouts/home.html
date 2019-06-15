@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{%- assign I18N = site.data.i18n -%}
 
 <div id="index-banner" class="parallax-container">
   <div class="section no-pad-bot">
@@ -11,13 +12,22 @@ layout: default
             <h5 class="header col s12 light" style="color:white"><b>{{ content }}</b></h5>
         </div>
         <div class="row center">
-            <a href="{% if page.registration != false %}{{ page.registration }}{% endif %}" id="download-button" class="btn-large waves-effect waves-light orange {% if page.registration == false %}disabled{% endif %}">Registrovať</a>
+            
+            {% if page.registration != false %}
+              {% assign registration = page.registration %}
+            {% endif %}
+            
+            <a class="btn-large waves-effect waves-light orange {% if page.registration == false %}disabled{% endif %}"
+            href="{{ registration }}" 
+              >
+                {{ I18N.register[site.active_lang] }}
+            </a>
         </div>
       </div>
     </div>
   </div>
   
-  <div class="parallax"><img src="img/parallax.jpg" style="filter: brightness(50%)" alt="parallax"></div>
+  <div class="parallax"><img src="/img/parallax.jpg" style="filter: brightness(50%)" alt="parallax"></div>
 </div>
 
 <div class="container">
@@ -29,9 +39,9 @@ layout: default
         <div class="icon-block">
           <h2 class="center light-blue-text"><i class="fas fa-flag-checkered"></i>
           </h2>
-          <h5 class="center">Racing</h5>
+          <h5 class="center">{{ I18N.racing_name[site.active_lang] }}</h5>
           <p class="light">
-            {{page.racing}}
+            {{ I18N.racing_text[site.active_lang] }}
 
           </p>
         </div>
@@ -41,10 +51,9 @@ layout: default
         <div class="icon-block">
           <h2 class="center light-blue-text"><i class="fas fa-rocket"></i>
           </h2>
-          <h5 class="center">Vlastný model</h5>
-
+          <h5 class="center">{{ I18N.vlastny_model_name[site.active_lang] }}</h5>
           <p class="light">
-            {{page.vlastny}}
+            {{ I18N.vlastny_model_text[site.active_lang] }}
           </p>
         </div>
       </div>
@@ -53,10 +62,9 @@ layout: default
         <div class="icon-block">
           <h2 class="center light-blue-text"><i class="fas fa-cogs"></i>
           </h2>
-          <h5 class="center">Robotická výzva</h5>
-
+          <h5 class="center">{{ I18N.robo_vyzva_name[site.active_lang] }}</h5>
           <p class="light">
-            {{page.vyzva}}
+            {{ I18N.robo_vyzva_text[site.active_lang] }}
           </p>
         </div>
       </div>
@@ -67,7 +75,7 @@ layout: default
 <div class="container">
   <div class="section">
     <div class="row center">
-      <h4><b>Organizátori</b></h4>
+      <h4><b>{{ I18N.organizers_home[site.active_lang] }}</b></h4>
     </div>
     <div class="row center">
       <div class="col s12 m3"></div>
@@ -85,7 +93,7 @@ layout: default
   <div>
     <div class="section">
       <div class="row center">
-        <h4><b>Partneri</b></h4>
+        <h4><b>{{ I18N.partners[site.active_lang] }}</b></h4>
       </div>
       {% assign PER_LINE = 6 %}
       {% assign N = site.data.partner_logo | size | divided_by: PER_LINE | ceil %}
