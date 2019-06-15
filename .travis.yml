@@ -20,7 +20,7 @@ sudo: false
 cache: bundler
 
 notifications:
-  email: false
+  email: true
 
 stages:
   - test
