@@ -1,6 +1,7 @@
 ---
 layout: slides
-title: Výsledky
+title: Results
+lang: en
 permalink: /results/
 show_category: results
 ---

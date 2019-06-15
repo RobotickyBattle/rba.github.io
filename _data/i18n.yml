@@ -1,0 +1,70 @@
+# Home
+register:
+  en: Register now!
+  sk: Registrovať!
+
+racing_name:
+  en: Racing
+  sk: Racing
+vlastny_model_name:
+  en: Custom model
+  sk: Vlastný model
+robo_vyzva_name:
+  en: Robo challange
+  sk: Robotická výzva
+
+racing_text:
+  sk: &racing_text >
+    V tejto kategórií je potrebné skonštruovať čo najrýchlejšie a najobratnejšie auto, 
+    ktoré bude schopné zdolávať rôzne prekážky na trati. Celá kategória má formu pretekov a vyhráva družstvo, 
+    ktoré prejde trať za najkratší čas a splní pri tom všetky podmienky. Okrem samotných pretekov, 
+    bude prebiehať hodnotenie najlepšieho technického prevedenia modelov, za ktoré je možné získať špeciálnu cenu.
+  en: *racing_text
+vlastny_model_text:
+  sk: &vlastny_model_text >
+    Úlohou je postaviť čo najzaujímavejší model s ľubovoľnou tématikou, ktorý musí zaujať porotu. 
+    Hodnotí sa vzhľad, konštrukcia, kreativita, funkčnosť, ale aj program a vlastná práca. 
+    Je vhodné vopred si pripraviť prezentáciu, v ktorej svoj model predstavíte a popíšete. 
+    K dispozícii sú pravidlá aj vzorová prezentácia.
+  en: *vlastny_model_text
+robo_vyzva_text:
+  sk: &robo_vyzva_text >
+    Robotickú výzvu hrajú súčasne dva roboty proti sebe. 
+    Roboty štartujú v rôznych koncoch ihriska. 
+    Obe ihriská sú zakončené spoločnou časťou - kde sa roboty stretávajú. 
+    Cieľom je získať najvyššie skóre.
+    V prípade rovnosti bodov rozhoduje čas. Pozrite si Pravidlá. 
+  en: *robo_vyzva_text
+
+organizers_home:
+  en: Organizers
+  sk: Organizátori
+
+partners:
+  en: Partners
+  sk: Partneri
+
+
+  
+# Header
+home:
+  en: Home
+  sk: Domov
+rules:
+  en: Rules
+  sk: Pravidlá
+results:
+  en: Results
+  sk: Výsledky
+gallery:
+  en: Gallery
+  sk: Galéria
+organizers:
+  en: Our team 
+  sk: Kto sme?
+subscribe:
+  en: Subscribe
+  sk: Prihláste sa na odber
+translate:
+  en: Slovensky
+  sk: English
