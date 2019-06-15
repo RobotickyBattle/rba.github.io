@@ -13,7 +13,7 @@ sass:
 
 permalink: /:categories/:year/:title:output_ext
 
-exclude: [docker-compose.yml, CNAME, scripts, vendor]
+exclude: [docker-compose.yml, scripts, vendor]
 
 defaults:
   - scope:
