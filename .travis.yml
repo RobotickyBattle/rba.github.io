@@ -1,0 +1,53 @@
+language: ruby
+rvm:
+  - 2.5
+
+before_install:
+  - gem update --system
+  - gem install bundler
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+
+sudo: false
+
+cache: bundler
+
+notifications:
+  email: false
+
+stages:
+  - test
+  - name: deploy
+    if: branch = master
+
+
+jobs:
+  include:
+    - stage: test
+      name: "Test"
+      script: 
+        - bundle exec jekyll build && bundle exec htmlproofer ./_site --disable-external
+
+    - stage: deploy
+      name: "Deploy to GitHub pages"
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build
+      deploy:
+        provider: pages
+        email: deploy@travis-ci.org
+        name: Deployment Bot
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        keep-history: true
+        on:
+          branch: master
+
+
+

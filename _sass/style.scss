@@ -1,0 +1,53 @@
+
+.circular--square {
+    width: 250%;
+    border-radius: 50%;
+}
+
+.circular--portrait {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.circular--portrait img {
+    width: 100%;
+    height: auto;
+} 
+
+.card {
+    .card-image-org {
+        position: relative;
+    
+        // Image background for content
+        img {
+          display: block;
+          border-radius: 2px 2px 0 0;
+          position: relative;
+          left: 10%;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 80%;
+          border-radius: 50%;
+        }
+      }
+
+    .card-content {
+        p {
+            margin: 0;
+            color: inherit;
+        }
+        .card-title {
+            display: block;
+            line-height: 30px;
+            margin-bottom: 8px;
+
+            i {
+            line-height: 30px;
+            }
+        }
+    }
+}
