@@ -11,11 +11,10 @@ addons:
     packages:
     - libcurl4-openssl-dev
 
-sudo: false # route your build to the container-based infrastructure for a faster build
+sudo: false
 
-cache: bundler # caching bundler gem packages will speed up build
+cache: bundler
 
-# Optional: disable email notifications about the outcome of your builds
 notifications:
   email: false
 
@@ -29,7 +28,8 @@ jobs:
   include:
     - stage: test
       name: "Test"
-      script: jekyll build && htmlproofer ./_site --disable-external
+      script: 
+        - bundle exec jekyll build && bundle exec htmlproofer ./_site --disable-external
 
     - stage: deploy
       name: "Deploy to GitHub pages"
@@ -37,7 +37,7 @@ jobs:
         - JEKYLL_ENV=production bundle exec jekyll build
       deploy:
         provider: pages
-        local-dir: ./site
+        local-dir: ./_site
         target-branch: master
         email: deploy@travis-ci.org
         name: Deployment Bot
