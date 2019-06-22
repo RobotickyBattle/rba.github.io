@@ -1,122 +1,139 @@
 ---
 layout: default
 ---
+{%- assign I18N = site.data.i18n -%}
+
+{%- assign post = site.posts | where: "categories", "rules" | first -%}
+{%- assign post_year = post.date | date: "%Y" -%}
+
+
+{% assign st_files = site.static_files | where: "common", true %}
+{% for file in st_files %}
+    {% if file.name contains post_year %}
+        {%- if file.name contains "en" -%}
+            {% assign common_en = file.path %}
+        {%- else -%}
+            {% assign common = file.path %}
+        {%- endif -%}
+    {% endif %}
+{% endfor %}
+
+
+{% assign st_files = site.static_files | where: "directive", true %}
+{% for file in st_files %}
+    {% if file.name contains post_year %}
+        {%- if file.name contains "en" -%}
+            {% assign directive_en = file.path %}
+        {%- else -%}
+            {% assign directive = file.path %}
+        {%- endif -%}
+    {% endif %}
+{% endfor %}
+
+{% assign st_files = site.static_files | where: "schedule", true %}
+{% for file in st_files %}
+    {% if file.name contains post_year %}
+        {%- if file.name contains "en" -%}
+            {% assign schedule_en = file.path %}
+        {%- else -%}
+            {% assign schedule = file.path %}
+        {%- endif -%}
+    {% endif %}
+{% endfor %}
+
+
+{% assign st_files = site.static_files | where: "rules_vyzva", true %}
+{% for file in st_files %}
+    {% if file.name contains post_year %}
+        {%- if file.name contains "en" -%}
+            {% assign rules_vyzva_en = file.path %}
+        {%- else -%}
+            {% assign rules_vyzva = file.path %}
+        {%- endif -%}
+    {% endif %}
+{% endfor %}
+
+{% assign st_files = site.static_files | where: "rules_racing", true %}
+{% for file in st_files %}
+    {% if file.name contains post_year %}
+        {%- if file.name contains "en" -%}
+            {% assign rules_racing_en = file.path %}
+        {%- else -%}
+            {% assign rules_racing = file.path %}
+        {%- endif -%}
+    {% endif %}
+{% endfor %}
+
+{% assign st_files = site.static_files | where: "rules_model", true %}
+{% for file in st_files %}
+    {% if file.name contains post_year %}
+        {%- if file.name contains "en" -%}
+            {% assign rules_model_en = file.path %}
+        {%- else -%}
+            {% assign rules_model = file.path %}
+        {%- endif -%}
+    {% endif %}
+{% endfor %}
+
+
 <div class="container">
-    <h1 class="page-title">{{ page.title | escape }}</h1>
+    <h1 class="page-title">{{ I18N.rules[site.active_lang] }} {{ post_year }}</h1>
     <div class="section">
-        {{ content | markdownify }}
+        {{ post.content | markdownify }}
     </div>
     <div class="section">
-
-
-        {% assign page_year = page.date | date: "%Y" %}
-        {% if page_year != "" %}
-        {% assign page_year = site.posts | map: "date" | first | date: "%Y" %}
-        {% endif %}
-        {% assign st_files = site.static_files | where: "common", true %}
-        {% for file in st_files %}
-        {% if file.name contains page_year %}
-        {% assign common = file.path %}
-        {% break %}
-        {% else %}
-        {% assign common = "" %}
-        {% endif %}
-        {% endfor %}
-
-        {% assign st_files = site.static_files | where: "directive", true %}
-        {% for file in st_files %}
-        {% if file.name contains page_year %}
-        {% assign directive = file.path %}
-        {% break %}
-        {% else %}
-        {% assign directive = "" %}
-        {% endif %}
-        {% endfor %}
-
-        {% assign st_files = site.static_files | where: "schedule", true %}
-        {% for file in st_files %}
-        {% if file.name contains page_year %}
-        {% assign schedule = file.path %}
-        {% break %}
-        {% else %}
-        {% assign schedule = "" %}
-        {% endif %}
-        {% endfor %}
-
-        {% assign st_files = site.static_files | where: "rules_vyzva", true %}
-        {% for file in st_files %}
-        {% if file.name contains page_year %}
-        {% assign rules_vyzva = file.path %}
-        {% break %}
-        {% else %}
-        {% assign rules_vyzva = "" %}
-        {% endif %}
-        {% endfor %}
-
-        {% assign st_files = site.static_files | where: "rules_racing", true %}
-        {% for file in st_files %}
-        {% if file.name contains page_year %}
-        {% assign rules_racing = file.path %}
-        {% break %}
-        {% else %}
-        {% assign rules_racing = "" %}
-        {% endif %}
-        {% endfor %}
-
-        {% assign st_files = site.static_files | where: "rules_model", true %}
-        {% for file in st_files %}
-        {% if file.name contains page_year %}
-        {% assign rules_model = file.path %}
-        {% break %}
-        {% else %}
-        {% assign rules_model = "" %}
-        {% endif %}
-        {% endfor %}
-
         <div class="row">
             <div class="col s12 m4">
                 <div class="card">
                     <ul class="collection with-header">
                         <li class="collection-header">
-                            <h5 class="center">Všeobecné informácie</h5>
+                            <h5 class="center">{{ I18N.common_info[site.active_lang] }}</h5>
                         </li>
-                        {% if common != "" %}
+
+                        <!-- Vseobecne pravidla -->
                         <li class="collection-item">
-                            {% if page.common_directives == true %}
-                            <a href="{{common}}">
-                                Všeobecné pravidlá súťaže
-                                <span class="secondary-content"><i class="material-icons">send</i></span>
-                            </a>
+                            {% if common %}
+                                <a href="{{ common }}">
+                                    {{ I18N.common_rules[site.active_lang] }}
+                                </a>
+                                
+                                <span class="secondary-content">
+                                    [ <a href="{{ common }}">SK</a>{% if common_en %} | <a href="{{ common_en }}">EN</a>{% endif %} ]
+                                </span>
                             {% else %}
-                                Všeobecné pravidlá súťaže čoskoro
+                                {{ I18N.common_rules[site.active_lang] }} {{ I18N.comming_soon[site.active_lang] }}
                             {% endif %}
                         </li>
 
-                        {% endif %}
-                        {% if directive != "" %}
+                        <!-- Propozicie -->
                         <li class="collection-item">
-                            {% if page.common_directives == true %}
-                            <a href="{{directive}}">
-                                Propozície
-                                <span class="secondary-content"><i class="material-icons">send</i></span>
-                            </a>
+                            {% if directive %}
+                                <a href="{{ directive }}">
+                                    {{ I18N.directive[site.active_lang] }}
+                                </a>
+                                
+                                <span class="secondary-content">
+                                    [ <a href="{{ directive }}">SK</a>{% if directive_en %} | <a href="{{ directive_en }}">EN</a>{% endif %} ]
+                                </span>
                             {% else %}
-                                Propozície čoskoro
+                                {{ I18N.directive[site.active_lang] }} {{ I18N.comming_soon[site.active_lang] }}
                             {% endif %}
                         </li>
-                        {% endif %}
-                        {% if schedule != "" %}
+                        
+                        <!-- Harmonogram -->
                         <li class="collection-item">
-                            {% if page.schedule == true %}
-                            <a href="{{schedule}}">
-                                Harmonogram
-                                <span class="secondary-content"><i class="material-icons">send</i></span>
-                            </a>
+                            {% if schedule %}
+                                <a href="{{ schedule }}">
+                                    {{ I18N.schedule[site.active_lang] }}
+                                </a>
+                                
+                                <span class="secondary-content">
+                                    [ <a href="{{ schedule }}">SK</a>{% if schedule_en %} | <a href="{{ schedule_en }}">EN</a>{% endif %} ]
+                                </span>
                             {% else %}
-                                Harmonogram čoskoro
+                                {{ I18N.schedule[site.active_lang] }} {{ I18N.comming_soon[site.active_lang] }}
                             {% endif %}
                         </li>
-                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -124,45 +141,53 @@ layout: default
                 <div class="card">
                     <ul class="collection with-header">
                         <li class="collection-header">
-                            <h5 class="center">Pravidlá kategórii</h5>
+                            <h5 class="center">{{ I18N.categories_rules[site.active_lang] }}</h5>
                         </li>
-                        {% if rules_racing != "" %}
+                        <!-- Racing -->
                         <li class="collection-item">
-                            {% if page.racing == true %}
-                            <a href="{{rules_racing}}">
-                                Racing
-                                <span class="secondary-content"><i class="material-icons">send</i></span>
-                            </a>
+                            {% if rules_racing %}
+                                <a href="{{ rules_racing }}">
+                                    {{ I18N.racing_name[site.active_lang] }}
+                                </a>
+                                
+                                <span class="secondary-content">
+                                    [ <a href="{{ rules_racing }}">SK</a>{% if rules_racing_en %} | <a href="{{ rules_racing_en }}">EN</a>{% endif %} ]
+                                </span>
                             {% else %}
-                            Racing čoskoro
+                                {{ I18N.racing_name[site.active_lang] }} {{ I18N.comming_soon[site.active_lang] }}
                             {% endif %}
                         </li>
 
-                        {% endif %}
-                        {% if rules_vyzva != "" %}
+
+                        <!-- Vyzva -->
                         <li class="collection-item">
-                            {% if page.roboticka_vyzva == true %}
-                            <a href="{{rules_vyzva}}">
-                                Robotická výzva
-                                <span class="secondary-content"><i class="material-icons">send</i></span>
-                            </a>
+                            {% if rules_vyzva %}
+                                <a href="{{ rules_vyzva }}">
+                                    {{ I18N.robo_vyzva_name[site.active_lang] }}
+                                </a>
+                                
+                                <span class="secondary-content">
+                                    [ <a href="{{ rules_vyzva }}">SK</a>{% if rules_vyzva_en %} | <a href="{{ rules_vyzva_en }}">EN</a>{% endif %} ]
+                                </span>
                             {% else %}
-                            Robotická výzva čoskoro
+                                {{ I18N.robo_vyzva_name[site.active_lang] }} {{ I18N.comming_soon[site.active_lang] }}
                             {% endif %}
                         </li>
-                        {% endif %}
-                        {% if rules_model != "" %}
+
+                        <!-- Model -->
                         <li class="collection-item">
-                            {% if page.vlastny_model == true %}
-                            <a href="{{rules_model}}">
-                                Vlastný model
-                                <span class="secondary-content"><i class="material-icons">send</i></span>
-                            </a>
+                            {% if rules_model %}
+                                <a href="{{ rules_model }}">
+                                    {{ I18N.vlastny_model_name[site.active_lang] }}
+                                </a>
+                                
+                                <span class="secondary-content">
+                                    [ <a href="{{ rules_model }}">SK</a>{% if rules_model_en %} | <a href="{{ rules_model_en }}">EN</a>{% endif %} ]
+                                </span>
                             {% else %}
-                            Vlastný model čoskoro
+                                {{ I18N.vlastny_model_name[site.active_lang] }} {{ I18N.comming_soon[site.active_lang] }}
                             {% endif %}
                         </li>
-                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -170,18 +195,18 @@ layout: default
                 <div class="card">
                     <ul class="collection with-header">
                         <li class="collection-header">
-                            <h5 class="center">Užitočné dokumenty</h5>
+                            <h5 class="center">{{ I18N.useful_documents[site.active_lang] }}</h5>
                         </li>
                         <li class="collection-item">
                             <a href="/pdf/other/prezentacia.pdf">
-                                Ako správne prezentovať
-                                <span class="secondary-content"><i class="material-icons">send</i></span>
+                                {{ I18N.how_to_present[site.active_lang] }}
+                                <span class="secondary-content">[ SK ]</span>
                             </a>
                         </li>
                         <li class="collection-item">
                             <a href="/pdf/other/TipsAndTricks.pdf">
-                                Tipy a triky pri stavbe Vlastného modelu
-                                <span class="secondary-content"><i class="material-icons">send</i></span>
+                                {{ I18N.tips_and_trics[site.active_lang] }} ({{ I18N.vlastny_model_name[site.active_lang] }})
+                                <span class="secondary-content">[ SK ]</span>
                             </a>
                         </li>
                     </ul>
@@ -190,14 +215,14 @@ layout: default
         </div>
     </div>
 
-    <h1 class="page-title">Archív</h1>
+    <h1 class="page-title">{{ I18N.archive[site.active_lang] }}</h1>
     <div class="section">
         <div class="row">
             <div class="col s12 m4">
                 <div class="card">
                     <ul class="collection with-header">
                         <li class="collection-header">
-                            <h5 class="center">Racing</h5>
+                            <h5 class="center">{{ I18N.racing_name[site.active_lang] }}</h5>
                         </li>
                         {% assign RAR = site.static_files | where: "rules_racing", true | sort: "name" | reverse %}
                         {% for item in RAR %}
@@ -214,7 +239,7 @@ layout: default
                 <div class="card">
                     <ul class="collection with-header">
                         <li class="collection-header">
-                            <h5 class="center">Robotická výzva</h5>
+                            <h5 class="center">{{ I18N.robo_vyzva_name[site.active_lang] }}</h5>
                         </li>
                         {% assign RAR = site.static_files | where: "rules_vyzva", true | sort: "name" | reverse %}
                         {% for item in RAR %}
@@ -233,7 +258,7 @@ layout: default
                 <div class="card">
                     <ul class="collection with-header">
                         <li class="collection-header">
-                            <h5 class="center">Vlastný model</h5>
+                            <h5 class="center">{{ I18N.vlastny_model_name[site.active_lang] }}</h5>
                         </li>
                         {% assign RAR = site.static_files | where: "rules_model", true | sort: "name" | reverse %}
                         {% for item in RAR %}

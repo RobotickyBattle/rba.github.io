@@ -73,3 +73,39 @@ translate:
 redirect_text:
   sk: Prejsť na stránku
   en: Go to page
+
+# Rules
+commin_soon:
+  sk: už čoskoro
+  en: comming soon
+
+common_info:
+  sk: Všeobecné informácie
+  en: General information
+common_rules:
+  sk: Všeobecné pravidlá
+  en: Common rules
+directive:
+  sk: Propozície
+  en: Directives
+schedule:
+  sk: Harmonogram
+  en: Competion schedule
+
+categories_rules:
+  sk: Pravidlá kategórii
+  en: Categories rules
+
+useful_documents:
+  sk: Užitočné dokumenty
+  en: Useful documents
+how_to_present:
+  sk: Ako správne prezentovať
+  en: How to present properly
+tips_and_trics:
+  sk: Tipy a triky
+  en: Tips and tricks
+
+archive:
+  sk: Archív
+  en: Archive

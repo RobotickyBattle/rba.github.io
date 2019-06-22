@@ -19,7 +19,7 @@ exclude: [docker-compose.yml, scripts, vendor, Gemfile*, README.md]
 
 languages: ["sk", "en"]
 default_lang: "sk"
-exclude_from_localization: ["assets", "img", "pdf", "feed.xml"]
+exclude_from_localization: ["assets", "img", "feed.xml"]
 parallel_localization: true
 
 
