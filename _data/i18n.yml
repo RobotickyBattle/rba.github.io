@@ -68,3 +68,8 @@ subscribe:
 translate:
   en: Slovensky
   sk: English
+
+# slides.html
+redirect_text:
+  sk: Prejsť na stránku
+  en: Go to page
