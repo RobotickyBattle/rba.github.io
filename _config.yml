@@ -5,6 +5,9 @@ logo_text: /img/logo_text.svg
 description: >
   Webpage for RBA
 
+facebook: https://www.facebook.com/robotickybattle
+linkedin: https://www.linkedin.com/company/robotickybattle
+
 plugins:
   - jekyll-feed
   - jekyll-polyglot

@@ -1,4 +1,7 @@
 
+@import "materialize/materialize";
+@import "floating-social";
+
 .circular--square {
     width: 250%;
     border-radius: 50%;
@@ -28,13 +31,20 @@
           position: relative;
           left: 10%;
           right: 0;
-          top: 0;
+          top: 10px;
           bottom: 0;
           width: 80%;
           border-radius: 50%;
         }
       }
 
+    @media #{$medium-and-up}
+    {
+        &.perfect {
+            height: 350px;
+        }
+    }
+    
     .card-content {
         p {
             margin: 0;

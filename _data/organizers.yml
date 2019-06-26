@@ -1,79 +1,59 @@
 - name: Peter Kovács
   photo: /img/organizers/petoK.jpg
   position: Hlavný organizátor
-  email: null
-  github: null
-  linkedin: null
-  twitter: null
+  linkedin: peterkovacs554
 
 - name: Ondrej Kurák
   photo: /img/organizers/ondrej.jpg
-  position: "Porota: Vlastný model"
+  position: Vlastný model
   email: ondrej.kurak.h@gmail.com
-  github: https://github.com/H00N24
-  linkedin: https://www.linkedin.com/in/ondrejkurak/
-  twitter: https://twitter.com/H00N24
-
-- name: Jana Bátoryová
-  photo: /img/organizers/janB.jpg
-  position: "Porota: Vlastný model"
-  email: janulik11@gmail.com
-  github: null
-  linkedin: null
-  twitter: null
-
-- name: Katka Marcinčáková
-  photo: /img/organizers/katka.jpg
-  position: "Porota: Vlastný model"
-  email: null
-  github: null
-  linkedin: null
-  twitter: null
-
-- name: Stanislav Havrila
-  photo: /img/organizers/sta.jpg
-  position: "Porota: Racing"
-  email: null
-  github: null
-  linkedin: null
-  twitter: null
-
-- name: Mikuláš Szabari
-  photo: /img/organizers/miki.jpg
-  position: "Porota: Racing"
-  email: null
-  github: null
-  linkedin: null
-  twitter: null
-
-- name: Eduard Čuba
-  photo: /img/organizers/edo.jpg
-  position: "Porota: Racing"
-  email: cuba.edo@gmail.com
-  github: https://github.com/edynox
-  linkedin: null
-  twitter: null
-
-- name: Peter Kravec
-  photo: /img/organizers/peder.jpg
-  position: "Porota: Racing"
-  email: null
-  github: null
-  linkedin: null
-  twitter: null
+  github: H00N24
+  linkedin: ondrejkurak
+  twitter: H00N24
 
 - name: Róbert Kolcún
   photo: /img/organizers/robo.jpg
-  position: "Porota: Racing"
+  position: Racing
   email: robert.kolcun@gmail.com
-  github: "https://github.com/NoName115"
-  linkedin: "https://www.linkedin.com/in/r%C3%B3bert-kolc%C3%BAn-a67153126/"
-  twitter: null
+  github: NoName115
+  linkedin: r%C3%B3bert-kolc%C3%BAn-a67153126
+
+- name: Mikuláš Szabari
+  photo: /img/organizers/miki.jpg
+  position: Racing
 
 - name: RNDr. Jana Plichtová
-  photo: /img/organizers/pl.jpg
-  position: null
+  photo: /img/organizers/plichtova.jpg
   email: janaplichtova@gmail.com
-  github: null
-  linkedin: null
-  twitter: null
+
+- name: Katarína Marcinčáková
+  photo: /img/organizers/katka.jpg
+  position: Vlastný model
+
+- name: Tímea Remetová
+  photo: /img/organizers/timea.jpg
+  position: Vlastný model
+  github: meablonde
+
+- name: Stanislav Havrila
+  photo: /img/organizers/stano.jpg
+  position: Racing
+
+- name: Stanislav Jochman
+  photo: /img/organizers/stanko.jpg
+  position: Racing
+  github: StanislavJochman
+  linkedin: stanislavjochman
+
+- name: Vratislav Madáč
+  photo: /img/organizers/vrato.jpg
+  position: Racing
+
+- name: Erik Berta
+  photo: /img/organizers/erik.jpg
+  position: Robotická výzva
+  linkedin: erikberta
+
+- name: Patrik Rusnák
+  photo: /img/organizers/pato.jpg
+  position: Robotická výzva

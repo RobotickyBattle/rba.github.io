@@ -61,7 +61,7 @@ gallery:
   sk: Galéria
 organizers:
   en: Our team 
-  sk: Kto sme?
+  sk: Náš tím
 subscribe:
   en: Subscribe
   sk: Prihláste sa na odber
@@ -75,7 +75,7 @@ redirect_text:
   en: Go to page
 
 # Rules
-commin_soon:
+comming_soon:
   sk: už čoskoro
   en: comming soon
 

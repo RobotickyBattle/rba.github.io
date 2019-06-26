@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="container">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+    <div class="card">
+        <div class="card-image">
+            <img src="/img/organizers/all-2019.jpg" alt="organizers-photo">
+        </div>
+        <div class="card-content">
+        <span class="card-title"><b>Náš tím</b></span>
+            {{ page.content | markdownify }}
+            <h5>
+                    Otázky? Neváhajte nás kontaktovať! <a href="mailto:galejeteam@gmail.com">galejeteam@gmail.com</a>  alebo  <a href="https://www.facebook.com/RBA-Robotický-Battle-na-Alejovej-301693466574320/" >Facebook</a>
+            </h5>
+            
+            
+            
+            {%- assign org_with_photo = site.data.organizers | sort: "name" -%}
+            {%- assign org_wo_photo = site.data.organizers_wo | sort: "name" -%}
+            {%- assign all_org = org_with_photo | concat: org_wo_photo -%}
+
+            <div class="row">
+                {% for org in all_org %}
+                <div class="col s8 offset-s2 m4 l3">
+                    <div class="card perfect">
+                        <div class="card-image-org">
+                            {% if org.photo %}
+                            <img src="{{org.photo}}">
+                            {% else %}
+                            <img src="/img/organizers/miss-head.jpg">
+                            {% endif %}
+                        </div>
+                        <div class="card-content center-align">
+                            <span class="card-title"><b>{{org.name}}</b></span>
+                            <p style="margin-bottom: 5px">{{org.position}}</p>
+                                {% if org.email %}
+                                <a href="mailto:{{ org.email }}" style="margin-right: 10px"><i class="fas fa-envelope fa-lg"></i></a>
+                                {% endif %}
+                                {% if org.github %}
+                                <a href="https://github.com/{{ org.github }}" style="margin-right: 10px"><i class="fab fa-github fa-lg"></i></a>
+                                {% endif %}
+                                {% if org.linkedin %}
+                                <a href="https://www.linkedin.com/in/{{ org.linkedin }}" style="margin-right: 10px"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                                {% endif %}
+                                {% if org.twitter %}
+                                <a href=" https://twitter.com/{{ org.twitter }}"><i class="fab fa-twitter fa-lg"></i></a>
+                                {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
