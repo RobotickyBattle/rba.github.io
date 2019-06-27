@@ -27,14 +27,14 @@ layout: default
                     <div class="card perfect">
                         <div class="card-image-org">
                             {% if org.photo %}
-                            <img src="{{org.photo}}">
+                            <img src="{{ org.photo }}" alt="{{ org.name }} photo">
                             {% else %}
-                            <img src="/img/organizers/miss-head.jpg">
+                            <img src="/img/organizers/miss-head.jpg" alt="default avatar">
                             {% endif %}
                         </div>
                         <div class="card-content center-align">
-                            <span class="card-title"><b>{{org.name}}</b></span>
-                            <p style="margin-bottom: 5px">{{org.position}}</p>
+                            <span class="card-title"><b>{{ org.name }}</b></span>
+                            <p style="margin-bottom: 5px">{{ org.position }}</p>
                                 {% if org.email %}
                                 <a href="mailto:{{ org.email }}" style="margin-right: 10px"><i class="fas fa-envelope fa-lg"></i></a>
                                 {% endif %}
