@@ -6,4 +6,4 @@ registration: false
 ---
 
 
-Tešíme sa na Vás na RBA 2020.
+Tešíme sa na Vás 1.6.2020 na ďalšom ročníku RBA. Registrácia bude spustená začiatkom apríla.
