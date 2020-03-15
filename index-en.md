@@ -5,4 +5,4 @@ permalink: /
 registration: false
 ---
 
-We look forward to seeing you on 1.6.2020 at the RBA 2020. Registration will begin in April.
+S ľútosťou vám oznamujeme, že vzhľadom na aktuálnu situáciu a usmernenie ministerstva školstva sme nútení súťaž RBA tento rok zrušiť (minimálne v pôvodne plánovanom termíne). V súčasnosti nevieme ako sa situácia vyvinie, ale akonáhle budeme vedieť viac budeme vás informovať prostredníctvom facebooku, stránky alebo nášho emailového newslettera.
