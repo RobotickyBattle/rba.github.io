@@ -6,4 +6,4 @@ registration: false
 ---
 
 
-Tešíme sa na Vás 1.6.2020 na ďalšom ročníku RBA. Registrácia bude spustená začiatkom apríla.
+Informácie ohľadom RBA 2021 zverejníme v marci.
