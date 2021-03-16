@@ -9,24 +9,23 @@ layout: default
       <h1 class="header center orange-text "><b>{{ site.title | escape }}</b></h1>
       <div class="section">
         <div class="row center">
-            <h5 class="header col s12 light" style="color:white"><b>{{ content | markdownify }}</b></h5>
+          <h5 class="header col s12 light" style="color:white"><b>{{ content | markdownify }}</b></h5>
         </div>
         <div class="row center">
-            
-            {% if page.registration != false %}
-              {% assign registration = page.registration %}
-            {% endif %}
-            
-            <a class="btn-large waves-effect waves-light orange {% if page.registration == false %}disabled{% endif %}"
-            href="{{ registration }}" 
-              >
-                {{ I18N.register[site.active_lang] }}
-            </a>
+
+          {% if page.registration != false %}
+          {% assign registration = page.registration %}
+          {% endif %}
+
+          <a class="btn-large waves-effect waves-light orange {% if page.registration == false %}disabled{% endif %}"
+            href="{{ registration }}">
+            {{ I18N.register[site.active_lang] }}
+          </a>
         </div>
       </div>
     </div>
   </div>
-  
+
   <div class="parallax"><img src="/img/parallax.jpg" style="filter: brightness(50%)" alt="parallax"></div>
 </div>
 
@@ -78,15 +77,13 @@ layout: default
       <h4><b>{{ I18N.organizers_home[site.active_lang] }}</b></h4>
     </div>
     <div class="row center">
-      <div class="col s12 m3"></div>
       {% for org in site.data.org_logo %}
-      <div class="col s8 offset-s2 m3">
+      <div class="col s8 offset-s2 m4">
         <a href="{{org.url}}">
           <img class="responsive-img" src="{{ org.logo | relative_url }}" alt="{{ org.name }}">
         </a>
       </div>
       {% endfor %}
-      <div class="col s12 m3"></div>
     </div>
   </div>
 
