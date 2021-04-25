@@ -6,4 +6,4 @@ registration: false
 ---
 
 
-Informácie ohľadom RBA 2021 zverejníme v marci.
+Desiaty ročník RBA  sa uskutoční 5.6.2021 online na platforme discord. Registráciu otvoríme čoskoro.
