@@ -2,8 +2,12 @@
 name = "rba-github-io"
 version = "0.1.0"
 description = "Web page for Robotický Battle na Alejovej (RBA)"
-authors = ["H00N24 <ondrej.kurak.h@gmail.com>"]
+authors = ["Ondrej Kurák <ondrej.kurak.h@gmail.com>"]
 license = "MIT"
+readme = "README.md"
+homepage = "https://robotickybattle.sk/"
+repository = "https://github.com/RobotickyBattle/rba.github.io/"
+
 
 [tool.poetry.dependencies]
 python = "^3.8"
