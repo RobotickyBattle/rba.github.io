@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "rba-github-io"
+version = "0.1.0"
+description = "Web page for Robotický Battle na Alejovej (RBA)"
+authors = ["H00N24 <ondrej.kurak.h@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pelican = "^4.6.0"
+pelican-lunr = "^0.2.6"
+pelican-seo = "^1.2.0"
+pelican-precompress = "^2.0.0"
+black = "^21.4b0"
+isort = "^5.8.0"
+flake8 = "^3.9.1"
+mypy = "^0.812"
+poetry-dynamic-versioning = "^0.12.6"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry-dynamic-versioning]
+enable = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

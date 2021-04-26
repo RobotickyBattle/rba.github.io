@@ -5,12 +5,9 @@ with import sources.nixpkgs {};
 mkShell {
   name = "rba-github-env";
   buildInputs = [
-    ruby
-    libiconv
+    python38
+    python38Packages.poetry
     glibcLocales
-    docker-compose
-    gcc
-    gnumake
   ];
   shellHook = ''
   # set SOURCE_DATE_EPOCH so that we can use python wheels
