@@ -36,6 +36,7 @@ jobs:
         - bundle exec jekyll build
         - mv _site/index-en.html _site/index.html
         - mv _site/en/index-en.html _site/en/index.html
+        - find _site -name "*.html" -exec sed -i s/index-en/index/g {} +
         - bundle exec htmlproofer ./_site --disable-external
 
     - stage: deploy
