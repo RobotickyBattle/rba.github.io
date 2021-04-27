@@ -30,10 +30,13 @@ stages:
 
 jobs:
   include:
-    # - stage: test
-    #   name: "Test"
-    #   script:
-    #     - bundle exec jekyll build && bundle exec htmlproofer ./_site --disable-external
+    - stage: test
+      name: "Test"
+      script:
+        - bundle exec jekyll build
+        - mv _site/index-en.html _site/index.html
+        - mv _site/en/index-en.html _site/en/index.html
+        - bundle exec htmlproofer ./_site --disable-external
 
     - stage: deploy
       name: "Deploy to GitHub pages"
