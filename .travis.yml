@@ -33,7 +33,7 @@ jobs:
     - stage: test
       name: "Test"
       script:
-        - bundle exec jekyll build
+        - JEKYLL_ENV=production bundle exec jekyll build
         - mv _site/index-en.html _site/index.html
         - mv _site/en/index-en.html _site/en/index.html
         - find _site -name "*.html" -exec sed -i s/index-en/index/g {} +
@@ -43,6 +43,9 @@ jobs:
       name: "Deploy to GitHub pages"
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
+        - mv _site/index-en.html _site/index.html
+        - mv _site/en/index-en.html _site/en/index.html
+        - find _site -name "*.html" -exec sed -i s/index-en/index/g {} +
       deploy:
         provider: pages
         local-dir: ./_site
