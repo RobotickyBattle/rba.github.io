@@ -1,7 +1,6 @@
 ---
 layout: slides
-title: Gallery
-lang: en
+title: Galéria
 permalink: /gallery/
 show_category: gallery
 ---

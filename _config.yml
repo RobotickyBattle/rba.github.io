@@ -10,7 +10,6 @@ linkedin: https://www.linkedin.com/company/robotickybattle
 
 plugins:
   - jekyll-feed
-  - jekyll-polyglot
 
 sass:
   style: compressed
@@ -20,10 +19,10 @@ permalink: /:categories/:year/:title:output_ext
 exclude: [docker-compose.yml, scripts, vendor, Gemfile*, README.md]
 
 
-languages: ["sk", "en"]
-default_lang: "sk"
-exclude_from_localization: ["assets", "img", "feed.xml"]
-parallel_localization: true
+# languages: ["sk", "en"]
+# default_lang: "sk"
+# exclude_from_localization: ["assets", "img", "feed.xml"]
+# parallel_localization: true
 
 
 defaults:
