@@ -11,11 +11,6 @@ layout: default
           <h5 class="header col s12 light" style="color:white"><b>{{ content | markdownify }}</b></h5>
         </div>
         <div class="row center">
-
-          {% if page.registration != false %}
-          {% assign registration = page.registration %}
-          {% endif %}
-
           <a class="btn-large waves-effect waves-light orange disabled"
             href="{{ registration }}">
             Registrovať!
