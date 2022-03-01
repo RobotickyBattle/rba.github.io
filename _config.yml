@@ -2,6 +2,8 @@ title: Robotický Battle na Alejovej
 author: Robotický Battle na Alejovej
 email: galejeteam@gmail.com
 logo_text: /img/logo_text.svg
+baseurl: "/"
+url: "https://robotickybattle.sk"
 description: >
   Webpage for RBA
 
