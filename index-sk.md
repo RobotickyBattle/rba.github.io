@@ -1,7 +1,7 @@
 ﻿---
 layout: home
 lang: sk
-registration: https://dotazniky.itakademia.sk/index.php/survey/index/sid/187217/newtest/Y/lang/sk
+registration: null
 ---
 
-Desiaty ročník RBA sa uskutoční vo štvrtok 10.6.2021 od 9:00 do 11:30 online na platforme discord.
+Jedenásty ročník RBA sa uskutoční vo pondelok 6.6.2022 na Gymnáziu, Alejová 1 v Košiciach. Registrácia bude spustená začiatkom apríla.
