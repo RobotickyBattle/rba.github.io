@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{%- assign I18N = site.data.i18n -%}
 
 <div class="container">
     <h1 class="page-title">{{ page.title | escape }}</h1>
@@ -20,7 +19,7 @@ layout: default
                     <span class="card-title">{{ page.title | escape }} {{ first_post_year }}</span>
                 </div>
                 <div class="card-action">
-                    <a target="_blank" rel="noopener noreferrer" href="{{ first_post.link }}">{{ I18N.redirect_text[site.active_lang] }}</a>
+                    <a target="_blank" rel="noopener noreferrer" href="{{ first_post.link }}">Prejsť na stránku</a>
                 </div>
             </div>
         </div>
@@ -43,7 +42,7 @@ layout: default
                     <span class="card-title">{{ page.title | escape }} {{ post_year }}</span>
                 </div>
                 <div class="card-action">
-                    <a target="_blank" rel="noopener noreferrer" href="{{ post.link }}">{{ I18N.redirect_text[site.active_lang] }}</a>
+                    <a target="_blank" rel="noopener noreferrer" href="{{ post.link }}">Prejsť na stránku</a>
                 </div>
             </div>
         </div>
