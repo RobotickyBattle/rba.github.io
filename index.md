@@ -1,6 +1,5 @@
 ﻿---
 layout: default
-registration: null
 ---
 
 <div id="index-banner" class="parallax-container">
@@ -12,12 +11,7 @@ registration: null
           <h5 class="header col s12 light" style="color:white"><b>Jedenásty ročník RBA sa uskutoční vo pondelok 6.6.2022 na Gymnáziu, Alejová 1 v Košiciach. Registrácia bude spustená začiatkom apríla.</b></h5>
         </div>
         <div class="row center">
-
-          {% if page.registration != false %}
-          {% assign registration = page.registration %}
-          {% endif %}
-
-          <a class="btn-large waves-effect waves-light orange {% if page.registration == false %}disabled{% endif %}"
+          <a class="btn-large waves-effect waves-light orange disabled"
             href="{{ registration }}">
             Registrovať!
           </a>
