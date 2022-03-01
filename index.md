@@ -1,6 +1,5 @@
 ﻿---
 layout: home
-lang: sk
 registration: null
 ---
 
