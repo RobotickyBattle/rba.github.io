@@ -1,5 +1,6 @@
 ﻿---
 layout: default
+title: Home
 ---
 
 <div id="index-banner" class="parallax-container">
