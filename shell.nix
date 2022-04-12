@@ -5,8 +5,10 @@ with import sources.nixpkgs {};
 mkShell {
   name = "rba-github-env";
   buildInputs = [
-    jekyll
-    bundler
+    go
+    hugo
+    nodejs
+    docker-compose
     glibcLocales
   ];
   shellHook = ''

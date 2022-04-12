@@ -1,8 +1,8 @@
-_site
-.sass-cache
-.jekyll-metadata
-.jekyll-cache
-vendor/*
-.vscode/*
-/.direnv
+/public
+resources/
+node_modules/
+.hugo_build.lock
+
 /tmp
+.DS_store
+.direnv
