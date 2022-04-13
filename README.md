@@ -1,6 +1,6 @@
 # Robotický Battle na Alejovej
 
-This is a repository with webpage of (Robotický Battle na Alejovej)[https://robotickybattle.sk]
+This is a repository with webpage of [Robotický Battle na Alejovej](https://robotickybattle.sk) (https://robotickybattle.sk).
 
 ## Installation
 Cloning the repository
