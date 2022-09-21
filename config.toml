@@ -204,7 +204,7 @@ enable = false
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
   name = "Mailing list"
-  url = "http://eepurl.com/gtR8Vb"
+  url = "https://eepurl.com/gtR8Vb"
   icon = "fa fa-envelope"
   desc = "Prihláste sa na odber našich noviniek!"
 [[params.links.developer]]
