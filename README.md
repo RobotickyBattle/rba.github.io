@@ -6,7 +6,7 @@ This is a repository with webpage of [Robotický Battle na Alejovej](https://rob
 Cloning the repository
 
 ```bash
-git clone git clone --recursive --depth 1 git@github.com:RobotickyBattle/rba.github.git
+git clone --recursive --depth 1 git@github.com:RobotickyBattle/rba.github.io.git
 ```
 
 It's highly recommended to use Nix and direnv.
