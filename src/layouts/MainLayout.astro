@@ -4,6 +4,7 @@ import "../styles/global.css";
 const {title} = Astro.props;
 
 import logo from "../assets/logo_submark.svg";
+import Navbar from "../Components/Navbar.astro";
 ---
 
 
@@ -19,6 +20,10 @@ import logo from "../assets/logo_submark.svg";
 		<title>{title} | Robotický Battle na Alejovej</title>
 	</head>
 	<body>
-		<slot />
+		<Navbar />
+		<div class="">
+			<slot />
+		</div>
+	<script src="../scripts/nav.js"></script>
 	</body>
 </html>

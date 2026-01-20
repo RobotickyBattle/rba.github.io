@@ -1,0 +1,62 @@
+---
+import logoPrimary from '../assets/logo_primary.svg';
+---
+<nav class="z-50  relative">
+    <div class="w-full py-4 bg-white shadow-md" id="navbar">
+        <div class="content flex flex-row justify-between items-stretch">
+            <!-- Logo -->
+            <div class="self-center">
+                <a href={`${import.meta.env.BASE_URL}`} class="" aria-label="navigate to home a">
+                    <img src={logoPrimary.src} alt="Logo" class="h-10" />
+                </a>
+            </div>
+            <!-- Menu Items -->
+            <div class="hidden space-x-6 self-center text-sm font-normal md:flex">
+                <a href={`${import.meta.env.BASE_URL}#about`} class="navlink animated-underline" aria-label="navigate to services button">
+					RBA 2025
+				</a>
+                <a href={`${import.meta.env.BASE_URL}#projects`} class="navlink animated-underline" aria-label="navigate to about me button">
+                    O súťaži
+                </a>
+                <a href={`${import.meta.env.BASE_URL}#contact`} class="navlink animated-underline" aria-label="navigate to contact button">
+                    Archív
+                </a>
+                <a href={`${import.meta.env.BASE_URL}#contact`} class="navlink animated-underline" aria-label="navigate to contact button">
+                    Kontakt
+                </a>
+            </div>
+
+            <div class="hidden space-x-6 self-center text-sm font-normal md:flex">
+                <a href={`${import.meta.env.BASE_URL}#about`} class="btn btn-orange" aria-label="navigate to services button">
+					Registrovať sa
+				</a>
+                <!--
+                <a href={`${import.meta.env.BASE_URL}/en`} class="navlink animated-underline" aria-label="navigate to EN version button">
+                    EN
+                </a>
+                 -->
+            </div>
+
+            <!-- Hamburger Icon -->
+            <button id="menu-btn" class="block hamburger self-center md:hidden focus:outline-none" aria-label="toggle mobile menu button">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div id="menu" class="full-screen hidden z-50 fixed backdrop-blur-sm">
+    <div class="font-semibold tracking-widest bg-white">
+        <div class="flex flex-col max-w-[90%] mx-auto">
+            <a href={`${import.meta.env.BASE_URL}/kontakt`} class="navlink-mobile" aria-label="navigate to EN version button">RBA 2025</a>
+			<hr class="w-full border-0 border-b border-gray-500">
+            <a href={`${import.meta.env.BASE_URL}/kontakt`} class="navlink-mobile" aria-label="navigate to EN version button">O súťaži</a>
+			<hr class="w-full border-0 border-b border-gray-500">
+            <a href={`${import.meta.env.BASE_URL}/kontakt`} class="navlink-mobile" aria-label="navigate to EN version button">Archív</a>
+			<hr class="w-full border-0 border-b border-gray-500">
+            <a href={`${import.meta.env.BASE_URL}/kontakt`} class="navlink-mobile" aria-label="navigate to EN version button">Kontakt</a>
+        </div>
+    </div>
+</div>

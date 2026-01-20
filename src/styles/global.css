@@ -62,3 +62,95 @@ h6 {
 .content {
   @apply w-[90%] max-w-[90%] lg:w-[85%] lg:max-w-[100rem] mx-auto;
 }
+
+.navlink,
+.navlink-mobile {
+  @apply text-blue hover:text-blueLight;
+
+  font-family: "Tomorrow", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navlink-mobile {
+  @apply w-[95%] mx-auto outline-none border-0 text-right px-2 py-4;
+}
+
+.btn {
+  @apply border-2 py-2 px-4 text-text cursor-pointer;
+}
+
+.btn-orange {
+  @apply border-orange bg-background text-blue hover:bg-orange hover:text-white;
+}
+
+/*Nav animations
+--------------------------------------------------*/
+
+.animated-underline {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.animated-underline::after {
+  display: block;
+  content: "";
+  @apply border-b-2 border-orange;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.animated-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Hamburger Menu */
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 3px;
+  background: #07478f;
+  transform: rotate(0);
+  transition: all 0.5s;
+  border-radius: 0px;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
