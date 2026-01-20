@@ -1,6 +1,0 @@
----
-title: Vyhľadávanie
-layout: search
-
----
-

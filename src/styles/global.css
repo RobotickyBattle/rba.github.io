@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f9f9f9;
+  --color-text: #04162b;
+  --color-subtext: #a6a6a6;
+  --color-orange: #ff7620;
+  --color-orangeLight: #ffa03c;
+  --color-blue: #07478f;
+  --color-blueLight: #0e5eb7;
+}
+
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  @apply text-text bg-background;
+}
+
+.full-screen {
+  @apply w-full h-screen;
+}
+
+button,
+a {
+  transition: all 0.2s ease-in;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  font-family: "Tomorrow", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 2.75rem !important;
+}
+h2 {
+  font-size: 1.741rem !important;
+}
+h3 {
+  font-size: 1.516rem !important;
+}
+h4 {
+  font-size: 1.32rem !important;
+}
+h5 {
+  font-size: 1.149rem !important;
+}
+h6 {
+  font-size: 1rem !important;
+}
+
+.content {
+  @apply w-[90%] max-w-[90%] lg:w-[85%] lg:max-w-[100rem] mx-auto;
+}
