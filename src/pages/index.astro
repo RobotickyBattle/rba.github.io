@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro"
 
 import hero from '../assets/photos/hero.svg';
 import heroMobile from '../assets/photos/hero-mobile.svg';
+import gearBg from '../assets/bg/orange-gears.svg';
+import about from '../assets/photos/about.jpg';
 ---
 
 <MainLayout title="Domov">
@@ -84,5 +86,20 @@ import heroMobile from '../assets/photos/hero-mobile.svg';
 
   </div>
 </section>
+
+	<section class="w-full bg-contain bg-center bg-repeat" style={{backgroundImage: `url('${gearBg.src}')`,}}>
+		<div class="flex flex-col md:flex-row md:justify-between gap-8 md:gap-0 md:items-stretch py-4 md:py-12 content">
+			<div class="w-full md:w-[45%] self-center mt-20 md:mt-0">
+				<span class="subtext">O RBA</span>
+				<h1 class="text-orange">Čo je RBA?</h1>
+				<div class="mt-2 text-dark">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce  vestibulum id sem nec lacinia. Quisque dictum nibh orci, vitae bibendum  lacus tincidunt ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce  vestibulum id sem nec lacinia. Quisque dictum nibh orci, vitae bibendum  lacus tincidunt ac.
+				</div>
+			</div>
+			<div class="w-full md:w-[45%] self-center">
+				<img src={about.src} alt="photo of me at competition Hack Kosice" class="w-full mx-auto">
+			</div>
+		</div>
+	</section>
 
 </MainLayout>
