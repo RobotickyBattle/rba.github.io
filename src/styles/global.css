@@ -15,7 +15,7 @@ html {
   font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  @apply text-text bg-background;
+  @apply text-blue bg-background;
 }
 
 .full-screen {
@@ -59,6 +59,10 @@ h6 {
   font-size: 1rem !important;
 }
 
+.subtext {
+  @apply text-sm text-subtext;
+}
+
 .content {
   @apply w-[90%] max-w-[90%] lg:w-[85%] lg:max-w-[100rem] mx-auto;
 }
@@ -78,11 +82,15 @@ h6 {
 }
 
 .btn {
-  @apply border-2 py-2 px-4 text-text cursor-pointer;
+  @apply border-2 py-2 px-6 text-text cursor-pointer;
 }
 
 .btn-orange {
   @apply border-orange bg-background text-blue hover:bg-orange hover:text-white;
+}
+
+.btn-orange-full {
+  @apply border-orange bg-orange text-white hover:bg-orangeLight hover:border-orangeLight;
 }
 
 /*Nav animations
