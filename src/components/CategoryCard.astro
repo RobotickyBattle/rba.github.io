@@ -1,0 +1,20 @@
+---
+	const {title, icon, href} = Astro.props;
+---
+
+<a
+  href={href}
+  class="group flex flex-col space-y-4 transition-all duration-300 ease-out hover:scale-[1.03] cursor-pointer"
+>
+  <img
+    src={icon}
+    alt=""
+    class="h-20 aspect-square mx-auto"
+  >
+
+  <div class="flex flex-col text-center items-center">
+    <h4>{title}</h4>
+    <span class="text-xl">→</span>
+  </div>
+</a>
+

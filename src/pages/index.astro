@@ -1,10 +1,18 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
+import CategoryCard from "../components/CategoryCard.astro";
 
 import hero from '../assets/photos/hero.svg';
 import heroMobile from '../assets/photos/hero-mobile.svg';
 import gearBg from '../assets/bg/orange-gears.svg';
 import about from '../assets/photos/about.jpg';
+import blueFull from '../assets/bg/blue-full.svg';
+import racingIcon from '../assets/icons/car.svg';
+import liveIcon from '../assets/icons/puzzle.svg';
+import rocketIcon from '../assets/icons/rocket.svg';
+import battleIcon from '../assets/icons/battle.svg';
+
+
 ---
 
 <MainLayout title="Domov">
@@ -61,31 +69,31 @@ import about from '../assets/photos/about.jpg';
 	</div>
   </section>
   <section id="stats" class="w-full bg-orange text-white py-4">
-  <div class="content flex flex-row justify-between">
-    
-    <div class="flex flex-col items-center">
-      <span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="123">
-        0
-      </span>
-      <span>projektov</span>
-    </div>
+	<div class="content flex flex-row justify-between">
+		
+		<div class="flex flex-col items-center">
+		<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="123">
+			0
+		</span>
+		<span>projektov</span>
+		</div>
 
-    <div class="flex flex-col items-center">
-      <span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="456">
-        0
-      </span>
-      <span>nadšencov</span>
-    </div>
+		<div class="flex flex-col items-center">
+		<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="456">
+			0
+		</span>
+		<span>nadšencov</span>
+		</div>
 
-    <div class="flex flex-col items-center">
-      <span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="78">
-        0
-      </span>
-      <span>škôl</span>
-    </div>
+		<div class="flex flex-col items-center">
+		<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="78">
+			0
+		</span>
+		<span>škôl</span>
+		</div>
 
-  </div>
-</section>
+	</div>
+	</section>
 
 	<section class="w-full bg-contain bg-center bg-repeat" style={{backgroundImage: `url('${gearBg.src}')`,}}>
 		<div class="flex flex-col md:flex-row md:justify-between gap-8 md:gap-0 md:items-stretch py-4 md:py-12 content">
@@ -101,5 +109,19 @@ import about from '../assets/photos/about.jpg';
 			</div>
 		</div>
 	</section>
+
+	<section class="w-full bg-cover bg-left bg-no-repeat text-white" style={{backgroundImage: `url('${blueFull.src}')`,}}>
+		<div class="flex flex-col gap-8 content py-10">
+			<h1 class="text-white text-center">Kategórie</h1>
+			<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+				<CategoryCard title="Racing" icon={racingIcon.src} href="/categories/racing"/>
+				<CategoryCard title="Live Challenge" icon={liveIcon.src} href="/categories/live"/>
+				<CategoryCard title="Vlastný model" icon={rocketIcon.src} href="/categories/rocket"/>
+				<CategoryCard title="Battle bots" icon={battleIcon.src} href="/categories/battle"/>
+			</div>
+		</div>
+	</section>
+
+	
 
 </MainLayout>
