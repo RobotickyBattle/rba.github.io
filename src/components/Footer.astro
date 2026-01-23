@@ -1,0 +1,40 @@
+---
+import logo from "../assets/logo_white.svg";
+import fb from "../assets/icons/fb.svg";
+import ig from "../assets/icons/ig.svg";
+---
+
+
+<footer class="bg-orangeLight text-white">
+  <div class="content px-4 py-8">
+
+    <div class="flex flex-col md:flex-row items-center md:items-center md:justify-between gap-6">
+
+      <!-- Left: Logo -->
+      <div class="shrink-0">
+        <a href="/" class="text-xl font-bold">
+          <img src={logo.src} alt="Logo" class="h-10" />
+        </a>
+      </div>
+
+      <!-- Center: Links -->
+      <div class="flex gap-6 md:absolute md:left-1/2 md:-translate-x-1/2">
+        <a href="#" class="title animated-underline">Pravidlá</a>
+        <a href="#" class="title animated-underline">Archív</a>
+        <a href="#" class="title animated-underline">Compex</a>
+      </div>
+
+      <!-- Right: Social Links -->
+      <div class="flex gap-4">
+        <a href="#" aria-label="Facebook">
+          	<img src={fb.src} alt="Facebook" class="h-8" />
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img src={ig.src} alt="Instagram" class="h-8" />
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
