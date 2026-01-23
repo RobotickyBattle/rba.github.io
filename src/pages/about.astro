@@ -1,0 +1,91 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
+import CategoryList from "../components/CategoryList.astro";
+
+import about from '../assets/photos/about.jpg';
+import history from '../assets/photos/history.jpg';
+import history2 from '../assets/photos/history2.jpg';
+import gearBg from '../assets/bg/orange-gears.svg';
+---
+
+<MainLayout title="O súťaži">
+	<SplitSectionImgTxt title="Čo je RBA?" subtitle="O súťaži" imageSrc={about.src} imageAlt="Racing RBA"   text="Robotický Battle na Alejovej (RBA) je celoslovenská súťaž, ktorá už roky spája fanúšikov technológií, programovania a kreativity. Či už si profík v stavbe autonómnych strojov, alebo ťa baví adrenalínový racing, RBA je miesto, kde môžeš ukázať svoje schopnosti. Súťaž organizovaná študentmi pre študentov – s jedinečnou atmosférou a výzvami, ktoré ťa posunú vpred."/>
+	
+	<CategoryList/>
+	
+	<SplitSectionImgTxt title="Ako vzniklo RBA?" subtitle="História" imageSrc={history.src} imageAlt="Racing v roku 2012" text="Na rozdiel od iných súťaží, RBA nevzniklo „zhora“ ako rozhodnutie inštitúcie, ale „zdola“ – z iniciatívy starších študentov Gymnázia na Alejovej ulici. Ich cieľom bolo vytvoriť pre mladších spolužiakov priateľské a motivačné prostredie, kde by si mohli otestovať svoje schopnosti v programovaní a stavbe robotov ešte predtým, než vyrazia na veľké medzinárodné turnaje."/>
+	
+	<SplitSectionImgTxt reverse title="" subtitle="" imageSrc={history2.src} imageAlt="RBA v roku 2013" text="Táto vízia „priestoru na vyskúšanie“ sa ukázala ako kľúčová. Z pôvodne komornej akcie pre pár nadšencov sa RBA postupne vyformovalo na rešpektované celoslovenské podujatie. Hoci sa technológie a kategórie rokmi menia, podstata zostáva: vytvoriť komunitu, kde skúsenejší odovzdávajú vedomosti mladším a kde súťaž nie je len o víťazstve, ale o zdieľaní inovácií a radosti z robotiky."/>
+
+<section class="w-full py-12 bg-contain bg-center bg-repeat" style={{backgroundImage: `url('${gearBg.src}')`,}}>
+  <div class="content">
+    
+    <div class="text-center mb-16">
+      <h2 class=" text-blue mb-2">História RBA</h2>
+      <div class="h-1.5 w-24 bg-orange mx-auto"></div>
+    </div>
+
+    <div class="relative">
+      
+      <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
+      
+      <div class="block md:hidden absolute left-4 h-full w-1 bg-blue-200"></div>
+
+      <div class="space-y-12">
+        
+        <div class="relative flex items-center justify-between md:flex-row-reverse w-full">
+          <div class="hidden md:block md:w-5/12"></div> 
+          <div class="z-10 absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-orange border-4 border-white rounded-full shadow"></div>
+          <div class="ml-12 md:ml-0 md:w-5/12 bg-white p-6 shadow-md border-r-4 border-orangeLight transition hover:shadow-xl">
+            <span class="text-orange font-black">2010</span>
+            <h3 class="text-lg font-bold text-blue mb-1">Prvotná idea</h3>
+            <p class="text-subtext text-sm">Skupina starších študentov na Alejke sa rozhodla vytvoriť priestor pre mladších žiakov, kde si vedia vyskúšať, aké to je súťažiť.</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between w-full">
+          <div class="hidden md:block md:w-5/12"></div>
+          <div class="z-10 absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blueLight border-4 border-white rounded-full shadow"></div>
+          <div class="ml-12 md:ml-0 md:w-5/12 bg-white p-6 shadow-md border-l-4 border-blueLight transition hover:shadow-xl">
+            <span class="text-blueLight font-black">2013</span>
+            <h3 class="text-lg font-bold text-orange mb-1">Celoslovenský rozmer</h3>
+            <p class="text-subtext text-sm">Jedinečný Racing prilákal śtudentov z celého Slovenska. Z malého eventu sa pomaly stáva veľká celoslovenská súťaž.</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:flex-row-reverse w-full">
+          <div class="hidden md:block md:w-5/12"></div>
+          <div class="z-10 absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-orange border-4 border-white rounded-full shadow"></div>
+          <div class="ml-12 md:ml-0 md:w-5/12 bg-white p-6 shadow-md border-r-4 border-orangeLight transition hover:shadow-xl">
+            <span class="text-orange font-black">2017</span>
+            <h3 class="text-lg font-bold text-blue mb-1">Neustály rast</h3>
+            <p class="text-subtext text-sm">RBA je stálicou medzi slovenskými robotickými súťažami.</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between w-full">
+          <div class="hidden md:block md:w-5/12"></div>
+          <div class="z-10 absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blueLight border-4 border-white rounded-full shadow"></div>
+          <div class="ml-12 md:ml-0 md:w-5/12 bg-white p-6 shadow-md border-l-4 border-blueLight transition hover:shadow-xl">
+            <span class="text-blueLight font-black">2020</span>
+            <h3 class="text-lg font-bold text-orange mb-1">COVID éra</h3>
+            <p class="text-subtext text-sm">Aj napriek pandémii sa súťaž úspešne presunula do online priestoru a vyskúšali sme nový formát.</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:flex-row-reverse w-full">
+          <div class="hidden md:block md:w-5/12"></div>
+          <div class="z-10 absolute left-4 md:left-1/2 transform -translate-x-1/2 w-10 h-10 bg-orange border-4 border-white rounded-full shadow ring-4 ring-orange-200"></div>
+          <div class="ml-12 md:ml-0 md:w-5/12 bg-blue p-8 shadow-2xl border-b-8 border-orangeLight transform hover:-translate-y-1 transition duration-300">
+            <span class="text-orange-400 font-black uppercase">Dnes</span>
+            <h3 class="text-xl font-bold text-white mb-2">Tradícia a komunita</h3>
+            <p class="text-blue-100 text-sm">Jedinečná robotická súťaž, ktorá spája nadšencov a buduje komunitu bude oslavovať 15 rokov.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+</MainLayout>
