@@ -1,16 +1,11 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
-import CategoryCard from "../components/CategoryCard.astro";
+import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
+import CategoryList from "../components/CategoryList.astro";
 
 import hero from '../assets/photos/hero.svg';
 import heroMobile from '../assets/photos/hero-mobile.svg';
-import gearBg from '../assets/bg/orange-gears.svg';
 import about from '../assets/photos/about.jpg';
-import blueFull from '../assets/bg/blue-full.svg';
-import racingIcon from '../assets/icons/car.svg';
-import liveIcon from '../assets/icons/puzzle.svg';
-import rocketIcon from '../assets/icons/rocket.svg';
-import battleIcon from '../assets/icons/battle.svg';
 import placeholder from '../assets/photos/placeholder.png';
 import devity from '../assets/partners/devity.svg';
 import alejka from '../assets/partners/alejka.png';
@@ -99,32 +94,9 @@ import sos from '../assets/partners/sos.svg';
 	</div>
 	</section>
 
-	<section class="w-full bg-contain bg-center bg-repeat" style={{backgroundImage: `url('${gearBg.src}')`,}}>
-		<div class="flex flex-col md:flex-row md:justify-between gap-8 md:gap-0 md:items-stretch py-4 md:py-12 content">
-			<div class="w-full md:w-[45%] self-center mt-20 md:mt-0">
-				<span class="subtext">O RBA</span>
-				<h1 class="text-orange">Čo je RBA?</h1>
-				<div class="mt-2 text-dark">
-					Robotický Battle na Alejovej (RBA) je celoslovenská súťaž, ktorá už roky spája fanúšikov technológií, programovania a kreativity. Či už si profík v stavbe autonómnych strojov, alebo ťa baví adrenalínový racing, RBA je miesto, kde môžeš ukázať svoje schopnosti. Súťaž organizovaná študentmi pre študentov – s jedinečnou atmosférou a výzvami, ktoré ťa posunú vpred.
-				</div>
-			</div>
-			<div class="w-full md:w-[45%] self-center">
-				<img src={about.src} alt="photo of me at competition Hack Kosice" class="w-full mx-auto">
-			</div>
-		</div>
-	</section>
+	<SplitSectionImgTxt title="Čo je RBA?" subtitle="O súťaži" imageSrc={about.src} imageAlt="Racing RBA"   text="Robotický Battle na Alejovej (RBA) je celoslovenská súťaž, ktorá už roky spája fanúšikov technológií, programovania a kreativity. Či už si profík v stavbe autonómnych strojov, alebo ťa baví adrenalínový racing, RBA je miesto, kde môžeš ukázať svoje schopnosti. Súťaž organizovaná študentmi pre študentov – s jedinečnou atmosférou a výzvami, ktoré ťa posunú vpred."/>
 
-	<section class="w-full bg-cover bg-left bg-no-repeat text-white" style={{backgroundImage: `url('${blueFull.src}')`,}}>
-		<div class="flex flex-col gap-8 content py-10">
-			<h1 class="text-white text-center">Kategórie</h1>
-			<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-				<CategoryCard title="Racing" icon={racingIcon.src} href="/categories/racing"/>
-				<CategoryCard title="Live Challenge" icon={liveIcon.src} href="/categories/live"/>
-				<CategoryCard title="Vlastný model" icon={rocketIcon.src} href="/categories/rocket"/>
-				<CategoryCard title="Battle bots" icon={battleIcon.src} href="/categories/battle"/>
-			</div>
-		</div>
-	</section>
+	<CategoryList/>
 
 	<section class="content flex flex-col space-y-8 py-12 items-center">
 		<h1 class="text-orange">Partneri</h1>
