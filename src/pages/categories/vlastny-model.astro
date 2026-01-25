@@ -1,0 +1,139 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro"
+import SplitSectionImgTxt from "../../components/SplitSectionImgTxt.astro";
+import WarningBox from "../../components/WarningBox.astro";
+import NoteBox from "../../components/NoteBox.astro";
+
+import vlastny from "../../assets/photos/vlastny.jpg";
+---
+
+<MainLayout title="Vlastný model - Pravidlá">
+	<SplitSectionImgTxt 
+		title="Vlastný model" 
+		subtitle="Kreativita. Inovácia. Prezentácia." 
+		imageSrc={vlastny.src} 
+		imageAlt="Vlastný model RBA"  
+		text="Máš nápad, ktorý svet ešte nevidel? Vlastný model je kategória bez hraníc, kde sa tvoja fantázia mení na realitu. Od smart domácností až po robotické ramená – dôležitý je originálny nápad, technické spracovanie a schopnosť svoj projekt obhájiť pred porotou. Ukáž nám, ako tvoj robot rieši skutočné problémy, a inšpiruj ostatných svojím technickým riešením."
+	/>
+
+	<div class="relative flex flex-col md:flex-row gap-12 content py-12">
+		<aside class="md:w-64 shrink-0">
+			<div class="sticky top-24 hidden md:block py-2">
+				<h4 class="text-xs font-black uppercase tracking-widest text-subtext mb-6">Obsah</h4>
+				<nav class="flex flex-col space-y-4">
+					<a href="#rozdelenie" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Rozdelenie</a>
+					<a href="#vseobecne" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Všeobecné pravidlá</a>
+					<a href="#prezentacia" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Prezentácia</a>
+					<a href="#priebeh" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Priebeh súťaže</a>
+					<a href="#hodnotenie" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Hodnotenie</a>
+				</nav>
+			</div>
+
+			<div class="md:hidden sticky top-0  z-30 px-4 py-4 border-b overflow-x-auto flex whitespace-nowrap space-x-6 text-sm font-bold no-scrollbar">
+				<a href="#rozdelenie" class="text-orange">Rozdelenie</a>
+				<a href="#vseobecne">Pravidlá</a>
+				<a href="#prezentacia">Prezentácia</a>
+				<a href="#priebeh">Priebeh</a>
+				<a href="#hodnotenie">Hodnotenie</a>
+			</div>
+		</aside>
+
+		<section class="content flex flex-col space-y-8 flex-1 w-full scroll-mt-24">
+			<div class="flex flex-col space-y-4">
+				<h1>Pravidlá</h1>
+				<p>
+					Cieľom súťažiacich je odprezentovať vlastné projekty, ktoré vytvorili. Projekty môžu byť z rôznych oblastí, môžu riešiť reálne probelémy, alebo byť zdrojom zábavy. Dôležitá je originalita, technické prevedenie a schopnosť obhájiť svoj projekt pred porotou.
+				</p>
+			</div>
+
+			<div id="rozdelenie" class="flex flex-col space-y-4 scroll-mt-28">
+				<div class="flex flex-col space-y-2">
+					<h2 class="text-orange">Rozdelenie</h2>
+					<p>
+						Katégória Vlastný model nie je rozdelená na podkategórie. Všetky projekty sú hodnotené spoločne na základe kritérií uvedených v sekcii Hodnotenie. V prípade veľkého počtu prihlásených projektov si organizátori vyhradzujú právo rozdeliť kategóriu na podkategórie ZŠ a SŠ. V takomto prípade rozhoduje vek najstaršieho člena tímu. O tomto rozdelení budú súťažiaci informovaní vopred.
+					</p>
+				</div>
+			</div>
+
+			<div id="vseobecne" class="flex flex-col space-y-4 scroll-mt-28">
+				<div class="flex flex-col space-y-2">
+					<h2 class="text-orange">Všeobecné pravidlá</h2>
+					<p>
+						Táto kategória nemá limitáciu na použité komponenty alebo technológie. Súťažiaci môžu využiť ľubovoľné materiály a technológie na vytvorenie svojho projektu, pokiaľ dodržiavajú všeobecné bezpečnostné pravidlá a pravidlá súťaže.
+					</p>
+					<strong>Na realizáciu projektov môžu súťažiaci použiť:</strong>
+					<ul>
+						<li>ľubovoľné stavebnice (napr. LEGO MINDSTORMS, LEGO Spike, Edison ...)</li>
+						<li>ľubovoľnú inú riadiacu jednotku (ESP32, RaspberryPi, Arduino ...)</li>
+						<li>rôzne materiály na tvorbu konštrukcie (kov, drevo, plast ...)</li>
+						<li>čokoľvek iné, čo súťažiaci považujú za vhodné</li>
+					</ul>
+					<strong>Roboty nesmú:</strong>
+					<ul>
+						<li>Spôsobiť nebezpečenstvo pre súťažiacich alebo divákov.</li>
+						<li>Byť vybavené zbraňami alebo inými prostriedkami na poškodenie iných robotov.</li>
+						<li>Obsahovať nebezpečné látky (napr. výbušné, jedovaté, korozívne).</li>
+						<li>Poškodiť priestory, v ktorých prebieha súťaž</li>
+						<li>Byť zakúpené. Musí to byť výlučne práca žiakov.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="prezentacia" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Prezentácia</h2>
+				<p>
+					Prezentácia Vlastného modelu je formou stánku. Každý tím má vyhradený priestor, kde si môže pripraviť svoj prezentačný stánok. Každý tím môže počítať s jednou školskou lavicou určenou k prezentácii. Vhodným doplnkom stánku je plagát, prípadne elektronická prezentácia vášho modelu a práce na ňom. Odporúčaná veľkosť plagátu je A2 a väčšie.
+
+					<WarningBox text="Ak sa rozhodnete pre elektronickú prezentáciu namiesto plagátu, je potrebné si zabezpečiť vlastný počítač/dataprojektor. V prípade, že máte špecifické požiadavky pre váš stánok uveďte to do prihlášky a včas nás kontaktujte emailom. Plagát si taktiež prineste vytlačený." />
+
+					<WarningBox text="V prípade, že váš model vyžaduje špeciálne podmienky na prezentáciu (napr. pripojenie na internet, napájanie väčším napätím, atď.), informujte nás o tom vopred emailom, aby sme vám vedeli zabezpečiť potrebné podmienky." />
+				</p>
+				<p>
+					Plagát (resp. prezentácia) by mal obsahovať nasledujúce informácie:
+					<ul>
+						<li>Názov tímu, školu/organizáciu, mená členov tímu, tímovú fotku,</li>
+						<li>Názov modelu, popis jeho funkcií, jeho využitie a výhody,</li>
+						<li>Dokumentáciu vývoja -- príprava a vývoj modelu,</li>
+						<li>Na čo ste najviac hrdí, čo bolo najnáročnejšie, vízia do budúcnosti,</li>
+						<li>Program, popis jeho fungovania, prípadne jeho zujímavé časti.</li>
+					</ul>
+					
+				</p>
+				<p>
+					Je vhodné aby plagát obsahoval viac obrázkov ako textu. Text by mal byť dostatočne veľký, aby bol dobre čítateľný. Vzhľad, usporiadanie plagátu a čo o vašom modeli poviete je čisto na Vás. Snažte sa, aby vaše prezentovanie bolo zaujímavé a zrozumiteľné. Dávajte si pozor na gramatické chyby. Ďalšie tipy k prezentácii nájdete na <a href="https://www.canva.com/design/DAF8mqj-raQ/9-ZzKWqfmlJTziAevh1C3A/view?utm_content=DAF8mqj-raQ&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" class="text-orange animated-underline">tomto odkaze</a>
+				</p>
+			</div>
+
+			<div id="priebeh" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Priebeh súťaže</h2>
+				<p>
+					Každý tím bude mať vyhradený čas (12 minút), kedy musia byť všetci členovia pri stánku. V tomto vyhradenom čase príde porota a súťažiaci odprezentujú svoj model. Po prezentácii bude porota klásť doplňujúce otázky. Mimo vyhradený čas je odporúčané aby sa na stánku nachádzal aspoň jeden z členov tímu pre prípadné doplňujúce otázky poroty a publika.
+				</p>
+				<p>
+					Časové rozdelenie prezentácie:
+					<ul>
+						<li>7 minút - prezentácia a ukážka modelu</li>
+						<li>5 minút - doplňujúce otázky od poroty</li>
+					</ul>
+					Odporúčame aby ste si prezentáciu a ukážku modelu nacvičili vopred, aby ste vedeli dodržať časový limit.
+				</p>
+				<NoteBox text="Odporúčame si natrénovať prezentáciu tak, aby ste vedeli dodržať časový limit. Z dôvodu dodržania harmonogramu je porota nútená prerušiť prezentáciu, ak časový limit bude prekročený." />
+			</div>
+
+			<div id="hodnotenie" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Hodnotenie</h2>
+				<p>
+					Hodnotenie pozostáva zo 4 rovnocenných oblastí:
+					<ul>
+						<li><strong>Softvér</strong> - náročnosť a efektívnosť programu</li>
+						<li><strong>Konštrukcia</strong> - pevnosť a stabilita konštrukcie</li>
+						<li><strong>Kreativita a funkčnosť</strong> - originalita a vzhľad modelu, zaujímavé riešenia problémov, funkčnosť pri predvádzaní</li>
+						<li><strong>Prezentácia</strong> - schopnosť pohotovo reagovať na otázky, vystupovanie členov tímu, plagát, prezentácia stánku.</li>
+					</ul>
+					Za každú z vyššie uvedených kategórií môže porota udeliť 0 až 5 bodov. Porota môže tímu udeliť až 3 bonusové body v prípade, že ju model výnimočne oslovil.
+				</p>
+			</div>
+		</section>
+	</div>
+
+</MainLayout>
