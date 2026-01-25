@@ -5,7 +5,7 @@ const {title, subtitle, imageSrc, imageAlt, text, reverse} = Astro.props;
 
 <section class="w-full bg-contain bg-center bg-repeat" style={{backgroundImage: `url('${gearBg.src}')`,}}>
 		<div class={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 md:gap-0 md:justify-between md:items-stretch py-4 md:py-12 content`}>
-			<div class="w-full md:w-[45%] self-center mt-20 md:mt-0">
+			<div class="w-full md:w-[45%] self-center mt-8 md:mt-">
 				<span class="subtext">{subtitle}</span>
 				<h1 class="text-orange">{title}</h1>
 				<div class="mt-2 text-dark">

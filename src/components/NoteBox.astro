@@ -1,0 +1,15 @@
+---
+const { text } = Astro.props;
+---
+
+<div class="w-full flex flex-col space-y-2 border-2 border-lime-500 text-lime-500 px-4 py-2">
+	<div class="flex flex-row space-x-2">
+		<span class="material-symbols-outlined">
+			info
+		</span>
+		<h5 class="">Poznámka</h5>
+	</div>
+	<p>
+		{text}
+	</p>
+</div>

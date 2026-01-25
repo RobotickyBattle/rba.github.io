@@ -14,7 +14,7 @@ import battleIcon from '../assets/icons/battle.svg';
 		<div class="flex flex-col gap-8 content py-10">
 			<h1 class="text-white text-center">Kategórie</h1>
 			<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-				<CategoryCard title="Racing" icon={racingIcon.src} href="/categories/racing"/>
+				<CategoryCard title="Racing" icon={racingIcon.src} href={`${import.meta.env.BASE_URL}categories/racing/`}/>
 				<CategoryCard title="Live Challenge" icon={liveIcon.src} href="/categories/live"/>
 				<CategoryCard title="Vlastný model" icon={rocketIcon.src} href="/categories/rocket"/>
 				<CategoryCard title="Battle bots" icon={battleIcon.src} href="/categories/battle"/>

@@ -166,3 +166,7 @@ h6 {
 .reverse-row {
   @apply flex-row-reverse;
 }
+
+ul {
+  @apply list-disc list-inside ml-4;
+}
