@@ -8,6 +8,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  site: 'https://robotickybattle.sk',
   base: "/",
   i18n: {
     locales: ["sk", "en"],
