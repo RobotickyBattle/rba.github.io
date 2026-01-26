@@ -1,0 +1,57 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ContactCard from "../components/ContactCard.astro";
+
+import fb from "../assets/icons/fb-blue.svg";
+import ig from "../assets/icons/ig-blue.svg";
+import yt from "../assets/icons/yt-blue.svg";
+import mail from "../assets/icons/mail-blue.svg";
+---
+
+<MainLayout title="Kontakt">
+	<section class="content py-12">
+        <div class="text-center mb-16">
+                <h1 class=" text-blue ">Kontakt</h1>
+                <div class="h-1.5 w-20 bg-orange mx-auto mt-4"></div>
+                <p class="text-subtext mt-6 text-lg">Máš otázky k súťaži alebo pravidlám? Napíš nám alebo nás sleduj na sociálnych sieťach.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                
+                <ContactCard 
+					platform="Email" 
+					name="info@robotickybattle.sk"
+					link="mailto:info@robotickybattle.sk"
+					icon={mail.src} />
+                
+                <ContactCard 
+					platform="Facebook" 
+					name="@robotickybattle"
+					link="https://www.facebook.com/robotickybattle"
+					icon={fb.src} />
+                
+                <ContactCard 
+					platform="YouTube" 
+					name="@RobotickyBattlenaAlejovej"
+					link="https://www.youtube.com/@RobotickyBattlenaAlejovej"
+					icon={yt.src} />
+                
+                <ContactCard 
+					platform="Instagram" 
+					name="@robotickybattle"
+					link="https://www.instagram.com/robotickybattle"
+					icon={ig.src} />
+
+            </div>
+
+            <div class="mt-12 bg-blue text-white p-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <h4 class="text-lg font-bold">Miesto konania</h4>
+                    <p class="opacity-80 leading-relaxed">Gymnázium, Alejová 1<br>041 49 Košice, Slovensko</p>
+                </div>
+                <a href="https://maps.app.goo.gl/jCcDpGEFmf35gxBB8" target="_blank" class="bg-white text-blue px-6 py-3 font-bold hover:bg-orange hover:text-white transition-colors">
+                    Otvoriť v Mapách
+                </a>
+            </div>
+    </section>
+</MainLayout>

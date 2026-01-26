@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f9f9f9;
+  --color-text: #04162b;
+  --color-subtext: #a6a6a6;
+  --color-orange: #ff7620;
+  --color-orangeLight: #ffa03c;
+  --color-blue: #07478f;
+  --color-blueLight: #0e5eb7;
+}
+
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  @apply text-blue bg-background;
+}
+
+.full-screen {
+  @apply w-full h-screen;
+}
+
+button,
+a {
+  transition: all 0.2s ease-in;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  font-family: "Tomorrow", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 2.75rem !important;
+}
+h2 {
+  font-size: 1.741rem !important;
+}
+h3 {
+  font-size: 1.516rem !important;
+}
+h4 {
+  font-size: 1.32rem !important;
+}
+h5 {
+  font-size: 1.149rem !important;
+}
+h6 {
+  font-size: 1rem !important;
+}
+
+.subtext {
+  @apply text-sm text-subtext;
+}
+
+.content {
+  @apply w-[90%] max-w-[90%] lg:w-[85%] lg:max-w-[100rem] mx-auto;
+}
+
+.navlink,
+.navlink-mobile {
+  @apply text-blue hover:text-blueLight;
+
+  font-family: "Tomorrow", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navlink-mobile {
+  @apply w-[95%] mx-auto outline-none border-0 text-right px-2 py-4;
+}
+
+.btn {
+  @apply border-2 py-2 px-6 text-text cursor-pointer;
+}
+
+.btn-orange {
+  @apply border-orange bg-background text-blue hover:bg-orange hover:text-white;
+}
+
+.btn-orange-full {
+  @apply border-orange bg-orange text-white hover:bg-orangeLight hover:border-orangeLight;
+}
+
+/*Nav animations
+--------------------------------------------------*/
+
+.animated-underline {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.animated-underline::after {
+  display: block;
+  content: "";
+  @apply border-b-2 border-orange;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.animated-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Hamburger Menu */
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 3px;
+  background: #07478f;
+  transform: rotate(0);
+  transition: all 0.5s;
+  border-radius: 0px;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.reverse-row {
+  @apply flex-row-reverse;
+}
+
+ul {
+  @apply list-disc list-inside ml-4;
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

@@ -1,0 +1,140 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
+import CategoryList from "../components/CategoryList.astro";
+
+import racing from '../assets/photos/racing2.jpg';
+import hero from '../assets/photos/hero-mobile.svg';
+import vyzva from '../assets/photos/vyzva.jpg';
+---
+
+<MainLayout title="RBA 2025">
+	<section class="relative flex items-center pt-12 pb-20">
+        
+        <div class="md:hidden absolute top-8 right-0 bg-orange text-white px-6 py-4 shadow-lg z-50">
+            <p class="text-[10px] uppercase font-bold leading-none opacity-90">Zľava do</p>
+            <p class="text-lg font-black leading-none">8.5.2025</p>
+        </div>
+
+        <div class="md:flex md:flex-row md:justify-between content md:items-center w-full">
+            
+            <div class="md:w-1/2 z-10 flex flex-col space-y-2">
+                <p class="text-subtext text-lg font-light mb-2">Pozývame Vás na</p>
+                <span class="title text-5xl md:text-7xl text-orange leading-tight md:leading-none">
+                    15. ročník
+				</span>
+                <p class="text-blue">
+                    súťaže Robotický Battle na Alejovej
+                </p>
+                
+                <div class="mt-10 space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-2xl">📅</span>
+                        <p class="text-xl font-bold text-gray-700 uppercase tracking-tight">2. 6. 2025</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-2xl">📍</span>
+                        <p class="text-xl font-bold text-gray-700 tracking-tight leading-tight">Gymnázium, Alejová 1, Košice</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden md:flex md:w-1/2 mt-0 relative justify-center items-center">
+                <div class="relative w-5/6 h-5/6 aspect-square bg-blueLight p-2 shadow-xl transform -rotate-3">
+                    <div class="w-full h-full bg-gray-200 overflow-hidden">
+                        <img 
+                            src={racing.src} 
+                            alt="Racing" 
+                            class="w-full h-full object-cover shadow-inner"
+                        >
+                    </div>
+                    
+                    <div class="absolute -bottom-12 -right-12 float-animation w-56 h-56 bg-orangeLight p-6 text-white flex flex-col justify-center shadow-2xl transform rotate-6">
+                        <p class="text-xs uppercase font-bold mb-2 tracking-tighter">Znížená cena do</p>
+                        <p class="text-4xl font-black mb-4 tracking-tight">8.5.2025</p>
+                        <div class="border-t border-orange pt-4">
+                            <p class="text-[11px] leading-tight">
+                                Registrácia prebieha do<br>
+                                <span class="font-bold">29.5.2025 16:00</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+	
+	<section id="stats" class="w-full bg-orange text-white py-4">
+		<div class="content flex flex-row justify-between">
+			
+			<div class="flex flex-col items-center">
+				<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="9">
+					9
+				</span>
+				<span>hodín</span>
+			</div>
+
+			<div class="flex flex-col items-center">
+				<div class="flex flex-row">
+					<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="6">
+						6
+					</span>
+					<span class="title text-xl sm:text-2xl md:text-3xl">+</span>
+				</div>
+				<span>sprievodných aktivít</span>
+			</div>
+
+			<div class="flex flex-col items-center">
+				<div class="flex flex-row">
+					<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="50">
+						50
+					</span>
+					<span class="title text-xl sm:text-2xl md:text-3xl">+</span>
+				</div>
+				<span>projektov</span>
+			</div>
+
+		</div>
+	</section>
+
+	<SplitSectionImgTxt title="Príďte ukázať čo dokážete" subtitle="RBA 2026" imageSrc={vyzva.src} imageAlt="Live Challenge robot RBA"   text="Prídťe si zmerať sily so žiakmi z celého Slovenska a ukázať, čo vo vás je. Čakajú vás zaujímavé výzvy, pri ktorých preveríte logické myslenie, kreativitu aj schopnosť pracovať v tíme. Či už ste začiatočníci alebo skúsení konštruktéri, u nás má každý šancu ukázať svoj talent. Príďte sa zabaviť, naučiť sa niečo nové a zažiť jedinečnú atmosféru."/>
+
+	<CategoryList />
+
+	<section class="content py-12 flex flex-col space-y-4">
+		<div class="flex flex-col">
+			<span>
+				RBA 2026
+			</span>
+			<h1 class="text-orange">Pravidlá</h1>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+				<a href={`${import.meta.env.BASE_URL}rules/vseobecne-pravidla/`} class="btn btn-orange flex flex-row gap-2 justify-between">
+					<span>Všeobecné pravidlá</span>
+					<span class="material-symbols-outlined">
+						arrow_outward
+					</span>
+				</a>
+				<a href={`${import.meta.env.BASE_URL}categories/racing/`} class="btn btn-orange flex flex-row gap-2 justify-between">
+					<span>Racing</span>
+					<span class="material-symbols-outlined">
+						arrow_outward
+					</span>
+				</a>
+				<a href={`${import.meta.env.BASE_URL}categories/live-challenge/`} class="btn btn-orange flex flex-row gap-2 justify-between">
+					<span>Live Challenge</span>
+					<span class="material-symbols-outlined">
+						arrow_outward
+					</span>
+				</a>
+				<a href={`${import.meta.env.BASE_URL}categories/vlastny-model/`} class="btn btn-orange flex flex-row gap-2 justify-between">
+					<span>Vlastný model</span>
+					<span class="material-symbols-outlined">
+						arrow_outward
+					</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+</MainLayout>

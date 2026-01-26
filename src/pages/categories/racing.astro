@@ -1,0 +1,231 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro"
+import SplitSectionImgTxt from "../../components/SplitSectionImgTxt.astro";
+import WarningBox from "../../components/WarningBox.astro";
+import NoteBox from "../../components/NoteBox.astro";
+
+import racing from "../../assets/photos/racing.jpg";
+---
+<MainLayout title="Racing - Pravidlá">
+	<SplitSectionImgTxt title="Racing" subtitle="Rýchlosť. Postreh. Adrenalín." imageSrc={racing.src} imageAlt="Racing RBA"   text="Kategória Racing je divácky najatraktívnejšou časťou RBA. Úloha je jasná: zostrojiť diaľkovo ovládané vozidlo, ktoré prekoná členitú prekážkovú dráhu v čo najkratšom čase. Nie je to však len o „plyne na podlahe“. Trať preverí stabilitu tvojej konštrukcie, polomer otáčania a tvoju schopnosť reagovať na nečakané zákruty pod tlakom časomiery. Trúfneš si pokoriť traťový rekord?"/>
+
+	<section class="flex flex-col space-y-2 content py-12">
+		<h1>Pravidlá</h1>
+		<p>
+			Pravidlá tejto kategórie zverejníme čoskoro. Pre predstavu si môžete prečítať <a href="https://github.com/RobotickyBattle/rba.github.io/blob/master/static/pdf/rules/racing/2025-Racing.pdf" target="_blank" class="text-orange animated-underline">minuloročné pravidlá</a>.
+		</p>
+	</section>
+
+<!--
+	<div class="relative flex flex-col md:flex-row gap-12 content py-12">
+		<aside class="md:w-64 shrink-0">
+			<div class="sticky top-24 hidden md:block py-2">
+				<h4 class="text-xs font-black uppercase tracking-widest text-subtext mb-6">Obsah</h4>
+				<nav class="flex flex-col space-y-4">
+					<a href="#rozdelenie" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Rozdelenie</a>
+					<a href="#bezpecnost" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Bezpečnostné pokyny</a>
+					<a href="#vseobecne" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Všeobecné pravidlá</a>
+					<a href="#hodnotenie" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Hodnotenie</a>
+					<a href="#priebeh" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Priebeh súťaže</a>
+					<a href="#trat" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Popis trate</a>
+				</nav>
+			</div>
+
+			<div class="md:hidden sticky top-0  z-30 px-4 py-4 border-b overflow-x-auto flex whitespace-nowrap space-x-6 text-sm font-bold no-scrollbar">
+				<a href="#rozdelenie" class="text-orange">Rozdelenie</a>
+				<a href="#bezpecnost">Bezpečnosť</a>
+				<a href="#vseobecne">Pravidlá</a>
+				<a href="#hodnotenie">Hodnotenie</a>
+				<a href="#priebeh">Priebeh</a>
+				<a href="#trat">Trať</a>
+			</div>
+		</aside>
+
+		<section class="content flex flex-col space-y-8 flex-1 w-full scroll-mt-24">
+			<div class="flex flex-col space-y-4">
+				<h1>Pravidlá</h1>
+				<p>
+					Súťaž pozostáva z dvoch častí, v prvej časti budú tímy jazdiť kvalifikačné jazdy, na základe ktorých sa určí ich poradie pri štarte v ostrých jazdách a rozdelenie do skupín. Úlohou v kvalifikácii je čo najrýchlejšie prejsť traťou a vybojovať si tak čo najlepšiu pozíciu a skupinu. Úlohou v ostrých jazdách je prísť do cieľa ako prvý. Počet kôl sa určí priamo na súťaži.
+				</p>
+			</div>
+
+			<WarningBox text="Racing v tomto roku prináša niekoľko významných zmien, preto si ich dôkladne naštudujte. Ak máte akékoľvek otázky alebo nejasnosti, neváhajte nás kontaktovať." />
+
+			<div id="rozdelenie" class="flex flex-col space-y-4 scroll-mt-28">
+				<div class="flex flex-col space-y-2">
+					<h2 class="text-orange">Rozdelenie</h2>
+					<p>
+						Vzhľadom na napredovanie technológií a zmeny v populárnych komponentoch používaných súťažiacimi sme sa rozhodli poupraviť podkategórie, aby to bolo viac férovo rozdelené. Kategórie pre RBA 2025 sú nasledovné: Racing Cup a Racing Open.
+					</p>
+				</div>
+				<div class="flex flex-col space-y-2">
+					<h3>Racing Cup</h3>
+					<p>
+						Táto kategória je primárnou kategóriou súťaže. Do tejto kategórie sa radia všetky modely, ktoré spĺňajú nasledovné podmienky:
+					</p>
+					<div>
+						<strong>Elektronické súčiastky sú výhradne zo sady:</strong>
+						<ul>
+							<li>LEGO MINDSTORMS NXT / EV3</li>
+							<li>LEGO Spike</li>
+							<li>Edison</li>
+							<li>ELECFREAKS</li>
+						</ul>
+					</div>
+					<div>
+						<strong>alebo</strong>
+						<ul>
+							<li>napätie plne nabitej batérie nepresahuje 9V</li>
+							<li>H Bridge musí byť napájaný cez poistku <a href="https://www.soselectronic.com/sk-sk/products/bel-fuse/0zrb0135ff2e-1-255978" target="_blank" class="animated-underline text-orange">Poistka vratná PTC, polymérová 0ZRB 30V 1,35A P5,1mm THT radiálna</a> Ak to nie je možné realizovať, poistka musí byť zaradená do hlavného napájania t.j. hneď za batériou</li>
+							<li>Robot neobsahuje žiadne prídavné aktívne alebo pasívne chladenie poistky</li>
+						</ul>
+					</div>
+					<p>
+						Splnenie podmienok posudzuje porota na technickom prevedení. V prípade, že model nespĺňa podmienky kategórie bude automaticky zaradený do kategórie OPEN. <br><br>
+
+						V prípade, že robot bude mať inú poistku, tím ju na súťaži bude musieť vymeniť za takú, ktorú mu poskytne porota kategórie.
+					</p>
+				</div>
+				<div class="flex flex-col space-y-2">
+					<h3>Racing OPEN</h3>
+					<p>
+						V kategórii Open môžu súťažiaci použiť čokoľvek v rámci pravidiel. Motory, servá, regulátory, karoséria, kolesá, ovládanie (prijímač, vysielač) a batérie môžu byť kúpené. Podvozok, vytáčanie a všetko ostatné musí byť vyrobené súťažiacimi.
+					</p>
+				</div>
+			</div>
+
+			<div id="bezpecnost" class="flex flex-col space-y-4 scroll-mt-28">
+				<div class="flex flex-col space-y-2">
+					<h2 class="text-orange">Bezpečnostné pokyny</h2>
+					<p>
+						Všetky autá, ktoré neobsahujú výlučne originálne LEGO elektronické súčiastky <strong>musia</strong> spĺňať nasledovné bezpečnostné pokyny:
+						
+						<ul>
+							<li>Batérie sa musia nachádzať v ochrannom obale o hrúbke minimálne 1mm. Výnimku tvoria batérie obsahujúce pevný obal (napr. 18650 batérií).</li>
+							<li>Batéria na robotovi musí byť umiestnená tak, aby v prípade kolízie bolo zabránené možnosti priamemu kontaktu iného robota alebo dráhy s batériou.</li>
+							<li>Vo vrchnej časti robota musí byť jasne viditeľné červené tlačidlo (switch), ktoré odpojí batériu.</li>
+						</ul>
+					</p>
+				</div>
+				<div class="flex flex-col space-y-2">
+					<h3>Bezpečnostná kontrola</h3>
+					<p>
+						To, či auto spĺňa bezpečnostné pokyny sa kontroluje najneskôr počas technického prevedenia. Súťažiaci môžu prísť na bezpečnostnú kontrolu aj po registrácii. Ak auto úspešne absolvuje bezpečnostnú kontrolu, obdrží nálepku. Autám bez úspešnej bezpečnostnej previerky je zakázané pohybovať sa po súťažnej trati a tréningovej zóne.
+					</p>
+					<NoteBox text="Bezpečnostná kontrola nie je technickou kontrolou. Je to samostatná kontrola, kde sa kontroluje splnenie bezpečnostných pokynov. Auto môže úspešne prejsť bezpečnostnou kontrolou, no nemusí prejsť technickou, kde sa kontroluje splnenie pravidiel a požiadaviek." />
+					<p>
+						Po bezpečnostnej a technickej kontrole auta už nie je možné auto meniť, t.j. vymeniť komponent za iný druh. V prípade akejkoľvek zmeny musí auto podstúpiť obe kontroly nanovo.
+					</p>
+				</div>
+			</div>
+
+			<div id="vseobecne" class="flex flex-col space-y-4 scroll-mt-28">
+				<div class="flex flex-col space-y-2">
+					<h2 class="text-orange">Všeobecné pravidlá</h2>
+					<ul>
+						<li>Kontakt robota s robotom je povolený, ale zasiahnutý robot nesmie byť materiálne poškodený (zlomené alebo inak poškodené súčiastky). Vážnosť situácie posúdia rozhodcovia.</li>
+						<li>Model môže byť ovládaný diaľkovo, ale môže pracovať aj autonómne.</li>
+						<li>Ak sa model počas jazdy technicky poškodí, je možné ho vrátiť na štart, opraviť a nanovo spustiť. Počet celých odjazdených kôl sa zachováva.</li>
+						<li>Každý robot musí mať na hornej časti vodorovnú hladkú plochu o veľkosti minimálne 10 x 5cm (dĺžka  x  šírka), na ktorej bude nalepené identifikačné čislo. Nálepku s číslom tím obdrží počas technickej kontroly. Súťažných a kvalifikačných kôl sa môžu zúčastniť len tímy, ktorých robot má identifikačné číslo.</li>
+						<li>Robot smie prejsť ponad mantinel iba za použitia skokanského mostíka.</li>
+						<li>Počas kvalifikačných a súťažných kôl je zakázaný voľný pohyb po súťažnej trati. Súťažíaci sa smú pohybovať len po vyznačených miestach.</li>
+						<li>Počas celého súťažného dňa je <strong>zakázané</strong> jazdiť s autami mimo tréningový a súťažný okruh.</li>
+						<li>Autám, ktoré používajú elektronické komponenty iné ako LEGO je <strong>zakázané</strong> jazdiť bez úspešnej bezpečnostnej previerky.</li>
+						<li>Súťažné modely musia byť totožné s tými, ktoré boli na technickej kontrole.</li>
+					</ul>
+					<strong>Roboty môžu byť vybavené nasledovnými komponentami:</strong>
+					<ul>
+						<li>motor, regulátor, servo</li>
+						<li>prijímač, vysielač, batéria</li>
+						<li>vlastná elektronika, gyroskop a iné snímače</li>
+						<li>tlmiče, diferenciály, poloosy, hriadele</li>
+						<li>diely vyrobené súťažiacimi</li>
+						<li>diely vytlačené na 3D tlačiarni</li>
+					</ul>
+					<strong>Roboty musia:</strong>
+					<ul>
+						<li>Byť vybavené funkciou spiatočky.</li>
+						<li>V prípade straty signálu zastať.</li>
+						<li>Mať maximálne 5 motorov.</li>
+						<li>Mať nasledovné maximálne rozmery: 40 x 30 x 40cm (dĺžka  x  šírka  x  výška).</li>
+						<li>Mať maximálnu hmotnosť 3kg.</li>
+					</ul>
+					<strong>Roboty nesmú:</strong>
+					<ul>
+						<li>Používať IR na ovládanie</li>
+						<li>Mať celú nápravu vytiahnutú zo závodného podvozku RC autíčka</li>
+						<li>Mať komplet nápravu zo stavebnice (tu sa radí aj predrobený Micro:Bit podvozok). Zadná <a href="http://static.competitionx.com/uploads/2017/01/team-associcated-rc10f6-factory-team-f1-car-p6.jpg" target="_blank" class="animated-underline text-orange">os s diferenciálom</a> je povolená.</li>
+						<li>Použiť už hotovú nápravu alebo podvozok</li>
+						<li>Použiť <a href="https://grabcad.com/library/openrc-1-10-3d-printable-rc-truggy" target="_blank" class="animated-underline text-orange">voľne dostupný RC model</a> vytlačený na 3D tlačiarni.</li>
+						<li>Byť zakúpené. Musí to byť výlučne práca žiakov.</li>
+					</ul>
+					<p>
+						Porušenie pravidel má za následok varovanie a následnu diskvalifikáciu tímu z danej kategórie.
+						<br>
+						Za prípadné škody na robotoch nezodpovedá organizátor.
+					</p>
+				</div>
+			</div>
+
+			<div id="hodnotenie" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Hodnotenie</h2>
+				<div class="flex flex-col space-y-2">
+					<h3>Kvalifikácia a skupiny</h3>
+					<p>
+						Pred hlavnými jazdami budú tímy rozdelené do skupín A až F na základe času v kvalifikačnom kole. Kvalifikácia prebieha na skrátenej trati. Každý tím má na kvalifikáciu 3 pokusy (3 kolá) a časový limit 5 minút. Ostré jazdy začnú od poslednej skupiny, pričom najlepšie dva roboty postupujú do vyššej skupiny.
+					</p>
+				</div>
+				<div class="flex flex-col space-y-2">
+					<h3>Najlepšie technické prevedenie</h3>
+					<p>
+						V rámci oboch kategórií bude udelené ocenenie za Najlepšie technické prevedenie.
+					</p>
+					<p>
+						Hodnotenie tímov a kontrola modelu bude prebiehať bezprostredne pred kvalifikačnou jazdou pri vstupe na trať. Pre vstup a výstup z trate bude potrebné použiť jasne vyznačené miesta. Pri technickej kontrole tím stručne odprezentuje program robota, konštrukciu a preukáže manévrovateľnosť. Dostavte sa na technickú kontrolu aspoň 2 minúty skôr. Model použitý pri kvalifikácii musí byť totožný s modelom, s ktorým sa bude jazdiť pretek.
+					</p>
+					<p>
+						Počas technickej kontroly porota urobí foto / video záznam modelu. Porota sa môže rozhodnúť vykonať pred štartom námatkovú kontrolu modelov, aby sa ubezpečila, že model je totožný s tým, ktorý bol na technickej kontrole. V prípade zistenia nezhody hrozí tímu diskvalifikácia.
+					</p>
+				</div>
+			</div>
+
+			<div id="priebeh" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Priebeh súťaže</h2>
+				<p>
+					Na základe najlepšieho času z kvalifikácie budú tímy rozdelené do skupín A až F. Počet kôl v ostrých jazdách bude určený na mieste podľa počtu prihlásených tímov. V každom kole štartuje naraz maximálne 10 tímov. Víťaz každého kola postupuje do ďalšieho kola, pričom v prípade rovnosti časov rozhoduje lepší kvalifikačný čas. Maximálna dĺžka preteku je 10 minút.
+				</p>
+				<p>
+					Každý tím má na trati 2 členov - šoféra a technika. Úlohou šoféra je diaľkovo riadiť vozidlo, zatiaľ čo technik je zodpovedný za prípadné opravy a úpravy vozidla počas pretekov. Obe pozície môžu komunikovať a koordinovať svoje činnosti, aby dosiahli čo najlepší výkon na trati. Technici stoja pri trati, a sledujú priebeh súťaže. V prípade kolízie auta s iným vozidlom alebo s prekážkou, technik môže vozidlo vziať do boxu na opravu. Vozidlo do boxu prenáša technik po vonkajšom obvode trate. V boxe môže technik vykonať opravy alebo úpravy vozidla, ale nesmie meniť jeho základnú konštrukciu alebo komponenty. Po oprave vozidlo vráti na trať na štartovnú pozíciu a pokračuje v preteku. Počet kôl, ktoré tím odjazdil, sa zachováva. Ak tím pozostáva len z jedného člena, bude mu pridelený člen organizačného tímu ako technik. V tomto prípade organizátor len prenáša auto do boxu a späť na trať, ale nezasahuje do opráv alebo úprav vozidla.
+				</p>
+			</div>
+
+			<div id="trat" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Popis trate</h2>
+				<p>
+					Trať je vyznačená mantinelmi o výške aspoň 3 cm. Na trati sa budú nachádzať rovné úseky rôznych dĺžok, oblúky, mierny náklon trate a rôzne stúpania, či klesania.
+				</p>
+				<div class="flex flex-col space-y-2">
+					<div>
+						<p><strong>Šírka trate</strong> – trať bude široká minimálne 50 cm.</p>
+					</div>
+
+					<div>
+						<p><strong>Prekážky</strong> – na trati sa môžu nachádzať prekážky, ktoré budú uložené tak, že medzi aspoň jednou vodiacou stenou a prekážkou bude minimálne 35 centimetrová medzera. Prekážky môžu byť fixne pripevnené k povrchu.</p>
+					</div>
+
+					<div>
+						<p><strong>Skokanský mostík</strong> – takýto prvok sa môže nachádzať na skratke (dá sa obísť okľukou), pôjde o naklonenú rovinu výšky maximálne 15 cm a s maximálnym sklonom 20°.</p>
+					</div>
+
+					<div>
+						<p><strong>Boxy</strong> – na trati sa nachádzajú boxy, v ktorých počas jazdy môžete svojho robota opraviť bez toho, aby sa musel vrátiť na štartovnú pozíciu a opakovať kolo. Budú sa nachádzať pri štarte.</p>
+					</div>
+
+					<div>
+						<p><strong>Povrch</strong> – jazdiť sa bude na palubovke. Na trati sa môžu nachádzať umelé nerovnosti alebo plochy z rôznych materiálov (napr. koberec s krátkymi vláknami), vzhľadom na to odporúčame svetlosť podvozku (vzdialenosť najnižšieho bodu podvozku od vozovky) aspoň 1 cm. Najmä v kategórii elektronika si treba dať pozor na vhodne zvolené pneumatiky a dostatočne citlivú reguláciu motorov.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div> -->
+</MainLayout>

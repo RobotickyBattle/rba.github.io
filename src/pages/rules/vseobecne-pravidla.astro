@@ -1,0 +1,190 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro"
+import NoteBox from "../../components/NoteBox.astro";
+import WarningBox from "../../components/WarningBox.astro";
+---
+
+<MainLayout title="Všeobecné pravidlá">
+	<div class="relative flex flex-col md:flex-row gap-12 content py-12">
+		<aside class="md:w-64 shrink-0">
+			<div class="sticky top-24 hidden md:block py-2">
+				<h4 class="text-xs font-black uppercase tracking-widest text-subtext mb-6">Obsah</h4>
+				<nav class="flex flex-col space-y-4">
+					<a href="#tim" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Tím</a>
+					<a href="#kategorie" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Súťažné kategórie</a>
+					<a href="#sutaznemodely" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Súťažné modely</a>
+					<a href="#reklama" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Reklama</a>
+					<a href="#dokumentacia" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Dokumentácia</a>
+					<a href="#samostatnapraca" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Samostatná práca</a>
+					<a href="#priestor" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Priestory súťaže</a>
+					<a href="#jazyk" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Jazyk súťaže</a>
+					<a href="#podmienky" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Podmienky účasti</a>
+					<a href="#bezpecnost" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Bezpečnostné zásady a zodpovednosť za škody</a>
+					<a href="#ochrana" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Ochrana osobných údajov</a>
+				</nav>
+			</div>
+
+			<div class="md:hidden sticky top-0  z-30 px-4 py-4 border-b overflow-x-auto flex whitespace-nowrap space-x-6 text-sm font-bold no-scrollbar">
+				<a href="#tim" class="text-orange">Tím</a>
+				<a href="#kategorie">Súťažné kategórie</a>
+				<a href="#sutaznemodely">Súťažné modely</a>
+				<a href="#reklama">Reklama</a>
+				<a href="#dokumentacia">Dokumentácia</a>
+				<a href="#samostatnapraca">Samostatná práca</a>
+				<a href="#priestor">Priestory súťaže</a>
+				<a href="#jazyk">Jazyk súťaže</a>
+				<a href="#podmienky">Podmienky účasti</a>
+				<a href="#bezpecnost">Bezpečnostné zásady a zodpovednosť za škody</a>
+				<a href="#ochrana">Ochrana osobných údajov</a>
+			</div>
+		</aside>
+
+		<section class="content flex flex-col space-y-8 flex-1 w-full scroll-mt-24">
+			<h1>Všeobecné pravidlá</h1>
+
+			<div id="tim" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Tím</h2>
+				<p>
+					Tím pozostáva z najviac troch členov, ktorí sú žiaci základnej, či strednej školy. Každý tím musí mať určeného vedúceho, ktorý môže byť buď učiteľom, alebo samotným súťažiacim.
+					<br>
+					Každá osoba môže byť členom iba jedného tímu účastniaceho sa v danej kategórií. Je teda zakázané, aby bol niekto členom dvoch tímov, ktoré súťažia v rovnakej kategórií.
+				</p>
+			</div>
+
+			<div id="kategorie" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Súťažné kategórie</h2>
+				<p>
+					Súťaží sa v týchto samostatných kategóriách:
+					<ul>
+						<li>Racing</li>
+						<li>Live Challenge</li>
+						<li>Vlastný model</li>
+					</ul>
+				</p>
+				<NoteBox text="V prípade zvýšeneho počtu tímov môže porota rozdeliť kategórie Live Challenge a Vlastný model na podkategórie ZŠ a SŠ. V prípade rozdelenia rozhoduje vek najstaršieho člena tímu." />
+				<p>
+					Viac informácií k jednotlivým kategóriám súťaže nájdete v~samostatných pravidlách pre každú kategóriu.
+				</p>
+				<WarningBox text="Organizátori si vyhradzujú možnosť doplniť, alebo bližšie špecifikovať pravidlá priamo na súťaži. O týchto zmenách počas súťaže budú včas informované všetky zainteresované osoby." />
+				<p>
+					Z časových dôvodov, má každá kategória následovné obmedzenie na počet súťažných tímov:
+					<ul>
+						<li>Racing - 50 tímov</li>
+						<li>Live Challenge - 25 tímov</li>
+						<li>Vlastný model - 25 tímov</li>
+					</ul>
+				</p>
+			</div>
+
+			<div id="sutaznemodely" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Súťažné modely</h2>
+				<p>
+					Všetky súťažné modely musia byť unikátne. Nie je teda povolené, aby viaceré tímy používali totožný model. Taktiež nie je povolené prezentovať jeden model vo viacerých kategóriách. Porota môže rozhodnúť o diskvalifikácii tímu v prípade porušenia týchto pravidiel.
+				</p>
+			</div>
+
+			<div id="reklama" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Reklama</h2>
+				<p>
+					Na súťaži nie je povolené propagovať čokoľvek s výnimkou vlastných modelov. Tím môže mať umiestnenú reklamu na školu alebo sponzorov v maximálnej ploche jednej A4 v blízkosti svojho stola alebo na modeli. Obmedzenia sa nevzťahujú na tričká a elektronické prezentácie.
+					<br>
+					Ak by ste chceli propagovať niečo iné, je potrebné to vopred konzultovať s organizátormi. V prípade porušenia tohto pravidla môže porota rozhodnúť o diskvalifikácii tímu.
+				</p>
+			</div>
+
+			<div id="dokumentacia" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Dokumentácia</h2>
+				<p>
+					Každý súťažiaci je povinný najneskôr <strong>3 dni pred súťažou</strong> odovzdať vyplnenú dokumentáciu vo formáte .pdf podľa predpísanej šablóny. Táto šablóna má stanovenú hlavičku a pätu, ktoré je nutné zachovať. Obsah dokumentu môže byť spracovaný voľne, avšak musí obsahovať minimálne nasledovné prvky:
+					<ul>
+						<li>aspoň jednu fotografiu robota,</li>
+						<li>základný popis funkcionality robota,</li>
+						<li>prehľad použitých technológií a komponentov,</li>
+						<li>stručný popis programu (riadiaceho algoritmu).</li>
+					</ul>
+				</p>
+				<h3>Šablóna</h3>
+				<p>
+					Šablónu v .pptx formáte nájdete na <a href="https://drive.google.com/drive/folders/1GLeglZSEy5k5ybKqlBda7lQOLuvnd_hf?usp=sharing" target="_blank" class="text-orange animated-underline">tomto</a> odkaze.
+					<br>
+					Na požiadanie poroty musí byť súťažiaci pripravený predložiť aj podrobnejšie informácie o konštrukcii a softvéri robota.
+				</p>
+				<WarningBox text="V prípade, že tím neodovzdá dokumentáciu v stanovenom termíne, môže porota rozhodnúť o diskvalifikácii tímu." />
+				<NoteBox text="Dokumentácia sa nevzťahuje na modely v kategórii Live Challenge." />
+			</div>
+
+			<div id="samostatnapraca" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Samostatná práca</h2>
+				<p>
+					Súťažný model musí byť výlučnou prácou tímu. Každý z členov sa zúčastnil prípravy na súťaž. Učiteľ / vedúci krúžku môže pôsobiť ako mentor, no je zakázané aby sa priamo zapájal do konštrukcie, dizajnu a programovania modelu. Na súťaži musí tím pracovať samostatne. S vedúcim tímu smie komunikovať iba vo výnimočných prípadoch a taký kontakt musí odobriť organizátor. V prípade ignorovania tohto zákazu, môže byť tím diskvalifikovaný.
+				</p>
+			</div>
+
+			<div id="priestor" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Priestory súťaže</h2>
+				<p>
+					Každému tímu bude priradené pracovisko s vlastným pracovným stolom a stoličkami. Pracovisko je stôl o veľkosti školskej lavice a stoličky podľa počtu členov tímu.  
+				</p>
+				<WarningBox text="V priestoroch súťaže bude k dispozícii niekoľko predlžovačiek, no prosíme o prinesenie si vlastných." />
+				<WarningBox text="Pripojenie k internetu z technických dôvodov zaručiť nevieme, ale budeme sa snažiť aby bolo k dispozícii." />
+			</div>
+
+			<div id="jazyk" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Jazyk súťaže</h2>
+				<p>
+					Jazykom súťaže je slovenčina a angličtina. Používanie iného jazyka v kontakte s organizátorom a rozhodcami je možné po predošlej dohode.  
+				</p>
+			</div>
+
+			<div id="podmienky" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Podmienky účasti</h2>
+				<p>
+					Tím, ktorý sa chce zúčastniť súťaže musí vyplniť registračný formulár. Odkaz na registráciu nájdete na našej stránke. Tím je následne povinný uhradiť účastnícky poplatok podľa pokynov v propozíciách.
+					<br>
+					Tím môže svoju účasť zrušiť. Účastnícky poplatok mu bude vrátený po odčítaní storno poplatku. Výška tohto poplatku je uvedená v propozíciách.
+					<br>
+					Tím je povinný riadiť sa harmonogramom, inak môže byť diskvalifikovaný.
+				</p>
+			</div>
+
+			<div id="bezpecnost" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Bezpečnostné zásady a zodpovednosť za škody</h2>
+				<div class="flex flex-col space-y-2">
+					<h3>Zodpovednosť za škody</h3>
+					<p>
+						Organizátor nezodpovedá za žiadne škody spôsobené tímami alebo ich robotmi, a to ani na zdraví osôb, ani na majetku. V prípade, že tím alebo jeho robot spôsobí škodu na zariadení, majetku alebo priestoroch školy (či iných súťažných priestorov), za vzniknuté škody plne zodpovedá vedúci príslušného tímu.
+					</p>
+				</div>
+				<div class="flex flex-col space-y-2">
+					<h3>Preventívne zásahy organizátora</h3>
+					<p>
+						Organizátor má právo okamžite zastaviť činnosť robota, ak identifikuje hrozbu spôsobenú jeho konaním (napríklad riziko požiaru, poškodenia majetku alebo ohrozenia osôb). Za žiadnych okolností nenesie organizátor zodpovednosť za škody vzniknuté na samotnom robotovi v dôsledku takéhoto zásahu.
+					</p>
+				</div>
+				<div class="flex flex-col space-y-2">
+					<h3>Dodržiavanie zásad robotiky</h3>
+					<p>
+						Všetky súťažné modely musia byť navrhnuté a prevádzkované v súlade so základnými zásadami robotiky. Za žiadnych okolností nesmú ohrozovať zdravie alebo bezpečnosť ostatných účastníkov podujatia, organizátorov, ani poškodzovať majetok či priestory, v ktorých sa súťaž koná.
+					</p>
+				</div>
+			</div>
+
+			<div id="ochrana" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Ochrana osobných údajov</h2>
+				<p>
+					V rámci prípravy, organizácie a vyhodnotenia súťaže spracovávame osobné údaje účastníkov a doprovodu. Konkrétne informácie o spracovaní vašich údajov nájdete na <a href={`${import.meta.env.BASE_URL}gdpr/`} target="_blank" class="animated-underline text-orange">tomto odkaze</a>.
+					<br>
+					Svojou účasťou v súťaži beriete na vedomie, že zo súťaže bude vytvorený a použitý audiovizuálny záznam (fotografie, videá, zvukové nahrávky a pod.) za účelom ďalšej propagácie súťaže. Za týmto účelom môže organizátor použiť aj všetky odovzdané elektronické dokumenty (napr. prezentácie, videá, vizuály tímov, názvy projektov a pod.).
+					<br>
+					Tento materiál môže byť:
+					<ul>
+						<li>zverejnený na oficiálnych webových stránkach a sociálnych sieťach organizátora,</li>
+						<li>zdieľaný s oficiálnymi partnermi a sponzormi súťaže, uvedenými na webovej stránke súťaže. Títo partneri sú oprávnení použiť materiál výlučne na svojich oficiálnych webových stránkach a sociálnych sieťach, a to za účelom propagácie súťaže.</li>
+					</ul>
+
+					Účasťou na súťaži vyjadrujete súhlas s vyššie uvedeným spôsobom spracovania a zverejnenia záznamov.
+				</p>
+			</div>
+		</section>
+	</div>
+</MainLayout>
