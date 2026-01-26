@@ -1,0 +1,39 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+
+---
+
+<MainLayout title="Kategórie">
+  <section class="content flex flex-col items-center space-y-4 py-12">
+	<h1 class=" text-blue ">Kategórie</h1>
+	<div class="h-1.5 w-20 bg-orange mx-auto mt-4"></div>
+
+	<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-12">
+
+		<div class="w-full flex flex-col space-y-4 py-4 px-6 border-l-4 border-blue bg-white shadow-sm">
+			<h2 class="font-black text-blue uppercase">Racing</h2>
+			<p class="text-subtext mb-8">Rýchlostné preteky diaľkovo ovládaných áut.</p>
+			<a href={`${import.meta.env.BASE_URL}categories/racing/`} class="btn btn-orange w-max">
+			Pravidlá
+			</a>
+		</div>
+
+		<div class="w-full flex flex-col space-y-4 py-4 px-6 border-l-4 border-blue bg-white shadow-sm">
+			<h2 class="font-black text-blue uppercase">Vlastný model</h2>
+			<p class="text-subtext mb-8">Prezentácia vlastných projektov.</p>
+			<a href={`${import.meta.env.BASE_URL}categories/vlastny-model/`} class="btn btn-orange w-max">
+			Pravidlá
+			</a>
+		</div>
+
+		<div class="w-full flex flex-col space-y-4 py-4 px-6 border-l-4 border-blue bg-white shadow-sm">
+			<h2 class="font-black text-blue uppercase">Live Challenge</h2>
+			<p class="text-subtext mb-8">Prekonavaj výzvy v reálnom čase.</p>
+			<a href={`${import.meta.env.BASE_URL}categories/live-challenge/`} class="btn btn-orange w-max">
+			Pravidlá
+			</a>
+		</div>
+
+    </div>
+  </section>
+</MainLayout>
