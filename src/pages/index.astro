@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
 import CategoryList from "../components/CategoryList.astro";
 
-import hero from '../assets/photos/hero.svg';
+import hero from '../assets/photos/hero.JPG';
 import heroMobile from '../assets/photos/hero-mobile.svg';
 import about from '../assets/photos/about.jpg';
 import placeholder from '../assets/photos/placeholder.png';
@@ -15,30 +15,32 @@ import sos from '../assets/partners/sos.svg';
 ---
 
 <MainLayout title="Domov">
-  <section class="h-[calc(100vh-72px)] bg-contain bg-no-repeat bg-right hidden md:block" style={{backgroundImage: `url('${hero.src}')`,}}>
-	<div class="content flex flex-col h-full justify-center space-y-6">
-		<div class="flex flex-col">
-			<span class="subtext">Jedinečné robotická súťaž v Košiciach</span>
-			<h1 class="text-orange">Robotický Battle</h1>
+  <section class="h-[calc(100vh-72px)] bg-cover bg-no-repeat bg-bottom-right hidden md:block" style={{backgroundImage: `url('${hero.src}')`,}}>
+	<div class="content flex flex-col justify-center h-full">
+		<div class="flex flex-col w-1/2 justify-center space-y-6 bg-white px-8 py-10">
+			<div class="flex flex-col">
+				<span class="subtext">Jedinečné robotická súťaž v Košiciach</span>
+				<h1 class="text-orange">Robotický Battle</h1>
+				<!-- Zakomentovat ked su pravidla na dalsi rocnik -->
+				<span class="text-xl mt-4">RBA 2024 je za nami!</span>
+				<!-- Odkomentovat ked su pravidla na dalsi rocnik -->
+				<!--
+				<span class="text-xl mt-4">2.6.2025, Gymnazium Alejova 1, Kosice</span>
+				-->
+			</div>
 			<!-- Zakomentovat ked su pravidla na dalsi rocnik -->
-			<span class="text-xl mt-4">RBA 2024 je za nami!</span>
-			<!-- Odkomentovat ked su pravidla na dalsi rocnik -->
-			 <!--
-			<span class="text-xl mt-4">2.6.2025, Gymnazium Alejova 1, Kosice</span>
-			 -->
+			<div class="flex flex-row space-x-4">
+				<a href="https://photos.app.goo.gl/FRv3Ykto8BwhSW9r5" target="_blank" class="btn btn-orange-full">Galéria&nbsp;&gt;</a>
+				<a href="https://github.com/RobotickyBattle/rba.github.io/blob/master/static/pdf/results/2025-Vysledky.pdf" target="_blank" class="btn btn-orange">Výsledky&nbsp;&gt;</a>
+			</div>
+			<!-- Odkomentovat toto a zakomentovat blok vyssie ked je novy rocnik -->
+			<!--
+			<div class="flex flex-row space-x-4">
+				<a href="" class="btn btn-orange-full">Propozície&nbsp;&gt;</a>
+				<a href="" class="btn btn-orange">Registrácia&nbsp;&gt;</a>
+			</div>
+			-->
 		</div>
-		<!-- Zakomentovat ked su pravidla na dalsi rocnik -->
-		<div class="flex flex-row space-x-4">
-			<a href="https://photos.app.goo.gl/FRv3Ykto8BwhSW9r5" target="_blank" class="btn btn-orange-full">Galéria&nbsp;&gt;</a>
-			<a href="https://github.com/RobotickyBattle/rba.github.io/blob/master/static/pdf/results/2025-Vysledky.pdf" target="_blank" class="btn btn-orange">Výsledky&nbsp;&gt;</a>
-		</div>
-		<!-- Odkomentovat toto a zakomentovat blok vyssie ked je novy rocnik -->
-		<!--
-		<div class="flex flex-row space-x-4">
-			<a href="" class="btn btn-orange-full">Propozície&nbsp;&gt;</a>
-			<a href="" class="btn btn-orange">Registrácia&nbsp;&gt;</a>
-		</div>
-		 -->
 	</div>
   </section>
   <section class="md:hidden h-[calc(100vh-72px)] bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${heroMobile.src}')`,}}>
@@ -67,7 +69,7 @@ import sos from '../assets/partners/sos.svg';
 		 -->
 	</div>
   </section>
-  <section id="stats" class="w-full bg-orange text-white py-4">
+  <section id="stats" class="w-full bg-blue text-white py-4">
 	<div class="content flex flex-row justify-between">
 		
 		<div class="flex flex-col items-center">
