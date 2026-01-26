@@ -1,0 +1,13 @@
+---
+const { platform, name, link, icon } = Astro.props;
+---
+
+<a href={link} class="transition-all duration-300 ease-out hover:scale-[1.03] cursor-pointer bg-white p-6 shadow-sm border-l-4 border-orange flex items-center space-x-6">
+	<div class="bg-blue-50 p-4 rounded-full text-blue aspect-square items-center justify-center hidden sm:flex">
+	    <img src={icon} alt={platform} class="w-8 h-8">
+	</div>
+	<div>
+	    <span class="text-subtext uppercase tracking-widest">{platform}</span>
+	    <h6>{name}</h6>
+	</div>
+</a>
