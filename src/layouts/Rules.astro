@@ -1,0 +1,96 @@
+---
+import "../styles/global.css";
+import logo from "../assets/logo_submark.svg";
+
+const {title} = Astro.props;
+
+const lastModified = new Date().toLocaleDateString('sk-SK')
+---
+
+
+<html lang="sk">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href={logo.src} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<title>{title} pravidlá | Robotický Battle na Alejovej</title>
+	</head>
+	<body class="bg-white">
+        <div id="printable-area" class="w-full max-w-4xl mx-auto">
+            <table class="w-full border-none border-collapse">
+                <thead>
+                <tr>
+                    <td>
+                    <div class="flex items-center justify-between border-b-2 border-orange pb-4 mb-8">
+                        <div class="flex flex-row items-center gap-3">
+                            <img src={logo.src}  alt="Logo" class="h-10 w-auto" />
+                            <h3 class="">RBA 2025</h3>
+                        </div>
+                        <div class="text-right h-full flex items-center">
+                            <span>{title}</span>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+                </thead>
+
+                <tbody class="flex grow">
+                    <tr>
+                        <td>
+                            <slot />
+                        </td> 
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td>
+                        <div class="border-t border-slate-200 pt-4 mt-8 flex justify-between text-[10px] text-slate-400 uppercase tracking-widest">
+                            <div>Posledná úprava: {lastModified}</div>
+                           <!-- <div class="print:block hidden">
+                                Strana <span class="page-number"></span>
+                            </div> -->
+                            <div>
+                                <span>© 2026</span>
+                                <a href="https://robotickybattle.sk/" target="_blank">www.robotickybattle.sk/</a>
+                            </div>
+                        </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+	</body>
+    <style is:global>
+        @media print {
+            @page {
+            size: A4;
+            margin: 15mm; /* Space for the header/footer */
+            }
+
+            /* Hide everything else on the site */
+            body * { visibility: hidden; }
+            #printable-area, #printable-area * { visibility: visible; }
+            #printable-area {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+
+            /* The magic: repeat header and footer */
+            thead { display: table-header-group; }
+            tfoot { display: table-footer-group; }
+            
+            /* Ensure the page number works in supported browsers (Chrome/Edge) */
+            .page-number::after {
+                content: counter(page);
+            }
+        }
+    </style>
+</html>
