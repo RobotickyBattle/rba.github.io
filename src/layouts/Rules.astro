@@ -29,7 +29,7 @@ const lastModified = new Date().toLocaleDateString('sk-SK')
                     <div class="flex items-center justify-between border-b-2 border-orange pb-4 mb-8">
                         <div class="flex flex-row items-center gap-3">
                             <img src={logo.src}  alt="Logo" class="h-10 w-auto" />
-                            <h3 class="">RBA 2025</h3>
+                            <h3 class="">RBA 2026</h3>
                         </div>
                         <div class="text-right h-full flex items-center">
                             <span>{title}</span>
@@ -91,6 +91,22 @@ const lastModified = new Date().toLocaleDateString('sk-SK')
             .page-number::after {
                 content: counter(page);
             }
+			/* Prevent headings from being lonely at the bottom of a page */
+    h1, h2, h3, h4 {
+        break-after: avoid;
+        page-break-after: avoid; /* For older browser support */
+    }
+
+    /* Prevent a paragraph from being split if it only has 1-2 lines left */
+    p, li {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    /* Optional: If you have specific "sections" you want to keep together */
+    section, .rule-block {
+        break-inside: avoid;
+    }
         }
     </style>
 </html>
