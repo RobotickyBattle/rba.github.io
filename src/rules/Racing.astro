@@ -2,6 +2,7 @@
 import WarningBox from "../components/WarningBox.astro";
 import NoteBox from "../components/NoteBox.astro";
 
+import track from '../assets/illustrations/track.jpg';
 ---
 
 <section class="content flex flex-col space-y-8 flex-1 w-full scroll-mt-24">
@@ -99,7 +100,7 @@ import NoteBox from "../components/NoteBox.astro";
 						<li>Robot smie prejsť ponad mantinel iba za použitia skokanského mostíka.</li>
 						<li>Počas kvalifikačných a súťažných kôl je zakázaný voľný pohyb po súťažnej trati. Súťažíaci sa smú pohybovať len po vyznačených miestach.</li>
 						<li>Počas celého súťažného dňa je <strong>zakázané</strong> jazdiť s autami mimo tréningový a súťažný okruh.</li>
-						<li>Autám, ktoré používajú elektronické komponenty iné ako LEGO je <strong>zakázané</strong> jazdiť bez úspešnej bezpečnostnej previerky.</li>
+						<li>Autám, ktoré neobsahujú výlučne elektronické súčiastky zo schválených stavebníc je <strong>zakázané</strong> jazdiť bez úspešnej bezpečnostnej previerky.</li>
 						<li>Súťažné modely musia byť totožné s tými, ktoré boli na technickej kontrole.</li>
 					</ul>
 					<strong>Roboty môžu byť vybavené nasledovnými komponentami:</strong>
@@ -116,9 +117,10 @@ import NoteBox from "../components/NoteBox.astro";
 						<li>Byť vybavené funkciou spiatočky.</li>
 						<li>V prípade straty signálu zastať.</li>
 						<li>Mať maximálne 5 motorov.</li>
-						<li>Mať nasledovné maximálne rozmery: 40 x 30 x 40cm (dĺžka  x  šírka  x  výška).</li>
+						<li>Mať nasledovné maximálne rozmery: 25 x 20 x 25cm (dĺžka  x  šírka  x  výška).</li>
 						<li>Mať maximálnu hmotnosť 3kg.</li>
 					</ul>
+					<NoteBox text="Na RBA 2025 budú ešte akceptované aj pôvodné rozmery (40 x 30 x 40cm), avšak ak sa dá tak by bolo vhodné aby ste auto čo najviac zmenšili." />
 					<strong>Roboty nesmú:</strong>
 					<ul>
 						<li>Používať IR na ovládanie</li>
@@ -141,7 +143,7 @@ import NoteBox from "../components/NoteBox.astro";
 				<div class="flex flex-col space-y-2">
 					<h3>Kvalifikácia a skupiny</h3>
 					<p>
-						Pred hlavnými jazdami budú tímy rozdelené do skupín A až X na základe času v kvalifikačnom kole. Každý tím má na kvalifikáciu 3 pokusy (3 kolá) a časový limit 5 minút. Ostré jazdy začnú od poslednej skupiny, pričom najlepšie dva tímy postupujú do vyššej skupiny.
+						Pred hlavnými jazdami budú tímy rozdelené do skupín A až X na základe času v kvalifikačnom kole. Každý tím má na kvalifikáciu 3 pokusy (3 kolá) a časový limit 5 minút. Ostré jazdy začnú od poslednej skupiny, pričom najlepší tím postupuje do vyššej skupiny.
 					</p>
 				</div>
 				<div class="flex flex-col space-y-2">
@@ -160,9 +162,61 @@ import NoteBox from "../components/NoteBox.astro";
 
 			<div id="priebeh" class="flex flex-col space-y-4 scroll-mt-28">
 				<h2 class="text-orange">Priebeh súťaže</h2>
-				<p>
-					Na základe najlepšieho času z kvalifikácie budú tímy rozdelené do skupín A až X. Počet kôl v ostrých jazdách bude určený na mieste podľa počtu prihlásených tímov. V každom kole štartuje naraz maximálne 10 tímov. Víťaz každého kola postupuje do ďalšieho kola, pričom v prípade rovnosti časov rozhoduje lepší kvalifikačný čas. Maximálna dĺžka preteku je 10 minút.
-				</p>
+				<div class="relative">
+      
+					<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
+					
+					<div class="block md:hidden absolute left-4 h-full w-1 bg-blue-200"></div>
+
+					<div class="space-y-12">
+						<div class="relative flex items-center justify-between md:flex-row-reverse w-full">
+							<div class="hidden md:block md:w-5/12"></div> 
+							<div class="z-10 absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-orange border-4 border-white rounded-full shadow"></div>
+							<div class="ml-12 md:ml-0 md:w-5/12 bg-white p-6 shadow-md border-r-4 border-orangeLight transition hover:shadow-xl">
+								<h3 class="text-lg font-bold text-blue mb-1">Bezpečnostná kontrola</h3>
+								<p class="text-subtext text-sm">
+									Porota skontorluje, či auto spĺňa bezpečnostné pokyny. Ak auto úspešne absolvuje bezpečnostnú kontrolu, obdrží nálepku. Autám bez úspešnej bezpečnostnej previerky je zakázané pohybovat sa po súťažnej trati a tréningovej zóne.
+								</p>
+							</div>
+						</div>
+
+						<div class="relative flex items-center justify-between w-full">
+							<div class="hidden md:block md:w-5/12"></div>
+							<div class="z-10 absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blueLight border-4 border-white rounded-full shadow"></div>
+							<div class="ml-12 md:ml-0 md:w-5/12 bg-white p-6 shadow-md border-l-4 border-blueLight transition hover:shadow-xl">
+								<h3 class="text-lg font-bold text-orange mb-1">Technické prevedenie</h3>
+								<p class="text-subtext text-sm">
+									Každý tím odprezentuje svoje vozidlo. Porota skontroluje, či vozidlo spĺňa pravidlá a požiadavky. Počas technickej kontroly porota urobí foto / video záznam modelu. Porota sa môže spýtať doplňujúce otázky týkajúce sa konštrukcie, programovania a funkčnosti vozidla.
+								</p>
+							</div>
+						</div>
+
+						<div class="relative flex items-center justify-between md:flex-row-reverse w-full">
+						<div class="hidden md:block md:w-5/12"></div>
+						<div class="z-10 absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-orange border-4 border-white rounded-full shadow"></div>
+						<div class="ml-12 md:ml-0 md:w-5/12 bg-white p-6 shadow-md border-r-4 border-orangeLight transition hover:shadow-xl">
+							<h3 class="text-lg font-bold text-blue mb-1">Kvalifikácia</h3>
+							<p class="text-subtext text-sm">
+								Bezprostredne po technickej kontrole tím odštartuje kvalifikačnú jazdu. Tím má na kvalifikáciu 3 pokusy (3 kolá) a časový limit 5 minút. Na základe najlepšieho času sa zaradí tím do príslušnej skupiny.
+							</p>
+						</div>
+						</div>
+
+						<div class="relative flex items-center justify-between w-full">
+							<div class="hidden md:block md:w-5/12"></div>
+							<div class="z-10 absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blueLight border-4 border-white rounded-full shadow"></div>
+							<div class="ml-12 md:ml-0 md:w-5/12 bg-white p-6 shadow-md border-l-4 border-blueLight transition hover:shadow-xl">
+								<h3 class="text-lg font-bold text-orange mb-1">Preteky</h3>
+								<p class="text-subtext text-sm">
+									Ostré jazdy začnú od poslednej skupiny, pričom najlepší tím postupuje do vyššej skupiny. Počet kôl sa určí priamo na súťaži.
+								</p>
+							</div>
+						</div>
+    				</div>
+				</div>
+
+				<NoteBox text="Víťaz každého kola postupuje do ďalšieho kola, pričom v prípade rovnosti časov rozhoduje lepší kvalifikačný čas. Maximálna dĺžka preteku je 10 minút." />
+
 				<WarningBox text="Pozor, nastali zmeny oproti minulým rokom v spôsobe brania auta do boxu." />
 				<p>
 					Každý tím má na trati 2 členov - šoféra a technika. Úlohou šoféra je diaľkovo riadiť vozidlo, zatiaľ čo technik je zodpovedný za prípadné opravy a úpravy vozidla počas pretekov. Obe pozície môžu komunikovať a koordinovať svoje činnosti, aby dosiahli čo najlepší výkon na trati. Technici stoja pri trati, a sledujú priebeh súťaže. V prípade kolízie auta s iným vozidlom alebo s prekážkou, technik môže vozidlo vziať do boxu na opravu. Vozidlo do boxu prenáša technik po vonkajšom obvode trate. V boxe môže technik vykonať opravy alebo úpravy vozidla, ale nesmie meniť jeho základnú konštrukciu alebo komponenty. Po oprave vozidlo vráti na trať na štartovnú pozíciu a pokračuje v preteku. Počet kôl, ktoré tím odjazdil, sa zachováva. Ak tím pozostáva len z jedného člena, bude mu pridelený člen organizačného tímu ako technik. V tomto prípade organizátor len prenáša auto do boxu a späť na trať, ale nezasahuje do opráv alebo úprav vozidla.
@@ -199,6 +253,7 @@ import NoteBox from "../components/NoteBox.astro";
 					</div>
 				</div>
 				<h6>Ukážka trate</h6>
+				<img src={track.src} alt="Ukážka trate" class="h-52 w-min rounded-lg shadow-md" />
 				<h6>Tréningový okruh</h6>
 				<p>
 					Na súťaži bude k dispozícii tréningový okruh, ktorý bude mať podobné parametre ako súťažná trať. Tréningový okruh bude k dispozícii po celý deň bez obmedzení, takže si ho môžete vyskúšať a otestovat svoje auto. Odporúčame vám, aby ste využili túto príležitosť na doladenie svojho modelu a získanie cenných skúseností pred ostrými jazdami.
