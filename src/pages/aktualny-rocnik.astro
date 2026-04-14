@@ -13,7 +13,7 @@ import vyzva from '../assets/photos/vyzva.jpg';
         
         <div class="md:hidden absolute top-8 right-0 bg-orange text-white px-6 py-4 shadow-lg z-50">
             <p class="text-[10px] uppercase font-bold leading-none opacity-90">Zľava do</p>
-            <p class="text-lg font-black leading-none">8.5.2025</p>
+            <p class="text-lg font-black leading-none">30.5.2026</p>
         </div>
 
         <div class="md:flex md:flex-row md:justify-between content md:items-center w-full">
@@ -30,7 +30,7 @@ import vyzva from '../assets/photos/vyzva.jpg';
                 <div class="mt-10 space-y-6">
                     <div class="flex items-center space-x-4">
                         <span class="text-2xl">📅</span>
-                        <p class="text-xl font-bold text-gray-700 uppercase tracking-tight">2. 6. 2025</p>
+                        <p class="text-xl font-bold text-gray-700 uppercase tracking-tight">12. 6. 2026 (piatok)</p>
                     </div>
                     <div class="flex items-center space-x-4">
                         <span class="text-2xl">📍</span>
@@ -51,11 +51,11 @@ import vyzva from '../assets/photos/vyzva.jpg';
                     
                     <div class="absolute -bottom-12 -right-12 float-animation w-56 h-56 bg-orangeLight p-6 text-white flex flex-col justify-center shadow-2xl transform rotate-6">
                         <p class="text-xs uppercase font-bold mb-2 tracking-tighter">Znížená cena do</p>
-                        <p class="text-4xl font-black mb-4 tracking-tight">8.5.2025</p>
+                        <p class="text-4xl font-black mb-4 tracking-tight">30.5.2026</p>
                         <div class="border-t border-orange pt-4">
                             <p class="text-[11px] leading-tight">
                                 Registrácia prebieha do<br>
-                                <span class="font-bold">29.5.2025 16:00</span>
+                                <span class="font-bold">4.6.2026 16:00</span>
                             </p>
                         </div>
                     </div>
@@ -65,7 +65,8 @@ import vyzva from '../assets/photos/vyzva.jpg';
         </div>
     </section>
 	
-	<section id="stats" class="w-full bg-orange text-white py-4">
+	<section id="stats" class="w-full bg-orange text-white py-4 h-24">
+		<!--
 		<div class="content flex flex-row justify-between">
 			
 			<div class="flex flex-col items-center">
@@ -95,7 +96,7 @@ import vyzva from '../assets/photos/vyzva.jpg';
 				<span>projektov</span>
 			</div>
 
-		</div>
+		</div> -->
 	</section>
 
 	<SplitSectionImgTxt title="Príďte ukázať čo dokážete" subtitle="RBA 2026" imageSrc={vyzva.src} imageAlt="Live Challenge robot RBA"   text="Prídťe si zmerať sily so žiakmi z celého Slovenska a ukázať, čo vo vás je. Čakajú vás zaujímavé výzvy, pri ktorých preveríte logické myslenie, kreativitu aj schopnosť pracovať v tíme. Či už ste začiatočníci alebo skúsení konštruktéri, u nás má každý šancu ukázať svoj talent. Príďte sa zabaviť, naučiť sa niečo nové a zažiť jedinečnú atmosféru."/>
@@ -111,6 +112,12 @@ import vyzva from '../assets/photos/vyzva.jpg';
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 				<a href={`${import.meta.env.BASE_URL}rules/vseobecne-pravidla/`} class="btn btn-orange flex flex-row gap-2 justify-between">
 					<span>Všeobecné pravidlá</span>
+					<span class="material-symbols-outlined">
+						arrow_outward
+					</span>
+				</a>
+				<a href={`${import.meta.env.BASE_URL}rules/propozicie/`} class="btn btn-orange flex flex-row gap-2 justify-between">
+					<span>Propozície</span>
 					<span class="material-symbols-outlined">
 						arrow_outward
 					</span>

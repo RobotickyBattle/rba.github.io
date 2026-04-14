@@ -1,0 +1,135 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro"
+import NoteBox from "../../components/NoteBox.astro";
+import WarningBox from "../../components/WarningBox.astro";
+---
+
+<MainLayout title="Propozície">
+	<div class="relative flex flex-col md:flex-row gap-12 content py-12">
+		<aside class="md:w-64 shrink-0">
+			<div class="sticky top-24 hidden md:block py-2">
+				<h4 class="text-xs font-black uppercase tracking-widest text-subtext mb-6">Obsah</h4>
+				<nav class="flex flex-col space-y-4">
+					<a href="#tim" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Priebeh súťaže</a>
+					<a href="#kategorie" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Dôležité upozornenia</a>
+					<a href="#sutaznemodely" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Registrácia</a>
+					<a href="#reklama" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Cenník</a>
+					<a href="#dokumentacia" class="text-sm font-medium text-subtext hover:text-orange transition-colors">Odhlásenie zo súťaže</a>
+				</nav>
+			</div>
+
+			<div class="md:hidden sticky top-0  z-30 px-4 py-4 border-b overflow-x-auto flex whitespace-nowrap space-x-6 text-sm font-bold no-scrollbar">
+				<a href="#tim" class="text-orange">Priebeh súťaže</a>
+				<a href="#kategorie">Dôležité upozornenia</a>
+				<a href="#sutaznemodely">Registrácia</a>
+				<a href="#reklama">Cenník</a>
+				<a href="#dokumentacia">Odhlásenie zo súťaže</a>
+			</div>
+		</aside>
+
+		<section class="content flex flex-col space-y-8 flex-1 w-full scroll-mt-24">
+			<h1>Propozície</h1>
+            <p>
+				Pozývame Vás na 15. ročník súťaže Robotický Battle na Alejovej, ktorá sa uskutoční v piatok 12. júna 2026 na pôde Gymnázia, Alejová 1, Košice.
+			</p>
+
+			<div id="tim" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Priebeh súťaže</h2>
+				<p>
+					K dispozícii dávame predbežný harmonogram súťaže. Presné časy budeme vedieť až po ukončení rezervácie podľa počtu prihlásených tímov.
+				</p>
+                <table class="w-full text-sm">
+                    <tbody class="divide-y divide-gray-300">
+                        <tr>
+                            <td class="py-2 pr-4 font-bold text-right w-1/4">7:00</td>
+                            <td class="py-2 pl-4">Otvorenie priestorov</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 pr-4 font-bold text-right">7:30 - 8:30</td>
+                            <td class="py-2 pl-4">Registrácia tímov</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 pr-4 font-bold text-right">8:45</td>
+                            <td class="py-2 pl-4">Otvorenie súťaže</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 pr-4 font-bold text-right">9:00 - 12:00</td>
+                            <td class="py-2 pl-4">Racing - kvalifikácia, Live Challenge, Vlastný model</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 pr-4 font-bold text-right text-gray-500 italic">12:00 - 12:30</td>
+                            <td class="py-2 pl-4 text-gray-500 italic">Obedná pauza</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 pr-4 font-bold text-right">12:30 - 16:00</td>
+                            <td class="py-2 pl-4">Racing - preteky, Vlastný model</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 pr-4 font-bold text-right">16:00</td>
+                            <td class="py-2 pl-4">Vlastný model - prezentácia top 3 projekty</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 pr-4 font-bold text-right font-black">16:30</td>
+                            <td class="py-2 pl-4">Vyhodnotenie</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 pr-4 font-bold text-right">17:00</td>
+                            <td class="py-2 pl-4">Koniec súťaže</td>
+                        </tr>
+                    </tbody>
+                </table>
+			</div>
+
+			<div id="kategorie" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Dôležité upozornenia</h2>
+				<p>
+					<ul>
+						<li>Prosíme, aby ste si doneisli vlastné predlžovačky, nakoľko nie sme schopní pokryť celé priestory súťaže.</li>
+						<li>Berte prosím na vedomie, že nevieme vopred zaručit pripojenie na internet v priestoroch, kde sa súťaž odohráva.</li>
+					</ul>
+				</p>
+			</div>
+
+			<div id="sutaznemodely" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Registrácia</h2>
+				<p>
+					Registrácia prebieha do 30.5.2026 16:00 alebo do naplnenia kapacity jednotlivých kategórií. Prihlasovanie prebieha cez portál <a href="https://compex.robotickybattle.sk" target="_blank" class="text-orange">https://compex.robotickybattle.sk</a>. V prípade, že sa do termínu nenaplní kapacita, registrácia môže byť predĺžená.
+				</p>
+			</div>
+
+			<div id="reklama" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Cenník</h2>
+				<h3>Registračný poplatok</h3>
+				<p>
+					Registračný poplatok sa platí za každý tím osobitne. Doprovod, ktorý nesúťaží, poplatok neplatí. Ceny tímových lístkov sú nasledovné:
+                    <ul>
+						<li> <strong>1členný tím</strong> - 8€</li>
+						<li> <strong>2členný tím</strong> - 14,4€</li>
+						<li> <strong>3členný tím</strong> - 20,8€</li>
+					</ul>
+				</p>
+				<h3>Doplnky</h3>
+				<p>
+					Okrem tímových lístkov si vedia účastníci objednať navyše aj tieto veci:
+                    <ul>
+						<li> <strong>Bageta šunková / syrová</strong> - 1,5€</li>
+						<li> <strong>Desiatový balíček</strong> <span class="text-subtext italic">(Bageta šunková / syrová, voda 1.5l, jablko, keks)</span> - 3,4€</li>
+					</ul>
+				</p>
+                <NoteBox text="Tímové lístky a doplnky sa dajú objednávať osobitne cez oficiálny portál. "/>
+			</div>
+
+			<div id="dokumentacia" class="flex flex-col space-y-4 scroll-mt-28">
+				<h2 class="text-orange">Odhlásenie zo súťaže</h2>
+				<p>
+					Každý tím má právo dohlásiť sa zo súťaže, avšak v závislosti od času odhlásenia sa uplatňujú nasledovné storno poplatky
+					<ul>
+						<li>do 4.5.2026 - 0% ceny tímového lístka, 0% cenu doplnkových služieb</li>
+						<li>do 2.6.2026 - 50% ceny tímového lístka, 0% cenu doplnkových služieb</li>
+						<li>do 12.6.2026 - 100% ceny tímového lístka, 100% cenu doplnkových služieb</li>
+					</ul>
+				</p>
+			</div>
+		</section>
+	</div>
+</MainLayout>
