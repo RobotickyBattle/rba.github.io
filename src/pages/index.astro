@@ -10,6 +10,7 @@ import placeholder from '../assets/photos/placeholder.png';
 import devity from '../assets/partners/devity.svg';
 import alejka from '../assets/partners/alejka.png';
 import sos from '../assets/partners/sos.svg';
+import amavetgaleje from '../assets/partners/galejeamavet.svg';
 
 
 ---
@@ -101,10 +102,18 @@ import sos from '../assets/partners/sos.svg';
 	<CategoryList/>
 
 	<section class="content flex flex-col space-y-8 py-12 items-center">
-		<h1 class="text-orange">Partneri</h1>
+		<h1 class="text-orange">Organizátori</h1>
 
-		<div class="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 items-center">
+		<div class="grid grid-cols-2 gap-6 sm:gap-8 items-center">
 			<img src={alejka.src} alt="Sponsor 1" class="w-full h-auto mx-auto" />
+			<img src={amavetgaleje.src} alt="Sponsor 1" class="h-full mx-auto" />
+		</div>
+	</section>
+
+	<section class="content flex flex-col space-y-8 py-12 items-center">
+		<h1 class="text-blue">Partneri</h1>
+
+		<div class="grid grid-cols-2 gap-6 sm:gap-8 items-center">
 			<img src={devity.src} alt="Sponsor 2" class="w-full h-auto mx-auto" />
 			<img src={sos.src} alt="Sponsor 3" class="w-full h-auto mx-auto" />
 		</div>
