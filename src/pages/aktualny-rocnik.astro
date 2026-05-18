@@ -6,6 +6,7 @@ import CategoryList from "../components/CategoryList.astro";
 import racing from '../assets/photos/racing2.JPG';
 import hero from '../assets/photos/hero-mobile.svg';
 import vyzva from '../assets/photos/vyzva.jpg';
+import racing3 from '../assets/photos/racing3.jpg';
 ---
 
 <MainLayout title="RBA 2026">
@@ -105,7 +106,7 @@ import vyzva from '../assets/photos/vyzva.jpg';
 
 	<CategoryList />
 
-	<section class="content py-12 flex flex-col space-y-4">
+	<section class="content py-24 flex flex-col space-y-4">
 		<div class="flex flex-col">
 			<span>
 				RBA 2026
@@ -142,6 +143,18 @@ import vyzva from '../assets/photos/vyzva.jpg';
 						arrow_outward
 					</span>
 				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="w-full py-28 bg-cover bg-no-repeat bg-center"  style={{backgroundImage: `url('${racing3.src}')`,}}>
+		<div class="content flex flex-row justify-end">
+			<div class="bg-background p-8 flex flex-col space-y-4 w-2/3 max-w-sm">
+				<h1 class="text-orange">Nechajte sa inšpirovať</h1>
+				<p>
+					Pozrite sa ako to vyzeralo po minulé roky, a s akými projektami prišli žiaci.
+				</p>
+				<a href={`${import.meta.env.BASE_URL}archiv/`} target="_blank" class="btn btn-orange text-center">Galéria&nbsp;&gt;</a>
 			</div>
 		</div>
 	</section>
