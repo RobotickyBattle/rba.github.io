@@ -2,12 +2,26 @@
 import MainLayout from "../layouts/MainLayout.astro"
 import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
 import CategoryList from "../components/CategoryList.astro";
+import ActivityCard from "../components/ActivityCard.astro";
+import TimelineLeft from "../components/TimelineLeft.astro";
+import TimelineRight from "../components/TimelineRight.astro";
 
 import racing from '../assets/photos/racing2.JPG';
 import hero from '../assets/photos/hero-mobile.svg';
 import vyzva from '../assets/photos/vyzva.jpg';
 import vyzva2 from '../assets/photos/vyzva2.jpg';
 import racing3 from '../assets/photos/racing3.jpg';
+import pero from '../assets/photos/3dpero.webp';
+import tetris from '../assets/photos/tetris.webp';
+import kviz from '../assets/photos/kviz.svg';
+import obed from '../assets/photos/obed.svg';
+import otvorenieTel from '../assets/photos/otvorenieTelocvicne.jpg';
+import registracia from '../assets/photos/registracia.jpg';
+import otvorenie from '../assets/photos/otvorenie.jpg';
+import preteky from '../assets/photos/preteky.jpg';
+import prezentacia from '../assets/photos/prezentacia.jpg';
+import vyhodnotenie from '../assets/photos/vyhodnotenie.jpg';
+import sutazenie from '../assets/photos/sutazenie.jpg';
 ---
 
 <MainLayout title="RBA 2026">
@@ -151,17 +165,61 @@ import racing3 from '../assets/photos/racing3.jpg';
 	<section class="w-full h-72 bg-cover bg-no-repeat bg-center"  style={{backgroundImage: `url('${vyzva2.src}')`,}}></section>
 
 	<section class="content py-24 flex flex-col space-y-4">
-
+		<span>
+			Sprievodný program
+		</span>
+		<h1 class="text-orange">Na čo sa môžete tešiť?</h1>
+		<div class="w-full gap-4 grid grid-cols-1 md:grid-cold-2 lg:grid-cols-3">
+			<ActivityCard title="3D pero" imgPath={pero.src} desc="Vytvor si niečo vlastné, čo si odnesieš ako pamiatku domov." time="9:00 - 15:00" place="Relax zóna" />
+			<ActivityCard title="Spoločenské hry" imgPath={tetris.src} desc="Zahrajte sa s kamarátmi rýchle hry na odreagovanie." time="9:00 - 15:00" place="Relax zóna" />
+			<ActivityCard title="Kvíz" imgPath={kviz.src} desc="Spríjemnite si čakanie na vyhodnotenie rýchlym kvízom a vyhrajte zaujímavú cenu. Súťažiť môžete ako jednotlivci alebo aj skupiny." time="16:00" place="Telocvičňa" />
+		</div>
 	</section>
 
 	<section class="w-full py-28 bg-cover bg-no-repeat bg-center"  style={{backgroundImage: `url('${racing3.src}')`,}}>
 		<div class="content flex flex-row justify-end">
-			<div class="bg-background p-8 flex flex-col space-y-4 w-2/3 max-w-sm">
+			<div class="bg-background p-8 flex flex-col space-y-4 w-full l:w-2/3 max-w-sm">
 				<h1 class="text-orange">Nechajte sa inšpirovať</h1>
 				<p>
 					Pozrite sa ako to vyzeralo po minulé roky, a s akými projektami prišli žiaci.
 				</p>
 				<a href={`${import.meta.env.BASE_URL}archiv/`} target="_blank" class="btn btn-orange text-center">Galéria&nbsp;&gt;</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="w-full py-24">
+		<div class="content flex flex-col">
+			<span>
+				Harmonogram dňa
+			</span>
+			<h1 class="text-orange">Ako to bude vyzerať</h1>
+
+			<div class="relative mt-12">
+				<!-- Timeline central line (Desktop) -->
+				<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
+				
+				<!-- Timeline side line (Mobile) -->
+				<div class="block md:hidden absolute left-4 h-full w-1 bg-blue-200"></div>
+
+				<div class="space-y-12">
+
+					<TimelineLeft img={otvorenieTel.src} title="Otvorenie telocvične" time="7:00" desc="Príprava tímových stanovísk, testovanie robotov ..." />
+
+					<TimelineRight  img={registracia.src} title="Registrácia" time="7:30 - 8:30" desc="Prevzatie stravných lístkov a bagety / desiatových balíčkov, Príprava pracoviska a skúšanie robotov." />
+					
+					<TimelineLeft img={otvorenie.src} title="Otvorenie súťaže" time="8:45" desc="Slávnostné otvorenie súťaže" />
+
+					<TimelineRight  img={sutazenie.src} title="Súťaženie" time="9:00 - 12:00" desc="Racing - kvalifikácia, Live Challenge, Vlastný model" />
+					
+					<TimelineLeft img={obed.src} title="Obedná pauza" time="12:00 - 12:30" desc="" />
+
+					<TimelineRight  img={preteky.src} title="Súťaženie" time="12:30 - 16:00" desc="Racing - preteky, Vlastný model" />
+
+					<TimelineLeft img={prezentacia.src} title="Prezentácia" time="16:00" desc="Vlastný model - prezentácia top 3 projekty" />
+
+					<TimelineRight  img={vyhodnotenie.src} title="Vyhodnotenie súťaže" time="16:30" desc="" />
+				</div>
 			</div>
 		</div>
 	</section>
