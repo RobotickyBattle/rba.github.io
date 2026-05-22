@@ -16,8 +16,9 @@ import battleIcon from '../assets/icons/battle.svg';
 			<div class="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 				<CategoryCard title="Racing" icon={racingIcon.src} href={`${import.meta.env.BASE_URL}categories/racing/`}/>
 				<CategoryCard title="Live Challenge" icon={liveIcon.src} href={`${import.meta.env.BASE_URL}categories/live-challenge/`}/>
-				<CategoryCard title="Vlastný model" icon={rocketIcon.src} href={`${import.meta.env.BASE_URL}categories/vlastny-model/`}/>
-			<!--	<CategoryCard title="Battle bots" icon={battleIcon.src} href="/categories/battle"/> -->
+				<div class="col-span-2 justify-self-center lg:col-span-1 lg:justify-self-auto">
+					<CategoryCard title="Vlastný model" icon={rocketIcon.src} href={`${import.meta.env.BASE_URL}categories/vlastny-model/`}/>
+				</div>
 			</div>
 		</div>
 	</section>
