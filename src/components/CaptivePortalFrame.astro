@@ -1,5 +1,13 @@
 ---
-const { src, alt } = Astro.props;
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+	image: ImageMetadata;
+	alt: string;
+}
+
+const { image, alt } = Astro.props;
 ---
 
 <div class="w-full h-full flex flex-col bg-gray-100">
@@ -26,6 +34,17 @@ const { src, alt } = Astro.props;
 			</svg>
 			<span>Prihlásenie do eventovej Wi-Fi siete</span>
 		</div>
-		<img src={src} alt={alt} class="w-full h-full object-cover object-top pt-8" loading="lazy" decoding="async" />
+		<Image
+			src={image}
+			alt={alt}
+			class="w-full h-full object-cover object-top pt-8"
+			width={800}
+			widths={[400, 800]}
+			sizes="(max-width: 1024px) 100vw, 33vw"
+			format="webp"
+			quality={70}
+			loading="lazy"
+			decoding="async"
+		/>
 	</div>
 </div>

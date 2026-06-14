@@ -2,11 +2,12 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
 import CaptivePortalFrame from "../components/CaptivePortalFrame.astro";
+import { Image } from "astro:assets";
 
 import about from '../assets/photos/about.jpg';
-
-const base = import.meta.env.BASE_URL;
-const sponsorship = (file: string) => `${base}sponsorship/${file}`;
+import tv2 from '../assets/sponsorship/tv2.jpg';
+import captivePortal from '../assets/sponsorship/captive_portal.jpg';
+import banners from '../assets/sponsorship/banners.jpg';
 ---
 
 <MainLayout title="Sponzorstvo">
@@ -40,10 +41,15 @@ const sponsorship = (file: string) => `${base}sponsorship/${file}`;
 		<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 			<figure class="flex flex-col space-y-4">
 				<div class="aspect-[4/3] w-full overflow-hidden rounded-lg shadow-md border border-gray-200 bg-white">
-					<img
-						src={sponsorship("tv2.jpg")}
+					<Image
+						src={tv2}
 						alt="Sponzori zobrazení na obrazovke v priestoroch gymnázia"
 						class="w-full h-full object-cover"
+						width={800}
+						widths={[400, 800]}
+						sizes="(max-width: 1024px) 100vw, 33vw"
+						format="webp"
+						quality={70}
 						loading="lazy"
 						decoding="async"
 					/>
@@ -59,7 +65,7 @@ const sponsorship = (file: string) => `${base}sponsorship/${file}`;
 			<figure class="flex flex-col space-y-4">
 				<div class="aspect-[4/3] w-full overflow-hidden rounded-lg shadow-md border border-gray-200 bg-white">
 					<CaptivePortalFrame
-						src={sponsorship("captive_portal.jpg")}
+						image={captivePortal}
 						alt="Prihlasovacia stránka eventovej Wi-Fi so sekciou sponzorov a partnerov"
 					/>
 				</div>
@@ -73,10 +79,15 @@ const sponsorship = (file: string) => `${base}sponsorship/${file}`;
 
 			<figure class="flex flex-col space-y-4">
 				<div class="aspect-[4/3] w-full overflow-hidden rounded-lg shadow-md border border-gray-200 bg-white">
-					<img
-						src={sponsorship("banners.jpg")}
+					<Image
+						src={banners}
 						alt="Sponzorské bannery v priestoroch gymnázia počas RBA"
 						class="w-full h-full object-cover"
+						width={800}
+						widths={[400, 800]}
+						sizes="(max-width: 1024px) 100vw, 33vw"
+						format="webp"
+						quality={70}
 						loading="lazy"
 						decoding="async"
 					/>
