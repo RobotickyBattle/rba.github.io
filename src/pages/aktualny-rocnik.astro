@@ -2,42 +2,19 @@
 import MainLayout from "../layouts/MainLayout.astro"
 import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
 import CategoryList from "../components/CategoryList.astro";
-import ActivityCard from "../components/ActivityCard.astro";
-import TimelineLeft from "../components/TimelineLeft.astro";
-import TimelineRight from "../components/TimelineRight.astro";
 
 import racing from '../assets/photos/racing2.JPG';
-import hero from '../assets/photos/hero-mobile.svg';
 import vyzva from '../assets/photos/vyzva.jpg';
-import vyzva2 from '../assets/photos/vyzva2.jpg';
 import racing3 from '../assets/photos/racing3.jpg';
-import pero from '../assets/photos/3dpero.webp';
-import tetris from '../assets/photos/tetris.webp';
-import kviz from '../assets/photos/kviz.svg';
-import obed from '../assets/photos/obed.svg';
-import otvorenieTel from '../assets/photos/otvorenietelocvicne.jpg';
-import registracia from '../assets/photos/registracia.jpg';
-import otvorenie from '../assets/photos/otvorenie.jpg';
-import preteky from '../assets/photos/preteky.jpg';
-import prezentacia from '../assets/photos/prezentacia.jpg';
-import vyhodnotenie from '../assets/photos/vyhodnotenie.jpg';
-import sutazenie from '../assets/photos/sutazenie.jpg';
 ---
 
-<MainLayout title="RBA 2026">
+<MainLayout title="RBA 2027">
 	<section class="relative flex items-center pt-12 pb-20">
-        
-        <div class="md:hidden absolute top-8 right-0 bg-orange text-white px-6 py-4 shadow-lg z-50">
-            <p class="text-[10px] uppercase font-bold leading-none opacity-90">Registrácia do</p>
-            <p class="text-lg font-black leading-none">4.6.2026</p>
-        </div>
-
         <div class="md:flex md:flex-row md:justify-between content md:items-center w-full">
-            
             <div class="md:w-1/2 z-10 flex flex-col space-y-2">
-                <p class="text-subtext text-lg font-light mb-2">Pozývame Vás na</p>
+                <p class="text-subtext text-lg font-light mb-2">Už sa tešíme na</p>
                 <span class="title text-5xl md:text-7xl text-orange leading-tight md:leading-none">
-                    15. ročník
+                    16. ročník
 				</span>
                 <p class="text-blue">
                     súťaže Robotický Battle na Alejovej
@@ -46,13 +23,17 @@ import sutazenie from '../assets/photos/sutazenie.jpg';
                 <div class="mt-10 space-y-6">
                     <div class="flex items-center space-x-4">
                         <span class="text-2xl">📅</span>
-                        <p class="text-xl font-bold text-gray-700 uppercase tracking-tight">12. 6. 2026 (piatok)</p>
+                        <p class="text-xl font-bold text-gray-700 uppercase tracking-tight">RBA 2027</p>
                     </div>
                     <div class="flex items-center space-x-4">
                         <span class="text-2xl">📍</span>
                         <p class="text-xl font-bold text-gray-700 tracking-tight leading-tight">Gymnázium, Alejová 1, Košice</p>
                     </div>
                 </div>
+
+                <p class="mt-8 text-lg text-gray-600 leading-relaxed">
+                    Termín, registráciu a pravidlá pre ďalší ročník zverejníme včas. Sledujte našu stránku a pripravte sa na ďalšie robotické výzvy!
+                </p>
             </div>
 
             <div class="hidden md:flex md:w-1/2 mt-0 relative justify-center items-center">
@@ -66,58 +47,18 @@ import sutazenie from '../assets/photos/sutazenie.jpg';
                     </div>
                     
                     <div class="absolute -bottom-12 -right-12 float-animation w-56 h-56 bg-orangeLight p-6 text-white flex flex-col justify-center shadow-2xl transform rotate-6">
-                        <p class="text-xs uppercase font-bold mb-2 tracking-tighter">Registrácia do</p>
-                        <p class="text-4xl font-black mb-4 tracking-tight">4.6.2026</p>
-						<!--
-                        <div class="border-t border-orange pt-4">
-                            <p class="text-[11px] leading-tight">
-                                Registrácia prebieha do<br>
-                                <span class="font-bold">4.6.2026 16:00</span>
-                            </p>
-                        </div>
-						 -->
+                        <p class="text-xs uppercase font-bold mb-2 tracking-tighter">Už sa tešíme na</p>
+                        <p class="text-4xl font-black mb-4 tracking-tight">RBA 2027</p>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 	
 	<section id="stats" class="w-full bg-orange text-white py-4 h-24">
-		<!--
-		<div class="content flex flex-row justify-between">
-			
-			<div class="flex flex-col items-center">
-				<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="9">
-					9
-				</span>
-				<span>hodín</span>
-			</div>
-
-			<div class="flex flex-col items-center">
-				<div class="flex flex-row">
-					<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="6">
-						6
-					</span>
-					<span class="title text-xl sm:text-2xl md:text-3xl">+</span>
-				</div>
-				<span>sprievodných aktivít</span>
-			</div>
-
-			<div class="flex flex-col items-center">
-				<div class="flex flex-row">
-					<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="50">
-						50
-					</span>
-					<span class="title text-xl sm:text-2xl md:text-3xl">+</span>
-				</div>
-				<span>projektov</span>
-			</div>
-
-		</div> -->
 	</section>
 
-	<SplitSectionImgTxt title="Príďte ukázať čo dokážete" subtitle="RBA 2026" imageSrc={vyzva.src} imageAlt="Live Challenge robot RBA"   text="Prídťe si zmerať sily so žiakmi z celého Slovenska a ukázať, čo vo vás je. Čakajú vás zaujímavé výzvy, pri ktorých preveríte logické myslenie, kreativitu aj schopnosť pracovať v tíme. Či už ste začiatočníci alebo skúsení konštruktéri, u nás má každý šancu ukázať svoj talent. Príďte sa zabaviť, naučiť sa niečo nové a zažiť jedinečnú atmosféru."/>
+	<SplitSectionImgTxt title="Príďte ukázať čo dokážete" subtitle="RBA 2027" imageSrc={vyzva.src} imageAlt="Live Challenge robot RBA"   text="Prídťe si zmerať sily so žiakmi z celého Slovenska a ukázať, čo vo vás je. Čakajú vás zaujímavé výzvy, pri ktorých preveríte logické myslenie, kreativitu aj schopnosť pracovať v tíme. Či už ste začiatočníci alebo skúsení konštruktéri, u nás má každý šancu ukázať svoj talent. Príďte sa zabaviť, naučiť sa niečo nové a zažiť jedinečnú atmosféru."/>
 
 	<CategoryList />
 
@@ -126,53 +67,24 @@ import sutazenie from '../assets/photos/sutazenie.jpg';
 			<span>
 				RBA 2026
 			</span>
-			<h1 class="text-orange">Pravidlá</h1>
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-				<a href={`${import.meta.env.BASE_URL}rules/vseobecne-pravidla/`} class="btn btn-orange flex flex-row gap-2 justify-between">
-					<span>Všeobecné pravidlá</span>
+			<h1 class="text-orange">Výsledky a galéria</h1>
+			<p class="mb-4">
+				15. ročník je za nami! Pozrite si fotografie zo súťaže a výsledkové listiny jednotlivých kategórií.
+			</p>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md">
+				<a href="https://photos.app.goo.gl/bGM8bswc5AVyLmGz7" target="_blank" class="btn btn-orange flex flex-row gap-2 justify-between">
+					<span>Fotogaléria</span>
 					<span class="material-symbols-outlined">
 						arrow_outward
 					</span>
 				</a>
-				<a href={`${import.meta.env.BASE_URL}rules/propozicie/`} class="btn btn-orange flex flex-row gap-2 justify-between">
-					<span>Propozície</span>
-					<span class="material-symbols-outlined">
-						arrow_outward
-					</span>
-				</a>
-				<a href={`${import.meta.env.BASE_URL}categories/racing/`} class="btn btn-orange flex flex-row gap-2 justify-between">
-					<span>Racing</span>
-					<span class="material-symbols-outlined">
-						arrow_outward
-					</span>
-				</a>
-				<a href={`${import.meta.env.BASE_URL}categories/live-challenge/`} class="btn btn-orange flex flex-row gap-2 justify-between">
-					<span>Live Challenge</span>
-					<span class="material-symbols-outlined">
-						arrow_outward
-					</span>
-				</a>
-				<a href={`${import.meta.env.BASE_URL}categories/vlastny-model/`} class="btn btn-orange flex flex-row gap-2 justify-between">
-					<span>Vlastný model</span>
+				<a href="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2026-Vysledky.pdf" target="_blank" class="btn btn-orange flex flex-row gap-2 justify-between">
+					<span>Výsledky</span>
 					<span class="material-symbols-outlined">
 						arrow_outward
 					</span>
 				</a>
 			</div>
-		</div>
-	</section>
-
-	<section class="w-full h-72 bg-cover bg-no-repeat bg-center"  style={{backgroundImage: `url('${vyzva2.src}')`,}}></section>
-
-	<section class="content py-24 flex flex-col space-y-4">
-		<span>
-			Sprievodný program
-		</span>
-		<h1 class="text-orange">Na čo sa môžete tešiť?</h1>
-		<div class="w-full gap-4 grid grid-cols-1 md:grid-cold-2 lg:grid-cols-3">
-			<ActivityCard title="3D pero" imgPath={pero.src} desc="Vytvor si niečo vlastné, čo si odnesieš ako pamiatku domov." time="9:00 - 15:00" place="Relax zóna" />
-			<ActivityCard title="Spoločenské hry" imgPath={tetris.src} desc="Zahrajte sa s kamarátmi rýchle hry na odreagovanie." time="9:00 - 15:00" place="Relax zóna" />
-			<ActivityCard title="Kvíz" imgPath={kviz.src} desc="Spríjemnite si čakanie na vyhodnotenie rýchlym kvízom a vyhrajte zaujímavú cenu. Súťažiť môžete ako jednotlivci alebo aj skupiny." time="16:00" place="Telocvičňa" />
 		</div>
 	</section>
 
@@ -183,43 +95,7 @@ import sutazenie from '../assets/photos/sutazenie.jpg';
 				<p>
 					Pozrite sa ako to vyzeralo po minulé roky, a s akými projektami prišli žiaci.
 				</p>
-				<a href={`${import.meta.env.BASE_URL}archiv/`} target="_blank" class="btn btn-orange text-center">Galéria&nbsp;&gt;</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="w-full py-24">
-		<div class="content flex flex-col">
-			<span>
-				Harmonogram dňa
-			</span>
-			<h1 class="text-orange">Ako to bude vyzerať</h1>
-
-			<div class="relative mt-12">
-				<!-- Timeline central line (Desktop) -->
-				<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
-				
-				<!-- Timeline side line (Mobile) -->
-				<div class="block md:hidden absolute left-4 h-full w-1 bg-blue-200"></div>
-
-				<div class="space-y-12">
-
-					<TimelineLeft img={otvorenieTel.src} title="Otvorenie telocvične" time="7:00" desc="Príprava tímových stanovísk, testovanie robotov ..." />
-
-					<TimelineRight  img={registracia.src} title="Registrácia" time="7:30 - 8:30" desc="Prevzatie stravných lístkov a bagety / desiatových balíčkov, Príprava pracoviska a skúšanie robotov." />
-					
-					<TimelineLeft img={otvorenie.src} title="Otvorenie súťaže" time="8:45" desc="Slávnostné otvorenie súťaže" />
-
-					<TimelineRight  img={sutazenie.src} title="Súťaženie" time="9:00 - 12:00" desc="Racing - kvalifikácia, Live Challenge, Vlastný model" />
-					
-					<TimelineLeft img={obed.src} title="Obedná pauza" time="12:00 - 12:30" desc="" />
-
-					<TimelineRight  img={preteky.src} title="Súťaženie" time="12:30 - 16:00" desc="Racing - preteky, Vlastný model" />
-
-					<TimelineLeft img={prezentacia.src} title="Prezentácia" time="16:00" desc="Vlastný model - prezentácia top 3 projekty" />
-
-					<TimelineRight  img={vyhodnotenie.src} title="Vyhodnotenie súťaže" time="16:30" desc="" />
-				</div>
+				<a href={`${import.meta.env.BASE_URL}archiv/`} class="btn btn-orange text-center">Galéria&nbsp;&gt;</a>
 			</div>
 		</div>
 	</section>
