@@ -1,0 +1,31 @@
+---
+const { src, alt } = Astro.props;
+---
+
+<div class="w-full h-full flex flex-col bg-gray-100">
+	<div class="flex items-center gap-2 px-3 py-2 bg-gray-200 border-b border-gray-300 shrink-0">
+		<div class="hidden sm:flex gap-1.5 shrink-0">
+			<span class="w-2.5 h-2.5 rounded-full bg-red-400" aria-hidden="true"></span>
+			<span class="w-2.5 h-2.5 rounded-full bg-yellow-400" aria-hidden="true"></span>
+			<span class="w-2.5 h-2.5 rounded-full bg-green-400" aria-hidden="true"></span>
+		</div>
+		<div class="flex flex-1 items-center gap-2 min-w-0 rounded-md border border-gray-300 bg-white px-2.5 py-1.5 text-xs text-gray-500">
+			<svg class="w-3.5 h-3.5 shrink-0 text-blue" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+				<path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
+			</svg>
+			<span class="truncate font-mono">http://wifi.rba.local/login</span>
+			<span class="ml-auto shrink-0 rounded bg-orangeLight/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-orange">
+				Captive portal
+			</span>
+		</div>
+	</div>
+	<div class="relative flex-1 min-h-0 bg-white">
+		<div class="absolute top-0 inset-x-0 z-10 flex items-center justify-center gap-2 bg-blue/90 px-3 py-1.5 text-[11px] text-white">
+			<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+				<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+			</svg>
+			<span>Prihlásenie do eventovej Wi-Fi siete</span>
+		</div>
+		<img src={src} alt={alt} class="w-full h-full object-cover object-top pt-8" loading="lazy" decoding="async" />
+	</div>
+</div>
