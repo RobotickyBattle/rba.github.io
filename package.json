@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "optimize:archive": "node scripts/optimize-archive.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.11",
+    "sharp": "^0.35.1",
     "tailwindcss": "^4.1.18"
   }
 }

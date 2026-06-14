@@ -3,7 +3,7 @@ const { title, imgPath, albumLink, resultsLink } = Astro.props
 ---
 
 <div class="w-full bg-white shadow-sm flex flex-col space-y-4">
-    <img src={imgPath} alt="photo" class="w-full" loading="lazy" referrerpolicy="no-referrer">
+    <img src={imgPath} alt={title} class="w-full aspect-[3/2] object-cover" loading="lazy" decoding="async" width="800" height="533">
     <h3 class="text-orange px-4">{title}</h3>
     <div class="grid grid-cols-2 gap-2 w-full px-4 pb-4">
         {albumLink ? (

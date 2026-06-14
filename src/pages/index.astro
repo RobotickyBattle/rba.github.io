@@ -2,11 +2,11 @@
 import MainLayout from "../layouts/MainLayout.astro"
 import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
 import CategoryList from "../components/CategoryList.astro";
+import OptimizedBackground from "../components/OptimizedBackground.astro";
+import { getImage } from 'astro:assets';
 
 import hero from '../assets/photos/hero.JPG';
-import heroMobile from '../assets/photos/hero-mobile.svg';
 import about from '../assets/photos/about.jpg';
-import placeholder from '../assets/photos/placeholder.png';
 import devity from '../assets/partners/devity.svg';
 import alejka from '../assets/partners/alejka.png';
 import ta from '../assets/partners/ta.jpg';
@@ -14,96 +14,100 @@ import sos from '../assets/partners/sos.svg';
 import mm from '../assets/partners/mm.png';
 import amavetgaleje from '../assets/partners/galejeamavet.svg';
 
-
+const heroDesktop = await getImage({ src: hero, width: 1920, format: 'webp', quality: 80 });
+const heroMobile = await getImage({ src: hero, width: 768, format: 'webp', quality: 75 });
 ---
 
 <MainLayout title="Domov">
-  <section class="h-[calc(100vh-72px)] bg-cover bg-no-repeat bg-bottom-right hidden md:block" style={{backgroundImage: `url('${hero.src}')`,}}>
-	<div class="content flex flex-col justify-center h-full">
-		<div class="flex flex-col w-1/2 justify-center space-y-6 bg-white px-8 py-10">
-			<div class="flex flex-col">
-				<span class="subtext">Jedinečné robotická súťaž v Košiciach</span>
-				<h1 class="text-orange">Robotický Battle</h1>
-				<span class="text-xl mt-4">RBA 2026 je za nami!</span>
-				<span class="text-lg mt-2">Už sa tešíme na RBA 2027.</span>
-				
-			</div>
-			<div class="flex flex-row space-x-4">
-				<a href="https://photos.app.goo.gl/bGM8bswc5AVyLmGz7" target="_blank" class="btn btn-orange-full">Galéria&nbsp;&gt;</a>
-				<a href="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2026-Vysledky.pdf" target="_blank" class="btn btn-orange">Výsledky&nbsp;&gt;</a>
-			</div>
-		</div>
-	</div>
+  <link slot="head" rel="preload" as="image" href={heroMobile.src} media="(max-width: 767px)" />
+  <link slot="head" rel="preload" as="image" href={heroDesktop.src} media="(min-width: 768px)" />
+
+  <section class="relative h-[calc(100vh-72px)] hidden md:block">
+    <OptimizedBackground
+      src={hero}
+      width={1920}
+      quality={80}
+      alt="Robotický Battle na Alejovej"
+      class="absolute inset-0 bg-bottom-right"
+    />
+    <div class="relative z-10 content flex flex-col justify-center h-full">
+      <div class="flex flex-col w-1/2 justify-center space-y-6 bg-white px-8 py-10">
+        <div class="flex flex-col">
+          <span class="subtext">Jedinečné robotická súťaž v Košiciach</span>
+          <h1 class="text-orange">Robotický Battle</h1>
+          <span class="text-xl mt-4">RBA 2026 je za nami!</span>
+          <span class="text-lg mt-2">Už sa tešíme na RBA 2027.</span>
+        </div>
+        <div class="flex flex-row space-x-4">
+          <a href="https://photos.app.goo.gl/bGM8bswc5AVyLmGz7" target="_blank" class="btn btn-orange-full">Galéria&nbsp;&gt;</a>
+          <a href="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2026-Vysledky.pdf" target="_blank" class="btn btn-orange">Výsledky&nbsp;&gt;</a>
+        </div>
+      </div>
+    </div>
   </section>
-  <section class="md:hidden h-[calc(100vh-72px)] bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${heroMobile.src}')`,}}>
-	<div class="content flex flex-col h-full justify-center items-center space-y-6">
-		<div class="flex flex-col">
-			<span class="subtext text-center text-background">Jedinečné robotická súťaž v Košiciach</span>
-			<h1 class="text-orange text-center">Robotický Battle</h1>
-			<span class="text-xl mt-4 text-center">RBA 2026 je za nami!</span>
-			<span class="text-lg mt-2 text-center">Už sa tešíme na RBA 2027.</span>
-			
-		</div>
-		<div class="flex flex-row space-x-4">
-			<a href="https://photos.app.goo.gl/bGM8bswc5AVyLmGz7" target="_blank" class="btn btn-orange-full">Galéria&nbsp;&gt;</a>
-			<a href="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2026-Vysledky.pdf" target="_blank" class="btn btn-orange">Výsledky&nbsp;&gt;</a>
-		</div>
-	</div>
+
+  <section class="relative h-[calc(100vh-72px)] md:hidden">
+    <OptimizedBackground
+      src={hero}
+      width={768}
+      quality={75}
+      alt="Robotický Battle na Alejovej"
+      class="absolute inset-0"
+    />
+    <div class="relative z-10 content flex flex-col h-full justify-center items-center space-y-6">
+      <div class="flex flex-col">
+        <span class="subtext text-center text-background">Jedinečné robotická súťaž v Košiciach</span>
+        <h1 class="text-orange text-center">Robotický Battle</h1>
+        <span class="text-xl mt-4 text-center">RBA 2026 je za nami!</span>
+        <span class="text-lg mt-2 text-center">Už sa tešíme na RBA 2027.</span>
+      </div>
+      <div class="flex flex-row space-x-4">
+        <a href="https://photos.app.goo.gl/bGM8bswc5AVyLmGz7" target="_blank" class="btn btn-orange-full">Galéria&nbsp;&gt;</a>
+        <a href="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2026-Vysledky.pdf" target="_blank" class="btn btn-orange">Výsledky&nbsp;&gt;</a>
+      </div>
+    </div>
   </section>
+
   <section id="stats" class="w-full bg-blue text-white py-4">
-	<div class="content flex flex-row justify-between">
-		
-		<div class="flex flex-col items-center">
-		<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="650">
-			0
-		</span>
-		<span>projektov</span>
-		</div>
+    <div class="content flex flex-row justify-between">
+      <div class="flex flex-col items-center">
+        <span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="650">0</span>
+        <span>projektov</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="1000">0</span>
+        <span>nadšencov</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="78">0</span>
+        <span>škôl</span>
+      </div>
+    </div>
+  </section>
 
-		<div class="flex flex-col items-center">
-		<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="1000">
-			0
-		</span>
-		<span>nadšencov</span>
-		</div>
+  <SplitSectionImgTxt title="Čo je RBA?" subtitle="O súťaži" image={about} imageAlt="Racing RBA" text="Robotický Battle na Alejovej (RBA) je celoslovenská súťaž, ktorá už roky spája fanúšikov technológií, programovania a kreativity. Či už si profík v stavbe autonómnych strojov alebo ťa baví adrenalínový racing, RBA je miesto, kde môžeš ukázať svoje schopnosti. Súťaž organizovaná študentmi pre študentov – s jedinečnou atmosférou a výzvami, ktoré ťa posunú vpred."/>
 
-		<div class="flex flex-col items-center">
-		<span class="title text-xl sm:text-2xl md:text-3xl counter" data-target="78">
-			0
-		</span>
-		<span>škôl</span>
-		</div>
+  <CategoryList/>
 
-	</div>
-	</section>
+  <section class="content flex flex-col space-y-8 py-12 items-center">
+    <h1 class="text-orange">Organizátori</h1>
+    <div class="grid grid-cols-2 gap-6 sm:gap-8 items-center">
+      <img src={alejka.src} alt="Gymnázium Alejová" class="w-full h-auto mx-auto" loading="lazy" decoding="async" />
+      <img src={amavetgaleje.src} alt="AMAVET Galeje" class="h-full mx-auto" loading="lazy" decoding="async" />
+    </div>
+  </section>
 
-	<SplitSectionImgTxt title="Čo je RBA?" subtitle="O súťaži" imageSrc={about.src} imageAlt="Racing RBA"   text="Robotický Battle na Alejovej (RBA) je celoslovenská súťaž, ktorá už roky spája fanúšikov technológií, programovania a kreativity. Či už si profík v stavbe autonómnych strojov alebo ťa baví adrenalínový racing, RBA je miesto, kde môžeš ukázať svoje schopnosti. Súťaž organizovaná študentmi pre študentov – s jedinečnou atmosférou a výzvami, ktoré ťa posunú vpred."/>
-
-	<CategoryList/>
-
-	<section class="content flex flex-col space-y-8 py-12 items-center">
-		<h1 class="text-orange">Organizátori</h1>
-
-		<div class="grid grid-cols-2 gap-6 sm:gap-8 items-center">
-			<img src={alejka.src} alt="Sponsor 1" class="w-full h-auto mx-auto" />
-			<img src={amavetgaleje.src} alt="Sponsor 1" class="h-full mx-auto" />
-		</div>
-	</section>
-
-	<section class="content flex flex-col space-y-8 py-12 items-center">
-		<h1 class="text-blue">Partneri</h1>
-
-		<div class="grid grid-cols-2 gap-6 sm:gap-8 items-center">
-			<img src={devity.src} alt="Sponsor 2" class="w-full h-auto mx-auto" />
-			<img src={sos.src} alt="Sponsor 3" class="w-full h-auto mx-auto" />
-			<div class="col-span-2">
-				<img src={mm.src} alt="Sponsor 3" class="h-20 mx-auto" />
-			</div>
-			<div class="col-span-2">
-				<img src={ta.src} alt="Sponsor 3" class="h-20 mx-auto aspect-square" />
-			</div>
-		</div>
-	</section>
-
-
+  <section class="content flex flex-col space-y-8 py-12 items-center">
+    <h1 class="text-blue">Partneri</h1>
+    <div class="grid grid-cols-2 gap-6 sm:gap-8 items-center">
+      <img src={devity.src} alt="Devity" class="w-full h-auto mx-auto" loading="lazy" decoding="async" />
+      <img src={sos.src} alt="SOS" class="w-full h-auto mx-auto" loading="lazy" decoding="async" />
+      <div class="col-span-2">
+        <img src={mm.src} alt="MM" class="h-20 mx-auto" loading="lazy" decoding="async" />
+      </div>
+      <div class="col-span-2">
+        <img src={ta.src} alt="TA" class="h-20 mx-auto aspect-square" loading="lazy" decoding="async" />
+      </div>
+    </div>
+  </section>
 </MainLayout>

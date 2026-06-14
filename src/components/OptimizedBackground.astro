@@ -1,0 +1,29 @@
+---
+import type { ImageMetadata } from 'astro';
+import { getImage } from 'astro:assets';
+
+interface Props {
+	src: ImageMetadata;
+	class?: string;
+	width?: number;
+	quality?: number;
+	alt?: string;
+}
+
+const {
+	src,
+	class: className = '',
+	width = 1920,
+	quality = 75,
+	alt = '',
+} = Astro.props;
+
+const optimized = await getImage({ src, width, format: 'webp', quality });
+---
+
+<div
+	class={`bg-cover bg-no-repeat bg-center ${className}`}
+	style={{ backgroundImage: `url('${optimized.src}')` }}
+	role={alt ? 'img' : undefined}
+	aria-label={alt || undefined}
+></div>
