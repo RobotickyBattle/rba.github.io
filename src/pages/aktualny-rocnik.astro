@@ -6,6 +6,12 @@ import CategoryList from "../components/CategoryList.astro";
 import racing from '../assets/photos/racing2.JPG';
 import vyzva from '../assets/photos/vyzva.jpg';
 import racing3 from '../assets/photos/racing3.jpg';
+import devity from '../assets/partners/devity.svg';
+import alejka from '../assets/partners/alejka.png';
+import ta from '../assets/partners/ta.jpg';
+import sos from '../assets/partners/sos.svg';
+import mm from '../assets/partners/mm.png';
+import amavetgaleje from '../assets/partners/galejeamavet.svg';
 ---
 
 <MainLayout title="RBA 2027">
@@ -96,6 +102,30 @@ import racing3 from '../assets/photos/racing3.jpg';
 					Pozrite sa ako to vyzeralo po minulé roky, a s akými projektami prišli žiaci.
 				</p>
 				<a href={`${import.meta.env.BASE_URL}archiv/`} class="btn btn-orange text-center">Galéria&nbsp;&gt;</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="content flex flex-col space-y-8 py-12 items-center">
+		<h1 class="text-orange">Organizátori</h1>
+
+		<div class="grid grid-cols-2 gap-6 sm:gap-8 items-center">
+			<img src={alejka.src} alt="Sponsor 1" class="w-full h-auto mx-auto" />
+			<img src={amavetgaleje.src} alt="Sponsor 1" class="h-full mx-auto" />
+		</div>
+	</section>
+
+	<section class="content flex flex-col space-y-8 py-12 items-center">
+		<h1 class="text-blue">Partneri</h1>
+
+		<div class="grid grid-cols-2 gap-6 sm:gap-8 items-center">
+			<img src={devity.src} alt="Sponsor 2" class="w-full h-auto mx-auto" />
+			<img src={sos.src} alt="Sponsor 3" class="w-full h-auto mx-auto" />
+			<div class="col-span-2">
+				<img src={mm.src} alt="Sponsor 3" class="h-20 mx-auto" />
+			</div>
+			<div class="col-span-2">
+				<img src={ta.src} alt="Sponsor 3" class="h-20 mx-auto aspect-square" />
 			</div>
 		</div>
 	</section>
