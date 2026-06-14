@@ -2,8 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro"
 import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
 import CategoryList from "../components/CategoryList.astro";
-import OptimizedBackground from "../components/OptimizedBackground.astro";
-import { getImage } from 'astro:assets';
+import CoverImage from "../components/CoverImage.astro";
 
 import hero from '../assets/photos/hero.JPG';
 import about from '../assets/photos/about.jpg';
@@ -13,24 +12,23 @@ import ta from '../assets/partners/ta.jpg';
 import sos from '../assets/partners/sos.svg';
 import mm from '../assets/partners/mm.png';
 import amavetgaleje from '../assets/partners/galejeamavet.svg';
-
-const heroDesktop = await getImage({ src: hero, width: 1920, format: 'webp', quality: 80 });
-const heroMobile = await getImage({ src: hero, width: 768, format: 'webp', quality: 75 });
 ---
 
 <MainLayout title="Domov">
-  <link slot="head" rel="preload" as="image" href={heroMobile.src} media="(max-width: 767px)" />
-  <link slot="head" rel="preload" as="image" href={heroDesktop.src} media="(min-width: 768px)" />
-
-  <section class="relative h-[calc(100vh-72px)] hidden md:block">
-    <OptimizedBackground
+  <section class="relative h-[calc(100vh-72px)] overflow-hidden">
+    <CoverImage
       src={hero}
-      width={1920}
-      quality={80}
       alt="Robotický Battle na Alejovej"
-      class="absolute inset-0 bg-bottom-right"
+      widths={[480, 768, 1024, 1280]}
+      sizes="100vw"
+      quality={70}
+      loading="eager"
+      fetchpriority="high"
+      objectPosition="center"
+      class="md:object-[center_right]"
     />
-    <div class="relative z-10 content flex flex-col justify-center h-full">
+
+    <div class="relative z-10 content hidden md:flex flex-col justify-center h-full">
       <div class="flex flex-col w-1/2 justify-center space-y-6 bg-white px-8 py-10">
         <div class="flex flex-col">
           <span class="subtext">Jedinečné robotická súťaž v Košiciach</span>
@@ -44,17 +42,8 @@ const heroMobile = await getImage({ src: hero, width: 768, format: 'webp', quali
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="relative h-[calc(100vh-72px)] md:hidden">
-    <OptimizedBackground
-      src={hero}
-      width={768}
-      quality={75}
-      alt="Robotický Battle na Alejovej"
-      class="absolute inset-0"
-    />
-    <div class="relative z-10 content flex flex-col h-full justify-center items-center space-y-6">
+    <div class="relative z-10 content flex md:hidden flex-col h-full justify-center items-center space-y-6">
       <div class="flex flex-col">
         <span class="subtext text-center text-background">Jedinečné robotická súťaž v Košiciach</span>
         <h1 class="text-orange text-center">Robotický Battle</h1>
