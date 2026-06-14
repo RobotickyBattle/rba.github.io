@@ -1,0 +1,138 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
+
+import about from '../assets/photos/about.jpg';
+---
+
+<MainLayout title="Sponzorstvo">
+	<section class="content py-12">
+		<div class="text-center mb-16">
+			<h1 class="text-blue">Staňte sa sponzorom</h1>
+			<div class="h-1.5 w-20 bg-orange mx-auto mt-4"></div>
+			<p class="text-subtext mt-6 text-lg max-w-2xl mx-auto">
+				Podporte jednu z najväčších robotických súťaží pre mládež na Slovensku a pomôžte nám rozvíjať talenty budúcnosti.
+			</p>
+		</div>
+	</section>
+
+	<SplitSectionImgTxt
+		title="Prečo sponzorovať RBA?"
+		subtitle="Sponzorstvo"
+		imageSrc={about.src}
+		imageAlt="Robotický Battle na Alejovej"
+		text="Robotický Battle na Alejovej je celoslovenská súťaž, ktorá už viac ako 15 rokov spája stovky mladých ľudí so záujmom o technológie, programovanie a inovácie. Sponzoring RBA znamená podporiť vzdelávanie v oblasti STEM, byť súčasťou komunity, ktorá roky buduje budúcnosť slovenských technológií, a zároveň získať viditeľnosť medzi žiakmi, učiteľmi aj širokou verejnosťou počas celého roka."
+	/>
+
+	<section class="content py-16 flex flex-col space-y-10">
+		<div class="flex flex-col">
+			<span>Prečo sa oplatí</span>
+			<h2 class="text-orange">Čo získate ako sponzor</h2>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div class="bg-white p-6 shadow-md border-l-4 border-orangeLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Viditeľnosť značky</h3>
+				<p class="text-subtext text-sm">Logo a meno vašej firmy na webovej stránke, propagačných materiáloch a priamo na podujatí pred stovkami návštevníkov.</p>
+			</div>
+			<div class="bg-white p-6 shadow-md border-l-4 border-orangeLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Cieľová komunita</h3>
+				<p class="text-subtext text-sm">Priamy kontakt s mladými talentmi, učiteľmi a školami z celého Slovenska, ktoré sa robotike a technológiám venujú dlhodobo.</p>
+			</div>
+			<div class="bg-white p-6 shadow-md border-l-4 border-orangeLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Spoločenská zodpovednosť</h3>
+				<p class="text-subtext text-sm">Podpora vzdelávania v oblasti technológií a podpora mládeže, ktorá sa chce rozvíjať v STEM odboroch.</p>
+			</div>
+			<div class="bg-white p-6 shadow-md border-l-4 border-blueLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Online propagácia</h3>
+				<p class="text-subtext text-sm">Zmienky na sociálnych sieťach, vo fotogalériách a v materiáloch dokumentujúcich priebeh súťaže.</p>
+			</div>
+			<div class="bg-white p-6 shadow-md border-l-4 border-blueLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Overené podujatie</h3>
+				<p class="text-subtext text-sm">RBA je dlhodobo zavedená súťaž s desiatkami škôl, stovkami účastníkov a silnou komunitou okolo Gymnázia Alejová 1 v Košiciach.</p>
+			</div>
+			<div class="bg-white p-6 shadow-md border-l-4 border-blueLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Flexibilná spolupráca</h3>
+				<p class="text-subtext text-sm">Vieme pripraviť balík sponzoringu podľa vašich cieľov — od finančnej podpory cez materiálne dary až po spoluprácu pri aktivitách počas dňa.</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="stats" class="w-full bg-blue text-white py-8">
+		<div class="content flex flex-row justify-between">
+			<div class="flex flex-col items-center">
+				<span class="title text-xl sm:text-2xl md:text-3xl">650+</span>
+				<span>projektov</span>
+			</div>
+			<div class="flex flex-col items-center">
+				<span class="title text-xl sm:text-2xl md:text-3xl">1000+</span>
+				<span>nadšencov</span>
+			</div>
+			<div class="flex flex-col items-center">
+				<span class="title text-xl sm:text-2xl md:text-3xl">78+</span>
+				<span>škôl</span>
+			</div>
+		</div>
+	</section>
+
+	<section class="content py-16 flex flex-col space-y-8">
+		<div class="flex flex-col">
+			<span>Naša ponuka</span>
+			<h2 class="text-orange">Čo vieme sponzorom ponúknuť</h2>
+			<p class="text-subtext mt-2 max-w-3xl">
+				Konkrétny rozsah spolupráce závisí od formy sponzoringu. Radi pripravíme balík na mieru podľa vašich potrieb.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			<div class="flex flex-col space-y-4">
+				<h3 class="text-lg font-bold text-blue">Online a komunikácia</h3>
+				<ul class="list-disc list-inside text-subtext space-y-2">
+					<li>umiestnenie loga na webovej stránke súťaže</li>
+					<li>propagácia na Facebooku, Instagrame a YouTube</li>
+					<li>možnosť využiť fotografie a videozáznamy zo súťaže na vašich kanáloch</li>
+					<li>zmienka v tlačových a propagačných materiáloch</li>
+				</ul>
+			</div>
+			<div class="flex flex-col space-y-4">
+				<h3 class="text-lg font-bold text-blue">Počas podujatia</h3>
+				<ul class="list-disc list-inside text-subtext space-y-2">
+					<li>viditeľnosť loga v priestoroch Gymnázia Alejová 1</li>
+					<li>priestor pre stánok alebo prezentáciu vašej firmy</li>
+					<li>možnosť zapojiť sa do sprievodného programu</li>
+					<li>osobná účasť pri slávnostnom otvorení alebo vyhodnotení</li>
+				</ul>
+			</div>
+			<div class="flex flex-col space-y-4">
+				<h3 class="text-lg font-bold text-blue">Materiálna a finančná podpora</h3>
+				<ul class="list-disc list-inside text-subtext space-y-2">
+					<li>finančný príspevok na organizáciu súťaže</li>
+					<li>poskytnutie cien pre víťazov alebo sprievodné aktivity</li>
+					<li>dar technológií, komponentov alebo služieb pre súťažiace tímy</li>
+					<li>podpora stravovania alebo vybavenia pre účastníkov</li>
+				</ul>
+			</div>
+			<div class="flex flex-col space-y-4">
+				<h3 class="text-lg font-bold text-blue">Dlhodobá spolupráca</h3>
+				<ul class="list-disc list-inside text-subtext space-y-2">
+					<li>partnerstvo na viacero ročníkov</li>
+					<li>spolupráca pri rozvoji kategórií a aktivít</li>
+					<li>prepojenie s talentovanou mládežou a školami</li>
+					<li>spoločné projekty v oblasti vzdelávania a technológií</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="content pb-16">
+		<div class="bg-orangeLight text-white p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-6">
+			<div class="text-center md:text-left">
+				<h2 class="text-2xl font-bold mb-2">Máte záujem o sponzoring?</h2>
+				<p class="opacity-90">Napíšte nám a pripravíme spoluprácu podľa vašich možností.</p>
+			</div>
+			<a href={`${import.meta.env.BASE_URL}kontakt/`} class="btn btn-orange bg-white text-orange hover:bg-blue shrink-0">
+				Kontaktujte nás&nbsp;&gt;
+			</a>
+		</div>
+	</section>
+</MainLayout>
