@@ -8,6 +8,8 @@ import sponsorHero from '../assets/sponsorship/banners.jpg';
 import tv2 from '../assets/sponsorship/tv2.jpg';
 import captivePortal from '../assets/sponsorship/captive_portal.jpg';
 import bannerRollups from '../assets/sponsorship/banners2.jpg';
+import print from '../assets/sponsorship/print.webp';
+import help from '../assets/illustrations/help.svg';
 ---
 
 <MainLayout title="Sponzorstvo">
@@ -38,9 +40,9 @@ import bannerRollups from '../assets/sponsorship/banners2.jpg';
 			</p>
 		</div>
 
-		<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 			<figure class="flex flex-col space-y-4">
-				<div class="aspect-[4/3] w-full overflow-hidden rounded-lg shadow-md border border-gray-200 bg-white">
+				<div class="aspect-4/3 w-full overflow-hidden shadow-md border border-gray-200 bg-white">
 					<Image
 						src={tv2}
 						alt="Sponzori zobrazení na obrazovke v priestoroch gymnázia"
@@ -63,7 +65,7 @@ import bannerRollups from '../assets/sponsorship/banners2.jpg';
 			</figure>
 
 			<figure class="flex flex-col space-y-4">
-				<div class="aspect-[4/3] w-full overflow-hidden rounded-lg shadow-md border border-gray-200 bg-white">
+				<div class="aspect-4/3 w-full overflow-hidden shadow-md border border-gray-200 bg-white">
 					<CaptivePortalFrame
 						image={captivePortal}
 						alt="Prihlasovacia stránka eventovej Wi-Fi so sekciou sponzorov a partnerov"
@@ -78,7 +80,7 @@ import bannerRollups from '../assets/sponsorship/banners2.jpg';
 			</figure>
 
 			<figure class="flex flex-col space-y-4">
-				<div class="aspect-[4/3] w-full overflow-hidden rounded-lg shadow-md border border-gray-200 bg-white">
+				<div class="aspect-4/3 w-full overflow-hidden shadow-md border border-gray-200 bg-white">
 					<Image
 						src={bannerRollups}
 						alt="Sponzorské bannery v priestoroch gymnázia počas RBA"
@@ -96,6 +98,29 @@ import bannerRollups from '../assets/sponsorship/banners2.jpg';
 					<h3 class="text-lg font-bold text-blue mb-1">Bannery</h3>
 					<p class="text-subtext text-sm">
 						Plachty a bannery s logami partnerov sú umiestnené na viditeľných miestach v budove počas celého podujatia.
+					</p>
+				</figcaption>
+			</figure>
+
+			<figure class="flex flex-col space-y-4">
+				<div class="aspect-4/3 w-full overflow-hidden shadow-md border border-gray-200 bg-white">
+					<Image
+						src={print}
+						alt="Sponzorské bannery v priestoroch gymnázia počas RBA"
+						class="w-full h-full object-cover"
+						width={800}
+						widths={[400, 800]}
+						sizes="(max-width: 1024px) 100vw, 33vw"
+						format="webp"
+						quality={70}
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+				<figcaption>
+					<h3 class="text-lg font-bold text-blue mb-1">Tlačené produkty</h3>
+					<p class="text-subtext text-sm">
+						Logá na prednej strane úvodných pokynov pre učiteľov, ktoré dostávajú pred začiatkom súťaže, tlačených brožúr pre doprovod na mieste súťaže a tlačených pravidlách pr ekategóriu Live Challenge.
 					</p>
 				</figcaption>
 			</figure>
@@ -202,15 +227,39 @@ import bannerRollups from '../assets/sponsorship/banners2.jpg';
 		</div>
 	</section>
 
-	<section class="content pb-16">
-		<div class="bg-orangeLight text-white p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-6">
-			<div class="text-center md:text-left">
-				<h2 class="text-2xl font-bold mb-2">Máte záujem o sponzoring?</h2>
-				<p class="opacity-90">Napíšte nám a pripravíme spoluprácu podľa vašich možností.</p>
+	<section class="content pb-16 px-4 md:px-0">
+		<div class="bg-white border border-slate-100 shadow-xl shadow-slate-100/50 p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8 mx-auto relative overflow-hidden">
+			
+			<!-- Decorative accent bar on the left (optional, using your theme's orange) -->
+			<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-orangeLight hidden md:block"></div>
+
+			<div class="text-center md:text-left max-w-xl md:pl-4">
+				<h2 class="text-2xl md:text-3xl font-extrabold mb-3 text-blue tracking-tight">
+					Chceli by ste nás podporiť?
+				</h2>
+				<p class="text-slate-600 leading-relaxed text-base md:text-lg">
+					Napíšte nám na 
+					<a href="mailto:katarina.koreckova@robotickybattle.sk" class="text-orangeLight font-semibold underline underline-offset-4 decoration-2 hover:text-blue transition-colors duration-200">
+						katarina.koreckova@robotickybattle.sk
+					</a> 
+					a pripravíme spoluprácu podľa vašich možností.
+				</p>
 			</div>
-			<a href={`${import.meta.env.BASE_URL}kontakt/`} class="btn btn-orange bg-white text-orange hover:bg-blue shrink-0">
-				Kontaktujte nás&nbsp;&gt;
-			</a>
+
+			<div class="w-full md:w-auto flex justify-center">
+				<Image
+					src={help}
+					alt="Podpora súťaže RBA"
+					class="h-48 md:h-56 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform duration-300"
+					width={800}
+					widths={[400, 800]}
+					sizes="(max-width: 1024px) 100vw, 33vw"
+					format="webp"
+					quality={70}
+					loading="lazy"
+					decoding="async"
+				/>
+			</div>
 		</div>
 	</section>
 </MainLayout>
