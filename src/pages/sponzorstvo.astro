@@ -1,0 +1,265 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import SplitSectionImgTxt from "../components/SplitSectionImgTxt.astro";
+import CaptivePortalFrame from "../components/CaptivePortalFrame.astro";
+import { Image } from "astro:assets";
+
+import sponsorHero from '../assets/sponsorship/banners.jpg';
+import tv2 from '../assets/sponsorship/tv2.jpg';
+import captivePortal from '../assets/sponsorship/captive_portal.jpg';
+import bannerRollups from '../assets/sponsorship/banners2.jpg';
+import print from '../assets/sponsorship/print.webp';
+import help from '../assets/illustrations/help.svg';
+---
+
+<MainLayout title="Sponzorstvo">
+	<section class="content py-12">
+		<div class="text-center mb-16">
+			<h1 class="text-blue">Staňte sa sponzorom</h1>
+			<div class="h-1.5 w-20 bg-orange mx-auto mt-4"></div>
+			<p class="text-subtext mt-6 text-lg max-w-2xl mx-auto">
+				Podporte jednu z najväčších robotických súťaží pre mládež na Slovensku a pomôžte nám rozvíjať talenty budúcnosti.
+			</p>
+		</div>
+	</section>
+
+	<SplitSectionImgTxt
+		title="Prečo sponzorovať RBA?"
+		subtitle="Sponzorstvo"
+		image={sponsorHero}
+		imageAlt="Robotický Battle na Alejovej"
+		text="Robotický Battle na Alejovej je celoslovenská súťaž, ktorá už viac ako 15 rokov spája stovky mladých ľudí so záujmom o technológie, programovanie a inovácie. Sponzoring RBA znamená podporiť vzdelávanie v oblasti STEM, byť súčasťou komunity, ktorá roky buduje budúcnosť slovenských technológií, a zároveň získať viditeľnosť medzi žiakmi, učiteľmi aj širokou verejnosťou počas celého roka."
+	/>
+
+	<section class="content py-16 flex flex-col space-y-10">
+		<div class="flex flex-col max-w-3xl">
+			<span>Počas podujatia</span>
+			<h2 class="text-orange">Kde uvidíte sponzorov</h2>
+			<p class="text-subtext mt-2">
+				Logá sponzorov a partnerov zobrazujeme priamo v priestoroch gymnázia — na obrazovkách počas celého dňa, na prihlasovacej stránke eventovej Wi-Fi (captive portal) a na banneroch v budove.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+			<figure class="flex flex-col space-y-4">
+				<div class="aspect-4/3 w-full overflow-hidden shadow-md border border-gray-200 bg-white">
+					<Image
+						src={tv2}
+						alt="Sponzori zobrazení na obrazovke v priestoroch gymnázia"
+						class="w-full h-full object-cover"
+						width={800}
+						widths={[400, 800]}
+						sizes="(max-width: 1024px) 100vw, 33vw"
+						format="webp"
+						quality={70}
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+				<figcaption>
+					<h3 class="text-lg font-bold text-blue mb-1">Obrazovky</h3>
+					<p class="text-subtext text-sm">
+						Logo partnerov sa strieda na displejoch v chodbách a spoločných priestoroch spolu s fotkami a informáciami zo súťaže.
+					</p>
+				</figcaption>
+			</figure>
+
+			<figure class="flex flex-col space-y-4">
+				<div class="aspect-4/3 w-full overflow-hidden shadow-md border border-gray-200 bg-white">
+					<CaptivePortalFrame
+						image={captivePortal}
+						alt="Prihlasovacia stránka eventovej Wi-Fi so sekciou sponzorov a partnerov"
+					/>
+				</div>
+				<figcaption>
+					<h3 class="text-lg font-bold text-blue mb-1">Eventová Wi-Fi</h3>
+					<p class="text-subtext text-sm">
+						Každý návštevník, ktorý sa pripojí na Wi-Fi, uvidí prihlasovaciu stránku (captive portal) s logami sponzorov ešte pred vstupom na internet.
+					</p>
+				</figcaption>
+			</figure>
+
+			<figure class="flex flex-col space-y-4">
+				<div class="aspect-4/3 w-full overflow-hidden shadow-md border border-gray-200 bg-white">
+					<Image
+						src={bannerRollups}
+						alt="Sponzorské bannery v priestoroch gymnázia počas RBA"
+						class="w-full h-full object-cover"
+						width={800}
+						widths={[400, 800]}
+						sizes="(max-width: 1024px) 100vw, 33vw"
+						format="webp"
+						quality={70}
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+				<figcaption>
+					<h3 class="text-lg font-bold text-blue mb-1">Bannery</h3>
+					<p class="text-subtext text-sm">
+						Plachty a bannery s logami partnerov sú umiestnené na viditeľných miestach v budove počas celého podujatia.
+					</p>
+				</figcaption>
+			</figure>
+
+			<figure class="flex flex-col space-y-4">
+				<div class="aspect-4/3 w-full overflow-hidden shadow-md border border-gray-200 bg-white">
+					<Image
+						src={print}
+						alt="Sponzorské bannery v priestoroch gymnázia počas RBA"
+						class="w-full h-full object-cover"
+						width={800}
+						widths={[400, 800]}
+						sizes="(max-width: 1024px) 100vw, 33vw"
+						format="webp"
+						quality={70}
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+				<figcaption>
+					<h3 class="text-lg font-bold text-blue mb-1">Tlačené produkty</h3>
+					<p class="text-subtext text-sm">
+						Logá na prednej strane úvodných pokynov pre učiteľov, ktoré dostávajú pred začiatkom súťaže, tlačených brožúr pre doprovod na mieste súťaže a tlačených pravidlách pr ekategóriu Live Challenge.
+					</p>
+				</figcaption>
+			</figure>
+		</div>
+	</section>
+
+	<section class="content py-16 flex flex-col space-y-10">
+		<div class="flex flex-col">
+			<span>Prečo sa oplatí</span>
+			<h2 class="text-orange">Čo získate ako sponzor</h2>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div class="bg-white p-6 shadow-md border-l-4 border-orangeLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Viditeľnosť značky</h3>
+				<p class="text-subtext text-sm">Logo a meno vašej firmy na webovej stránke, propagačných materiáloch, obrazovkách, prihlasovacej stránke eventovej Wi-Fi a banneroch počas podujatia pred stovkami návštevníkov.</p>
+			</div>
+			<div class="bg-white p-6 shadow-md border-l-4 border-orangeLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Cieľová komunita</h3>
+				<p class="text-subtext text-sm">Priamy kontakt s mladými talentmi, učiteľmi a školami z celého Slovenska, ktoré sa robotike a technológiám venujú dlhodobo.</p>
+			</div>
+			<div class="bg-white p-6 shadow-md border-l-4 border-orangeLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Spoločenská zodpovednosť</h3>
+				<p class="text-subtext text-sm">Podpora vzdelávania v oblasti technológií a podpora mládeže, ktorá sa chce rozvíjať v STEM odboroch.</p>
+			</div>
+			<div class="bg-white p-6 shadow-md border-l-4 border-blueLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Online propagácia</h3>
+				<p class="text-subtext text-sm">Zmienky na sociálnych sieťach, vo fotogalériách a v materiáloch dokumentujúcich priebeh súťaže.</p>
+			</div>
+			<div class="bg-white p-6 shadow-md border-l-4 border-blueLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Overené podujatie</h3>
+				<p class="text-subtext text-sm">RBA je dlhodobo zavedená súťaž s desiatkami škôl, stovkami účastníkov a silnou komunitou okolo Gymnázia Alejová 1 v Košiciach.</p>
+			</div>
+			<div class="bg-white p-6 shadow-md border-l-4 border-blueLight">
+				<h3 class="text-lg font-bold text-blue mb-2">Flexibilná spolupráca</h3>
+				<p class="text-subtext text-sm">Vieme pripraviť balík sponzoringu podľa vašich cieľov — od finančnej podpory cez materiálne dary až po spoluprácu pri aktivitách počas dňa.</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="stats" class="w-full bg-blue text-white py-8">
+		<div class="content flex flex-row justify-between">
+			<div class="flex flex-col items-center">
+				<span class="title text-xl sm:text-2xl md:text-3xl">650+</span>
+				<span>projektov</span>
+			</div>
+			<div class="flex flex-col items-center">
+				<span class="title text-xl sm:text-2xl md:text-3xl">1000+</span>
+				<span>nadšencov</span>
+			</div>
+			<div class="flex flex-col items-center">
+				<span class="title text-xl sm:text-2xl md:text-3xl">78+</span>
+				<span>škôl</span>
+			</div>
+		</div>
+	</section>
+
+	<section class="content py-16 flex flex-col space-y-8">
+		<div class="flex flex-col">
+			<span>Naša ponuka</span>
+			<h2 class="text-orange">Čo vieme sponzorom ponúknuť</h2>
+			<p class="text-subtext mt-2 max-w-3xl">
+				Konkrétny rozsah spolupráce závisí od formy sponzoringu. Radi pripravíme balík na mieru podľa vašich potrieb.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			<div class="flex flex-col space-y-4">
+				<h3 class="text-lg font-bold text-blue">Online a komunikácia</h3>
+				<ul class="list-disc list-inside text-subtext space-y-2">
+					<li>umiestnenie loga na webovej stránke súťaže</li>
+					<li>propagácia na Facebooku, Instagrame a YouTube</li>
+					<li>možnosť využiť fotografie a videozáznamy zo súťaže na vašich kanáloch</li>
+					<li>zmienka v tlačových a propagačných materiáloch</li>
+				</ul>
+			</div>
+			<div class="flex flex-col space-y-4">
+				<h3 class="text-lg font-bold text-blue">Počas podujatia</h3>
+				<ul class="list-disc list-inside text-subtext space-y-2">
+					<li>viditeľnosť loga na obrazovkách, captive portáli eventovej Wi-Fi a banneroch v priestoroch Gymnázia Alejová 1</li>
+					<li>priestor pre stánok alebo prezentáciu vašej firmy</li>
+					<li>možnosť zapojiť sa do sprievodného programu</li>
+					<li>osobná účasť pri slávnostnom otvorení alebo vyhodnotení</li>
+				</ul>
+			</div>
+			<div class="flex flex-col space-y-4">
+				<h3 class="text-lg font-bold text-blue">Materiálna a finančná podpora</h3>
+				<ul class="list-disc list-inside text-subtext space-y-2">
+					<li>finančný príspevok na organizáciu súťaže</li>
+					<li>poskytnutie cien pre víťazov alebo sprievodné aktivity</li>
+					<li>dar technológií, komponentov alebo služieb pre súťažiace tímy</li>
+					<li>podpora stravovania alebo vybavenia pre účastníkov</li>
+				</ul>
+			</div>
+			<div class="flex flex-col space-y-4">
+				<h3 class="text-lg font-bold text-blue">Dlhodobá spolupráca</h3>
+				<ul class="list-disc list-inside text-subtext space-y-2">
+					<li>partnerstvo na viacero ročníkov</li>
+					<li>spolupráca pri rozvoji kategórií a aktivít</li>
+					<li>prepojenie s talentovanou mládežou a školami</li>
+					<li>spoločné projekty v oblasti vzdelávania a technológií</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="content pb-16 px-4 md:px-0">
+		<div class="bg-white border border-slate-100 shadow-xl shadow-slate-100/50 p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8 mx-auto relative overflow-hidden">
+			
+			<!-- Decorative accent bar on the left (optional, using your theme's orange) -->
+			<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-orangeLight hidden md:block"></div>
+
+			<div class="text-center md:text-left max-w-xl md:pl-4">
+				<h2 class="text-2xl md:text-3xl font-extrabold mb-3 text-blue tracking-tight">
+					Chceli by ste nás podporiť?
+				</h2>
+				<p class="text-slate-600 leading-relaxed text-base md:text-lg">
+					Napíšte nám na 
+					<a href="mailto:katarina.koreckova@robotickybattle.sk" class="text-orangeLight font-semibold underline underline-offset-4 decoration-2 hover:text-blue transition-colors duration-200">
+						katarina.koreckova@robotickybattle.sk
+					</a> 
+					a pripravíme spoluprácu podľa vašich možností.
+				</p>
+			</div>
+
+			<div class="w-full md:w-auto flex justify-center">
+				<Image
+					src={help}
+					alt="Podpora súťaže RBA"
+					class="h-48 md:h-56 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform duration-300"
+					width={800}
+					widths={[400, 800]}
+					sizes="(max-width: 1024px) 100vw, 33vw"
+					format="webp"
+					quality={70}
+					loading="lazy"
+					decoding="async"
+				/>
+			</div>
+		</div>
+	</section>
+</MainLayout>

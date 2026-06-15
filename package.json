@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "optimize:archive": "node scripts/optimize-archive.mjs",
+    "optimize:sponsorship": "node scripts/optimize-sponsorship.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

@@ -89,6 +89,10 @@ h6 {
   @apply border-orange bg-background text-blue hover:bg-orange hover:text-white;
 }
 
+.btn-blue {
+  @apply border-blue bg-background text-blue hover:bg-blue hover:text-white;
+}
+
 .btn-orange-full {
   @apply border-orange bg-orange text-white hover:bg-orangeLight hover:border-orangeLight;
 }
