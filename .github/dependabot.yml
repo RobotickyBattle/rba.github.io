@@ -3,12 +3,24 @@ updates:
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: daily
-    time: '20:00'
-  open-pull-requests-limit: 10
-- package-ecosystem: bundler
+    interval: weekly
+  cooldown:
+    default-days: 7
+  groups:
+    # Minor and patch updates arrive together in one PR.
+    # Major updates (for example a new Astro version) each get their own PR,
+    # because they often need code changes.
+    npm-minor-and-patch:
+      update-types:
+      - minor
+      - patch
+- package-ecosystem: github-actions
   directory: "/"
   schedule:
-    interval: daily
-    time: '20:00'
-  open-pull-requests-limit: 10
+    interval: weekly
+  cooldown:
+    default-days: 7
+  groups:
+    github-actions:
+      patterns:
+      - "*"
