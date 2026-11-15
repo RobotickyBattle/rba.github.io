@@ -4,9 +4,13 @@ import MainLayout from "../layouts/MainLayout.astro"
 import ArchiveCard from "../components/ArchiveCard.astro"
 
 const img = (year: string) => `${import.meta.env.BASE_URL}archive/${year}.jpg`;
+const results = (year: string) => `${import.meta.env.BASE_URL}pdf/results/${year}-Vysledky.pdf`;
 ---
 
-<MainLayout title="Archív">
+<MainLayout
+	title="Archív"
+	description="Archív súťaže Robotický Battle na Alejovej: fotogalérie a výsledkové listiny zo všetkých ročníkov od roku 2012 po RBA 2026."
+>
 	<secition class="content py-12 flex flex-col space-y-2">
 		<h1>Archív</h1>
 		<p>
@@ -17,67 +21,67 @@ const img = (year: string) => `${import.meta.env.BASE_URL}archive/${year}.jpg`;
 				title="RBA 2026" 
 				imgPath={img("2026")} 
 				albumLink="https://photos.app.goo.gl/bGM8bswc5AVyLmGz7" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2026-Vysledky.pdf" />
+				resultsLink={results("2026")} />
 			<ArchiveCard 
 				title="RBA 2025" 
 				imgPath={img("2025")} 
 				albumLink="https://photos.app.goo.gl/FRv3Ykto8BwhSW9r5" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2025-Vysledky.pdf" />
+				resultsLink={results("2025")} />
 			<ArchiveCard 
 				title="RBA 2024" 
 				imgPath={img("2024")} 
 				albumLink="https://photos.app.goo.gl/SBa7oX8Lk1VtxJVq9" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2024-Vysledky.pdf" />
+				resultsLink={results("2024")} />
 			<ArchiveCard 
 				title="RBA 2023" 
 				imgPath={img("2023")} 
 				albumLink="https://photos.app.goo.gl/5zKcWjhPAhp5NUkPA" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2023-Vysledky.pdf" />
+				resultsLink={results("2023")} />
 			<ArchiveCard 
 				title="RBA 2022" 
 				imgPath={img("2022")} 
 				albumLink="https://photos.app.goo.gl/p3XBnPog3AaquoqK7" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2022-Vysledky.pdf" />
+				resultsLink={results("2022")} />
 			<ArchiveCard 
 				title="RBA 2019" 
 				imgPath={img("2019")} 
 				albumLink="https://photos.app.goo.gl/TauKfqhvxxduYK91A" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2019-Vysledky.pdf" />
+				resultsLink={results("2019")} />
 			<ArchiveCard 
 				title="RBA 2018" 
 				imgPath={img("2018")} 
 				albumLink="https://photos.app.goo.gl/wyQGKjJjBC6P5SKP9" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2018-Vysledky.pdf" />
+				resultsLink={results("2018")} />
 			<ArchiveCard 
 				title="RBA 2017" 
 				imgPath={img("2017")} 
 				albumLink="https://photos.app.goo.gl/Vf956zMgDwbAYTdSA" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2017-Vysledky.pdf" />
+				resultsLink={results("2017")} />
 			<ArchiveCard 
 				title="RBA 2016" 
 				imgPath={img("2016")} 
 				albumLink="https://photos.app.goo.gl/8FaytboaV8JYm5G99" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2016-Vysledky.pdf" />
+				resultsLink={results("2016")} />
 			<ArchiveCard 
 				title="RBA 2015" 
 				imgPath={img("2015")} 
 				albumLink="https://www.facebook.com/media/set/?set=a.830426927034302&type=3" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2015-Vysledky.pdf" />
+				resultsLink={results("2015")} />
 			<ArchiveCard 
 				title="RBA 2014" 
 				imgPath={img("2014")} 
 				albumLink="https://photos.app.goo.gl/zWPQCVHPCBqjiWvd9" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2014-Vysledky.pdf" />
+				resultsLink={results("2014")} />
 			<ArchiveCard 
 				title="RBA 2013" 
 				imgPath={img("2013")} 
 				albumLink="https://www.facebook.com/media/set/?set=a.470511683025830&type=3" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2013-Vysledky.pdf" />
+				resultsLink={results("2013")} />
 			<ArchiveCard 
 				title="RBA 2012" 
 				imgPath={img("2012")} 
 				albumLink="https://photos.app.goo.gl/U8FVdQmwC5E6hzJm8" 
-				resultsLink="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2012-Vysledky.pdf" />
+				resultsLink={results("2012")} />
 		</div>
 	</secition>
 </MainLayout>

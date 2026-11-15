@@ -18,13 +18,12 @@ import yt from "../assets/icons/yt.svg";
         </a>
       </div>
 
-      <!-- Center: Links 
-      <div class="flex gap-6 md:absolute md:left-1/2 md:-translate-x-1/2">
-        <a href="#" class="title animated-underline">Pravidlá</a>
-        <a href="#" class="title animated-underline">Archív</a>
-        <a href="#" class="title animated-underline">Compex</a>
-      </div>
--->
+      <!-- Center: Links -->
+      <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm" aria-label="Odkazy v pätičke">
+        <a href={`${import.meta.env.BASE_URL}rules/vseobecne-pravidla/`} class="title hover:underline underline-offset-4">Všeobecné pravidlá</a>
+        <a href={`${import.meta.env.BASE_URL}gdpr/`} class="title hover:underline underline-offset-4">Ochrana osobných údajov</a>
+      </nav>
+
       <!-- Right: Social Links -->
       <div class="flex gap-4">
         <a href="https://www.facebook.com/robotickybattle" target="_blank" aria-label="Facebook">

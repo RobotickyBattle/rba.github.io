@@ -11,7 +11,8 @@
 }
 
 body,
-html {
+html,
+.font-body {
   font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -40,7 +41,10 @@ h6,
   font-style: normal;
 }
 
-h1 {
+/* .h1 = vzhľad nadpisu H1 pre sekčné nadpisy (<h2 class="h1">),
+   aby mala každá stránka iba jeden skutočný <h1>. */
+h1,
+.h1 {
   font-size: 2.75rem !important;
 }
 h2 {

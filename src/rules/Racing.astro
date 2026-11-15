@@ -3,6 +3,14 @@ import WarningBox from "../components/WarningBox.astro";
 import NoteBox from "../components/NoteBox.astro";
 
 import track from '../assets/illustrations/track.jpeg';
+
+interface Props {
+	/** 1 na samostatnej stránke na tlač, 2 pod nadpisom kategórie. */
+	headingLevel?: 1 | 2;
+}
+
+const { headingLevel = 2 } = Astro.props;
+const Heading = headingLevel === 1 ? "h1" : "h2";
 ---
 
 <section class="content flex flex-col space-y-8 flex-1 w-full scroll-mt-24">
@@ -10,7 +18,7 @@ import track from '../assets/illustrations/track.jpeg';
 			<!-- <WarningBox text="PRAVIDLÁ SÚ V PRACOVNEJ VERZII A EŠTE NIE SÚ PLATNÉ." />-->
 
 			<div class="flex flex-col space-y-4">
-				<h1>Pravidlá</h1>
+				<Heading class="h1">Pravidlá</Heading>
 				<p>
 					Súťaž pozostáva z dvoch častí, v prvej časti budú tímy jazdiť kvalifikačné jazdy, na základe ktorých sa určí ich poradie pri štarte v ostrých jazdách a rozdelenie do skupín. Úlohou v kvalifikácii je čo najrýchlejšie prejsť traťou a vybojovať si tak čo najlepšiu pozíciu a skupinu. Úlohou v ostrých jazdách je prísť do cieľa ako prvý. Počet kôl sa určí priamo na súťaži.
 				</p>

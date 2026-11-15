@@ -10,16 +10,19 @@ interface Props {
 	imageAlt: string;
 	text: string;
 	reverse?: boolean;
+	/** 1 iba pre hlavný nadpis stránky; ostatné sekcie sú H2 so vzhľadom H1. */
+	headingLevel?: 1 | 2;
 }
 
-const { title, subtitle, image, imageAlt, text, reverse } = Astro.props;
+const { title, subtitle, image, imageAlt, text, reverse, headingLevel = 2 } = Astro.props;
+const Heading = headingLevel === 1 ? "h1" : "h2";
 ---
 
 <section class="w-full bg-contain bg-center bg-repeat" style={{backgroundImage: `url('${gearBg.src}')`,}}>
 	<div class={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 md:gap-0 md:justify-between md:items-stretch py-4 md:py-12 content`}>
 		<div class="w-full md:w-[45%] self-center mt-8 md:mt-">
 			<span class="subtext">{subtitle}</span>
-			<h1 class="text-orange">{title}</h1>
+			{title && <Heading class="h1 text-orange">{title}</Heading>}
 			<div class="mt-2 text-dark">
 				{text}
 			</div>

@@ -17,17 +17,22 @@ import amavetgaleje from '../assets/partners/galejeamavet.svg';
 import freevision from '../assets/partners/freevision.svg';
 ---
 
-<MainLayout title="RBA 2027">
+<MainLayout
+	title="RBA 2027"
+	description="RBA 2027 – 16. ročník súťaže Robotický Battle na Alejovej na Gymnáziu, Alejová 1 v Košiciach. Termín, registráciu a pravidlá zverejníme včas."
+>
 	<section class="relative flex items-center pt-12 pb-20">
         <div class="md:flex md:flex-row md:justify-between content md:items-center w-full">
             <div class="md:w-1/2 z-10 flex flex-col space-y-2">
                 <p class="text-subtext text-lg font-light mb-2">Už sa tešíme na</p>
-                <span class="title text-5xl md:text-7xl text-orange leading-tight md:leading-none">
-                    16. ročník
-				</span>
-                <p class="text-blue">
-                    súťaže Robotický Battle na Alejovej
-                </p>
+                <h1 class="flex flex-col space-y-2">
+                    <span class="title text-5xl md:text-7xl text-orange leading-tight md:leading-none">
+                        16. ročník
+                    </span>{" "}
+                    <span class="font-body text-base font-normal text-blue">
+                        súťaže Robotický Battle na Alejovej
+                    </span>
+                </h1>
                 
                 <div class="mt-10 space-y-6">
                     <div class="flex items-center space-x-4">
@@ -81,7 +86,7 @@ import freevision from '../assets/partners/freevision.svg';
 			<span>
 				RBA 2026
 			</span>
-			<h1 class="text-orange">Výsledky a galéria</h1>
+			<h2 class="h1 text-orange">Výsledky a galéria</h2>
 			<p class="mb-4">
 				15. ročník je za nami! Pozrite si fotografie zo súťaže a výsledkové listiny jednotlivých kategórií.
 			</p>
@@ -92,7 +97,7 @@ import freevision from '../assets/partners/freevision.svg';
 						arrow_outward
 					</span>
 				</a>
-				<a href="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/results/2026-Vysledky.pdf" target="_blank" class="btn btn-orange flex flex-row gap-2 justify-between">
+				<a href={`${import.meta.env.BASE_URL}pdf/results/2026-Vysledky.pdf`} target="_blank" class="btn btn-orange flex flex-row gap-2 justify-between">
 					<span>Výsledky</span>
 					<span class="material-symbols-outlined">
 						arrow_outward
@@ -113,7 +118,7 @@ import freevision from '../assets/partners/freevision.svg';
 		/>
 		<div class="relative z-10 content flex flex-row justify-end">
 			<div class="bg-background p-8 flex flex-col space-y-4 w-full l:w-2/3 max-w-sm">
-				<h1 class="text-orange">Nechajte sa inšpirovať</h1>
+				<h2 class="h1 text-orange">Nechajte sa inšpirovať</h2>
 				<p>
 					Pozrite sa ako to vyzeralo po minulé roky, a s akými projektami prišli žiaci.
 				</p>
@@ -123,7 +128,7 @@ import freevision from '../assets/partners/freevision.svg';
 	</section>
 
 	<section class="content flex flex-col space-y-8 py-12 items-center">
-		<h1 class="text-orange">Organizátori</h1>
+		<h2 class="h1 text-orange">Organizátori</h2>
 
 		<div class="grid grid-cols-2 gap-6 sm:gap-8 items-center">
 			<img src={alejka.src} alt="Gymnázium Alejová" class="w-full h-auto mx-auto" loading="lazy" decoding="async" />
@@ -132,7 +137,7 @@ import freevision from '../assets/partners/freevision.svg';
 	</section>
 
 	<section class="content flex flex-col space-y-8 py-12 items-center">
-		<h1 class="text-blue">Partneri</h1>
+		<h2 class="h1 text-blue">Partneri</h2>
 
 		<div class="grid grid-cols-2 gap-6 sm:gap-8 items-center">
 			<img src={devity.src} alt="Devity" class="w-full h-auto mx-auto" loading="lazy" decoding="async" />

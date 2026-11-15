@@ -1,11 +1,19 @@
 ---
 import WarningBox from "../components/WarningBox.astro";
 import NoteBox from "../components/NoteBox.astro";
+
+interface Props {
+	/** 1 na samostatnej stránke na tlač, 2 pod nadpisom kategórie. */
+	headingLevel?: 1 | 2;
+}
+
+const { headingLevel = 2 } = Astro.props;
+const Heading = headingLevel === 1 ? "h1" : "h2";
 ---
 
 <section class="content flex flex-col space-y-8 flex-1 w-full scroll-mt-24">
 	<div class="flex flex-col space-y-4">
-		<h1>Pravidlá</h1>
+		<Heading class="h1">Pravidlá</Heading>
 		<p>
 			V deň konania súťaže bude zverejnené zadanie kategórie a úlohou tímu je
 			vyriešiť súťažné úlohy z vlastnej prinesenej stavebnice.
@@ -133,7 +141,7 @@ import NoteBox from "../components/NoteBox.astro";
 		<div class="flex flex-col space-y-4">
 			<h2>Archív pravidiel</h2>
 			<p>
-				Pre lepšiu predstavu toho, čo Vás čaká, si môžete pozrieť staršie zadania <a href="https://github.com/RobotickyBattle/rba.github.io/tree/master/public/pdf/rules/roboticka_vyzva/2025-LiveChallenge.pdf" target="_blank" class="text-orange animated-underline">na tomto odkaze</a>.
+				Pre lepšiu predstavu toho, čo Vás čaká, si môžete pozrieť staršie zadania <a href={`${import.meta.env.BASE_URL}pdf/rules/roboticka_vyzva/2025-LiveChallenge.pdf`} target="_blank" class="text-orange animated-underline">na tomto odkaze</a>.
 			</p>
 		</div>
 </section>
